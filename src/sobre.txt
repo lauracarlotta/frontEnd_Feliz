@@ -1,0 +1,141 @@
+depois ensina a confiruar o eslint
+ loading na tag img?
+
+
+
+
+
+
+
+
+
+logo mirror fashon (imagem)=> E-commerce
+        => É uma loja focada em roupas femininas para o público de classe média alta. (Também tem roupas para o público masculino, porém o foco é do feminino = importante para o UX)
+
+Título A Mirror Fashion
+
+Paragráfo a Mirror Fashion é a maior empresa ...
+
+Paragráfo nosso centro de distribuição ...
+
+Foto do centro de distribuição / legenda
+
+Paragráfo Compre suas roupas e acessórios...
+
+Subtítulo = História
+
+        => A hierarquia de título, a tipografia (tamanho da fonte, subtítulo, título, etc) é uma herança que vem do jornal, do Impresso.
+
+E PARA PODERMOS NOS COMUNICAR COM O NAVEGADOR E PASSAR TODAS ESSAS INFORMÇÕES PARA O BROWSER, NÓS USAMOS AS "tags". AS TAGS SERVEM PARA DAR SÊMANTICA DENTRO DO HTML (TRANSMITIR A INFO CORRETA PARA O CONTEÚDO CORRETO). SERVE PARA VALORIZAR O CONTEÚDO PARA DAR ACESSIBILIDADE AO CONTEÚDO E SERVE TAMBÉM PARA O SEO* [Search Engine Optimization (otimização para mecanismos de busca)]. (DAR UMA BOA REFERENCIA PARA BUSCA NO GOOGLE - OTIMIZAR O SITE PARA A BUSCA) => pessoas/SEO
+
+Usando as tags:
+
+    <nomeDaTag> = Tag de abertura
+    </nomeDaTag> = Tag de fechamento
+    <img/> = Quando não tem tag de fechamento? Quando ela não tem começo meio e fim. 
+    com o arquivo em .html, as tags ficam em outra cor, o que chamamos de starlight.
+
+        <h1>A Mirror Fashion</h1>
+
+        <p>a Mirror Fashion é a maior empresa ... </p> .p-paragrafe
+
+        <p> nosso centro de distribuição ... </p>
+
+        Foto do centro de distribuição / legenda
+
+        <p> Compre suas roupas e acessórios... </p>
+
+        <h2> História </h2>
+
+                
+                
+                *** Hierarquia de Títulos ***
+
+                <h1> <h2> <h3> <h4> <h5> <h6> .h-heading 1 => foi criado o html para criar teses cientificas dentro da Web. * Não use até o h6 - Varie do h1 até no máximo h3. Você pode acabar atrapalhando a semântica do pág.
+
+
+===>>> Tudo o que for conteúdo, colocamos denro da tag <body>
+===>>> Porém, precisamos dar um nome para a página para que ele fique visível ao usuário, para que ele saiba em qual página está navegando. Colocamos assim a tag <title>
+
+                >>> (A baixo veremos a construção do nosso site) <<<
+
+===>>> Alguns navegadores não conseguem entender as acentuções (ã, ç, à, ü, ô, etc). Então, a partir de uma tabela que já existe, nos add as configs dela na nossa página para que o texto fique correto. Colocamos a tag <meta charset="UTF-8"/> .meta-metadados / #charset = char: caracteres e set: definir (característica ou config) / "UTF-8"-valor (definimos qual é a tabela de caracteres) 
+*** TAG> ATRIBUTO> VALOR *** (Não tem tag de fechamento porque não tem conteúdo.)
+
+===>>> tag que add imagens: <img src="../img/logo.png"/" alt="Logo da marca Mirror Fashion"/> .img-imagem / #src-source (caminho)/ "entre aspas, o local onde está a imagem, o endereço dela." (../ volta uma pasta) / Para deixar a imagem acessível para deficientes visuais momentâneo, parcial ou total, colocamos o atributo "alt" e nele fazemos uma descrição da imagem.
+
+===>>> Colocamos a tag figcaption para colocar a legenda da imagem (muitas pessoas colocam a tag <p> de forma genérica mas para o html5 foi criada essa rag própria para as legendas)
+
+??? E se nós tivessemos mais de uma imagem? Como eu sei que aquela legenda é daquela figura em específico?
+
+envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (semânticamente) que aquela legenda representa sobre aquela exata imagem.
+
+===>>> Quando colocamos a tag <!DOCTYPE html> estamos informando ao navegador que o tipo do nosso arquivo é um arquivo do tipo html na sua ultima versão de uso. (E por isso que ela tem que ficar na primiera linha pois é assim que o navegador entenderá de cara qual é a versão que estamos usando.)
+
+===>>> A ordem do HTML é a seguinte:
+
+        html1 ; html2; html3; html4; xhtml; html5.
+
+===>>> Na tag <html> colocamos o atributo lang (linguagem) que assim, nessa tag global, indicamos em que idioma o site está sendo escrito. (com o valor "pt-BR", pois está em português.)
+
+
+
+        <!DOCTYPE html>
+        <html lang="pt-BR">
+
+                <head>
+                        <meta charset="UTF-8"/>
+                        <title> A Mirror Fashion</title>
+                </head>
+
+                <body>
+                        <img src="../img/logo.png"/" alt="Logo da marca Mirror Fashion"/>
+
+                        <h1>A Mirror Fashion</h1>
+
+                        <p>a Mirror Fashion é a maior empresa ... </p>
+
+                        <p> nosso centro de distribuição ... </p>
+
+                        <figure>
+                                <img src="../img/centro-distribuicao.png" alt="Foto do centro de distribuição da Mirror Fashion"/>
+                                <figcaption>Centro de distribuição da Mirror Fashion</figcaption>
+                        </figure>
+
+                        <p> Compre suas roupas e acessórios... </p>
+
+                        <h2> História </h2>
+
+                        <figure>
+                                <img src="../img/familia-pelho.jpg" alt="Fot da Família pelho">
+                                <figcaption>Família Pelho</figcaption>
+                        </figure>
+
+                        <p>
+                                A fundação em 1932 ocorreu no momento da descoberta econônica do interior do Paraná. A 
+                                família Pelho, tradicional da região, investiu todas as suas economias nessa nova iniciativa, 
+                                revolucionária para a época. O fundador Eduardo Simões Pelho, dotado de particular visão 
+                                administrativa, guiou os negócios da empresa durante mais de 50 anos, muitos deles ao lado 
+                                de seu filho E. S. Pelho Filho, atual CEO. O nome da empresa é inspirado no nome da família.
+                        </p>
+
+                        <p>
+                                O crescimento da empresa foi praticamente instantâneo. Nos primeiros 5 anos, já atendia 18 países. 
+                                Bateu a marca de 100 países em apenas 15 anos de existência. Até hoje, já atendeu 740 milhões 
+                                de usuários diferentes, em bilhões de diferentes pedidos.
+                        </p>
+
+                        <p>
+                                O crescimento em número de funcionários é também assombroso. Hoje, é a maior empregadora do 
+                                Brasil, mas mesmo após apenas 5 anos de sua existência, já possuía 30 mil funcionários. Fora do 
+                                Brasil, há 240 mil funcionários, além dos 890 mil brasileiros nas instalações de Jacarezinho e 
+                                nos escritórios em todo país.
+                        </p>
+
+                        <p>
+                                Dada a importância econômica da empresa para o Brasil, a família Pelho já recebeu diversos prêmios, 
+                                homenagens e condecorações. Todos os presidentes do Brasil já visitaram as instalações da Mirror 
+                                Fashion, além de presidentes da União Européia, Ásia e o secretário-geral da ONU.
+                        </p>
+                </body>
+        </html>
