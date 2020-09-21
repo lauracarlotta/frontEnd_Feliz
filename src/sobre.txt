@@ -139,3 +139,41 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
                         </p>
                 </body>
         </html>
+
+
+
+                        *** CSS ***
+
+        Agora, vamos estilizar a página:
+
+        A tag <style> conseguimos dar propriedades a ela, assim visualmente, podemos modificar a cor de fundo da página, cor da letra, estilo da letra, se o texto ficará centralizado ou não, etc.
+
+        É uma boa prática de programação quando separamos os arquivos, pois para a manutenção por exemplo, separamos os arquivos e assim facará muito mais fácil de saber onde eu devo alterar ou fazer a manutenção x, do que colocar nas tags html. (É como se deixassemos quando um cumprir com o seu papel. Caso colocassemos o css no html é como se "sobrecarregassemos" o html desnecessáriemante.) deixamos cada qual fazer o seu trabalho: html cuidando do conteúdo e o css cuidando da estilização. 
+
+README.md
+
+        # HTML
+
+        - Tem a responsabilidade de guardar:
+        - Conteúdo(textos e imagens);
+        - Forma semântica (tags)
+        - Estrutura (figure)
+        (*ajudam na semântica mas não tem interferencia visual)
+
+                = CONTEÚDO.
+
+        # CSS
+
+        - Tem responsabilidade de: 
+        (Liguagem de estilo)
+        - Visual
+
+                = ESTILO.
+
+        # JavaScript
+
+        - Tem responsabilidade de:
+        (Interatividade)
+        - Interação, animação
+
+                = INTERAÇÃO.
