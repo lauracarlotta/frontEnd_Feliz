@@ -1,5 +1,6 @@
 depois ensina a confiruar o eslint
  loading na tag img?
+ resetar css
 
 
 
@@ -78,6 +79,8 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
 
 ===>>> Na tag <html> colocamos o atributo lang (linguagem) que assim, nessa tag global, indicamos em que idioma o site está sendo escrito. (com o valor "pt-BR", pois está em português.)
 
+===>>> colocamos uma tag <link> para usarmos o css fora do html e ficaria assim: <link rel="stylesheet" href="../css/style.css"> rel - relation (relacionado ao que: ao valor "stylesheet" que é o estilo do css) e href - é o local do endereço de onde se encontra o arquivo css que eu estou criando
+
 
 
         <!DOCTYPE html>
@@ -86,6 +89,7 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
                 <head>
                         <meta charset="UTF-8"/>
                         <title> A Mirror Fashion</title>
+                        <link rel="stylesheet" href="../css/style.css">
                 </head>
 
                 <body>
@@ -144,11 +148,64 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
 
                         *** CSS ***
 
+                        (seletor > propriedade > valor)
+
         Agora, vamos estilizar a página:
 
         A tag <style> conseguimos dar propriedades a ela, assim visualmente, podemos modificar a cor de fundo da página, cor da letra, estilo da letra, se o texto ficará centralizado ou não, etc.
 
         É uma boa prática de programação quando separamos os arquivos, pois para a manutenção por exemplo, separamos os arquivos e assim facará muito mais fácil de saber onde eu devo alterar ou fazer a manutenção x, do que colocar nas tags html. (É como se deixassemos quando um cumprir com o seu papel. Caso colocassemos o css no html é como se "sobrecarregassemos" o html desnecessáriemante.) deixamos cada qual fazer o seu trabalho: html cuidando do conteúdo e o css cuidando da estilização. 
+
+        ===>>> Para colocarmos uma linha abaixo do h2 nós usamos o border-bottom, porque a tag hr é semântica e é utilizada para separar estrofes e aqui queremos fazer algo visual, queremos colocar uma linha no background do h2
+
+
+* Podemos usar o body para deixar a página padronizada, por exemplo, cor de fundo, estilo de letra, etc... 
+
+        -background-color: cor do fundo;
+
+        -background-image: url() coloca uma imagem no fundo e seu valor será sua url (seu end.);
+
+        -color: cor da letra;
+
+        -border: 1px solid #000000 [tamanho, tipo e cor = em px, boda solid (sólida - contínua) e a cor preta (borda de qualquer elemento);
+        
+        - E ainda é possível dizer onde queremos essa linha: se left, right, top or bottom. Caso não seja especificado, quer dizer que a borda será em tudo];
+
+        -text-align: center - alinhamento do texto (center - centralizado)* No nosso primiero caso aplicamos a tag <figure>, porém dentro dela temos além de um texto na <figcaption>, uma <img> e neste caso podemos considerar a img como texto também (como contéudo) e com isso, (a proprieadade sendo aplicada na tag pai), tudo o que estiver dentro (as tags filho) serão alteradas;
+
+        -font-family: "Lucida Sans Unicode","LucidaGrande", Arial, sans-serif; (familia da fonte - Aqui, colocamos outras opções caso não haja aquela determinada fonte instalada na máquina do usuário) e por fim colocamos a sans-serif que ficaria como "qualquer fonte sem serifa";
+
+        -font-style: italic - estilo da fonte (itálico);
+
+
+
+
+body{
+    color: rgb(41, 40, 40);
+    font-family: "Lucida Sans Unicode","LucidaGrande", Arial, sans-serif;
+}
+
+h1{
+    background-image:url(../img/sobre-background.jpg);
+    color: #000000;
+}
+
+h2{
+    border-bottom: 1px solid #000000;
+}
+
+figure{
+    background-color:rgba(48, 47, 47, 0.1);
+    text-align: center;
+    border: 1px solid #000000;
+    color: #000000;
+}
+
+figcaption{
+    font-style: italic;
+}
+
+-------------------------------------------
 
 README.md
 
