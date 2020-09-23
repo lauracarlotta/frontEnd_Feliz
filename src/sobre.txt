@@ -81,6 +81,20 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
 
 ===>>> colocamos uma tag <link> para usarmos o css fora do html e ficaria assim: <link rel="stylesheet" href="../css/style.css"> rel - relation (relacionado ao que: ao valor "stylesheet" que é o estilo do css) e href - é o local do endereço de onde se encontra o arquivo css que eu estou criando
 
+===>>> Listas:
+
+        ordered list: lista ordenada <ol>
+                (existe hierarquia de impostancia)
+                <li> list item - item da lista
+        unordered list: lista não-ordenada <ul>
+                (não existe hierarquia de impostancia)
+                <li> list item - item da lista
+
+(===>>> Tag div não tem semantica)
+
+===>>> Lorem cria um conteúdo gigante, caso você precise de um texto de exemplo
+
+===>>> para colocar link, adicionamos a tag <a href=""> a - ancora e href - referencia (sem o href não funcionará)
 
 
         <!DOCTYPE html>
@@ -88,6 +102,7 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
 
                 <head>
                         <meta charset="UTF-8"/>
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
                         <title> A Mirror Fashion</title>
                         <link rel="stylesheet" href="../css/style.css">
                 </head>
@@ -116,31 +131,40 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
                         </figure>
 
                         <p>
-                                A fundação em 1932 ocorreu no momento da descoberta econônica do interior do Paraná. A 
-                                família Pelho, tradicional da região, investiu todas as suas economias nessa nova iniciativa, 
-                                revolucionária para a época. O fundador Eduardo Simões Pelho, dotado de particular visão 
-                                administrativa, guiou os negócios da empresa durante mais de 50 anos, muitos deles ao lado 
-                                de seu filho E. S. Pelho Filho, atual CEO. O nome da empresa é inspirado no nome da família.
+                                A fundação em 1932 ocorreu no momento da descoberta econônica do interior do Paraná. A...
                         </p>
 
                         <p>
-                                O crescimento da empresa foi praticamente instantâneo. Nos primeiros 5 anos, já atendia 18 países. 
-                                Bateu a marca de 100 países em apenas 15 anos de existência. Até hoje, já atendeu 740 milhões 
-                                de usuários diferentes, em bilhões de diferentes pedidos.
+                                O crescimento da empresa foi praticamente instantâneo. Nos primeiros 5 anos, já atendia 18 países...
                         </p>
 
                         <p>
                                 O crescimento em número de funcionários é também assombroso. Hoje, é a maior empregadora do 
-                                Brasil, mas mesmo após apenas 5 anos de sua existência, já possuía 30 mil funcionários. Fora do 
-                                Brasil, há 240 mil funcionários, além dos 890 mil brasileiros nas instalações de Jacarezinho e 
-                                nos escritórios em todo país.
+                                Brasil, ...
                         </p>
 
                         <p>
                                 Dada a importância econômica da empresa para o Brasil, a família Pelho já recebeu diversos prêmios, 
-                                homenagens e condecorações. Todos os presidentes do Brasil já visitaram as instalações da Mirror 
-                                Fashion, além de presidentes da União Européia, Ásia e o secretário-geral da ONU.
+                                homenagens e ...
                         </p>
+
+                        <h2>Diferenciais</h2>
+
+                        <ul>
+                                <li>Menor preço do varejo, garantido</li>
+                                <li>Se você achar uma loja mais barata, leva o produto de graça</li>
+                                <li>Pague em reais, dólares, euros ou bitcoins</li>
+                                <li>Todas as compras com frete grátis para o mundo todo</li>
+                                <li>Maior comércio eletrônico de moda do mundo</li>
+                                <li>Atendimento via telefone, email, chat, twitter, facebook, carta, fax e telegrama</li>
+                                <li>Presente em 124 países</li>
+                                <li>Mais de um milhão de funcionários em todo o mundo</li>
+                        </ul>
+
+                        <footer>
+                        <img src="../img/logo-rodape.png" alt="Logo da Mirror Fashion"/> 
+                        &copy; Copyright Mirror Fashion
+                        </footer>
                 </body>
         </html>
 
@@ -158,8 +182,76 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
 
         ===>>> Para colocarmos uma linha abaixo do h2 nós usamos o border-bottom, porque a tag hr é semântica e é utilizada para separar estrofes e aqui queremos fazer algo visual, queremos colocar uma linha no background do h2
 
+        ===>>> Como funciona o "box model"? (modelo de caixa)
+
+                (de dentropra fora)
+
+                Da tag <h2>
+                > conteúdo (História)
+                > padding (aumenta o tamanho da imagem)
+                > **border (aumenta o tamanho da imagem)**
+                > margin (aumenta o tamanho da imagem)
+
+                HTML
+                <h2>História</h2>
+
+                CSS
+
+                h2{
+                        height:200px;
+                        width:400px;
+                        border: 1px solid white;
+                        padding: 50px; (respiro interno)
+                        margin: 60px; (respiro externo) => não acrescenta tamanho ao elemento.
+                }
+
+                                          width 400px
+                        -------------------------------------------------
+                        |                 margin 60px                   |
+                        |solid **_______________________________** 1px  |
+                        |       |         padding 50px          |       |
+                        |       |       -----------------       |       |
+                 height |       |       |   conteúdo    |       |       |
+                  200px |       |       -----------------       |       |
+                        |       |_______________________________|       |
+                        |                                               |
+                        -------------------------------------------------
+                                          
+
+                                tamanho total do item: 902px x 502px
+                                
+
+(Somamos: width or height + padding + border. A margin empurra o elementos que estão a volta mas não acrescenta tamanho ao elemnto)
+
+
 
 * Podemos usar o body para deixar a página padronizada, por exemplo, cor de fundo, estilo de letra, etc... 
+
+** sobre cores:
+
+        1.Por nome: Red,
+        2.Por hexadecimal: #ffffff => Baseado em luz,
+        3.Por rgb (ou rgba):rgb(48, 47, 47) / rgba(48, 47, 47, 0.1); => 
+
+                2. (RRGGBB) = Red, Green, Blue 0 - F.
+                3. (rgb - red, green, blue 0 - 255)
+                (rgba - red, green, blue, alpha => r, g, b = 0 - 255 e alpha 0 - 1) ALPHA dá uma transparencia a cor.
+
+                [Já para colocar transparencia na imagem, add no css uma propriedade a tag <img> que a opacity: 0.5 (exemplo) Que é exatamente igual ao canal alpha do rgba] Exemplo:
+
+                        HTML:
+                        <img src="logo.png">
+
+                        CSS:
+                        img{
+                                opacity: 0.5;
+                                boder: 1px solid blue;
+                        }
+
+                        A opacidade será aplicada a toda a tag img e na borda também pois ficará na tag toda.
+
+
+===>>> Temos que lembrar que tudo tem um padrão, no início. Exemplo: o texto todo sempre começará da esquerda apra a direita e de cima para baixo. Então, tudo, eu disse TUDO, sempre tem um coportamento padão para que possamos formata-los conforme nossa necessidade.
 
         -background-color: cor do fundo;
 
@@ -177,33 +269,129 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
 
         -font-style: italic - estilo da fonte (itálico);
 
+        -text-indent: (só afeta o texto, como o seu prefixo mostra) adicionamos o parágrafo daquele que dáriamos com o tab quando estamos escrevendo no word ou no papel, quando a professora nos ensina no primário que um bom espaço para o parágrafo é colocar um dedo no início da folha da esquerda pra direita, marca um pontinho e começa a escrever daquele ponto. A doferença com o text-indent é que esse espaço, o colocamos em px, cm, ou em qualquer unidade de medida que vocẽ esteja usando para desenvolver a sua página;
+
+        -width: largura [Quando você não define uma largura, ele (o elemento) ocupará toda a largura da página (o height ou ultilizará a altura do elemento ou se adaptará conforme o width)***];
+
+                *** Lembrando que: nem toda a tag tem esse mesmo comportamento. isso (ocupar toda a largura da página) acontece para as tags <div>, <p>, etc. Já, por exemplo com a tag <a> (link) isso não acontecerá (irá ocupar só o espaço do link);
+
+                *** Quando a largura vaza, causa um scroll (pode acontecer apra qualquer propriedade quando o valor que atribuimos ultrapassa ao tamanho da página atual.)
+
+        -height: altura [quando você não a declara ela se ajustará com o width e caso você não coloque o width se adaptará ao tamanho da sua tela, caso você tenha declarado a tag <meta name="viewport" content="width=device-width, initial-scale=1.0">];
+
+        -margin: respiro externo [auto: centralizará o elemento, pois ele atribui o mesmo valor de lado esquerdo para o lado direito (margin-left e margin-right). (Fica melhor de visualizar quando você define um valor para o width. Caso contrário, o margin se adaptará ao tamanho da sua tela.) Contudo, o margin auto funciona com 3 regras: display, width e margin. Assim ele funcionará direitinho (no nosso exemplo, usamos a div. Por padrão a div já é em display: block)]
+
+                > margin: 10px [aplica em todas as direções];
+                > margin-top: 10px [aplica só no topo] (ainda podemos definir especificamente para right, bottom e left.)
+                > margin: 10px 11px 12px 13px [estamo fazendo a forma resumida e a ordem é 10px - top, 11px - right, 12px - bottom e 13px - left.]
+                > margin: 10px 15px [será a plicado assim: 10px top e bottom / 15px right e left]
+                        (então, margin: 0 auto [ficaria 0 para top e bottom / auto para right e left])
+                > margin: 10px 12px 14px [10px para top, 12px para right e left, 14px para bottom]
+
+                                         10px
+                                      -----------
+                                      |         |
+                                 12px |         | 12px
+                                      |         |
+                                      -----------  
+                                          14px
+
+                        (Essa lógica acima, quando eu coloco só um valor, ou 2 ou 4 ou 3, se aplica para padding e border também [só temos que lembrar que pra toda regra, temos excessões] mas por padrão, funciona assim.)
+
+        -padding: respiro interno [idem margin** (Quase sempre)];
+
+        -display: block (bloco. Utilizará o bloco da página toda** Isso poderá ter algumas diferenças.)
+
 
 
 
 body{
-    color: rgb(41, 40, 40);
+    width: 940px;
+    color: #333333;
     font-family: "Lucida Sans Unicode","LucidaGrande", Arial, sans-serif;
+    margin: 0 auto;
 }
 
 h1{
     background-image:url(../img/sobre-background.jpg);
     color: #000000;
+    padding: 10px;
 }
 
 h2{
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #333333;
+    margin-top: 30px;
+}
+
+p{
+    padding: 0 45px;
+    text-indent: 15px;
 }
 
 figure{
-    background-color:rgba(48, 47, 47, 0.1);
+    background-color:#f2eded;
     text-align: center;
-    border: 1px solid #000000;
-    color: #000000;
+    border: 1px solid #cecece;
+    padding: 15px;
+    margin: 30px;
 }
 
 figcaption{
     font-style: italic;
+    margin-top: 10px;
 }
+
+
+        Na explicação de margin-auto:
+        -----------------------------
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicação Margin-Auto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        First => Aprendendo o Margin-Auto
+    </div>
+
+    <p>
+        Aprendendo o text-indent </br></br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ad dolor nostrum pariatur quos error veniam quibusdam illo, iusto repellendus, temporibus nisi sunt ullam, id maxime corrupti doloribus sed laboriosam!
+    </p>
+</body>
+</html>
+
+=======
+
+body{
+    color: #fff;
+    background-color: #000;
+}
+
+div{
+    font-size: 30px;
+    background-color: rgb(138, 22, 22);
+    display: block;
+    width: 500px;
+    margin: auto; /* ou margin: 0 auto; */
+    text-align: center;
+}
+
+p{
+    font-size: 20px;
+    text-indent: 20px;
+}
+
+
+
+
+        Na explicação de link:
+        ----------------------
+
 
 -------------------------------------------
 
