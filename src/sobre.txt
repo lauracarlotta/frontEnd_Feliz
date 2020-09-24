@@ -368,7 +368,6 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
         -padding: respiro interno [idem margin** (Quase sempre)];
 
         -display: block (bloco. Utilizará o bloco da página toda** Isso poderá ter algumas diferenças.)
-        
 
 Seletores de tag, com "e"(,) e seltores filho:
 ----------------------------------------------
