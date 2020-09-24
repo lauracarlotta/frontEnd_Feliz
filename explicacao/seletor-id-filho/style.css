@@ -1,0 +1,48 @@
+/* Seletor de tag*/
+
+h1{
+    background-color: red;
+    color: white;
+    width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+/* seletor de tag com e = , */
+
+h2, h3{
+    font-size: 20px;
+    margin-left: 400px;
+}
+
+/* Seletor de ID # */
+
+#email{
+    color: green;
+}
+
+#skype{
+    color: blue;
+}
+
+/* Seletor filho = com "espaço" */
+
+footer a, footer p{
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Tanto podemos ser mais especificos assim: "footer a strong" como com "footer strong" somente! tudo vai depender em que resultado você precisa chegar*/
+
+footer a strong{
+    color: #f00;
+}
+
+footer{
+    background-color: #000;
+    color: #fff;
+    width: 550px;
+    margin: auto;
+    text-align: center;
+    padding: 10px 0;
+}

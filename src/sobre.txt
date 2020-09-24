@@ -2,10 +2,22 @@ depois ensina a confiruar o eslint
  loading na tag img?
  resetar css
 
+IDEs = Integrated Development Environment 
 
 
 
 
+
+<html>
+        <head>
+                são as infos importante só para o nevegador
+        </head> 
+        
+        //(head e boddy são tags irmãs pois tem o mesmo nível hierarquico, sendo filhas da tag html)
+        
+        <body></body>
+
+</html>
 
 
 
@@ -30,6 +42,7 @@ Subtítulo = História
 E PARA PODERMOS NOS COMUNICAR COM O NAVEGADOR E PASSAR TODAS ESSAS INFORMÇÕES PARA O BROWSER, NÓS USAMOS AS "tags". AS TAGS SERVEM PARA DAR SÊMANTICA DENTRO DO HTML (TRANSMITIR A INFO CORRETA PARA O CONTEÚDO CORRETO). SERVE PARA VALORIZAR O CONTEÚDO PARA DAR ACESSIBILIDADE AO CONTEÚDO E SERVE TAMBÉM PARA O SEO* [Search Engine Optimization (otimização para mecanismos de busca)]. (DAR UMA BOA REFERENCIA PARA BUSCA NO GOOGLE - OTIMIZAR O SITE PARA A BUSCA) => pessoas/SEO
 
 Usando as tags:
+(dão significado ao texto)
 
     <nomeDaTag> = Tag de abertura
     </nomeDaTag> = Tag de fechamento
@@ -54,13 +67,17 @@ Usando as tags:
 
                 <h1> <h2> <h3> <h4> <h5> <h6> .h-heading 1 => foi criado o html para criar teses cientificas dentro da Web. * Não use até o h6 - Varie do h1 até no máximo h3. Você pode acabar atrapalhando a semântica do pág.
 
+===>>> Tags de ênfase:
+        <strong>Deixa o texto em negrito (de forma semantica)</strong>
+        <em>Deixa o texto em itálico (de forma semantica) - emphasis accentuated / (ênfase acentuada)</em>
+        <small>Deixa o texto menor que o padrão (de forma semantica)</small>
 
 ===>>> Tudo o que for conteúdo, colocamos denro da tag <body>
-===>>> Porém, precisamos dar um nome para a página para que ele fique visível ao usuário, para que ele saiba em qual página está navegando. Colocamos assim a tag <title>
+===>>> Porém, precisamos dar um nome para a página para que ele fique visível ao usuário, para que ele saiba em qual página está navegando. Colocamos assim a tag <title> (Ficará na aba do documento ou será exibido na barra de título)
 
                 >>> (A baixo veremos a construção do nosso site) <<<
 
-===>>> Alguns navegadores não conseguem entender as acentuções (ã, ç, à, ü, ô, etc). Então, a partir de uma tabela que já existe, nos add as configs dela na nossa página para que o texto fique correto. Colocamos a tag <meta charset="UTF-8"/> .meta-metadados / #charset = char: caracteres e set: definir (característica ou config) / "UTF-8"-valor (definimos qual é a tabela de caracteres) 
+===>>> Alguns navegadores não conseguem entender as acentuções (ã, ç, à, ü, ô, etc). Então, a partir de uma tabela que já existe, nos add as configs dela na nossa página para que o texto fique correto. Colocamos a tag <meta charset="UTF-8"/> .meta-metadados / #charset = char: caracteres e set: definir (característica, parâmetro ou config) (charset ou encoding = conf da codificação de caracteres) / "UTF-8"-valor (definimos qual é a tabela de caracteres) (UTF-8 = Unicode)
 *** TAG> ATRIBUTO> VALOR *** (Não tem tag de fechamento porque não tem conteúdo.)
 
 ===>>> tag que add imagens: <img src="../img/logo.png"/" alt="Logo da marca Mirror Fashion"/> .img-imagem / #src-source (caminho)/ "entre aspas, o local onde está a imagem, o endereço dela." (../ volta uma pasta) / Para deixar a imagem acessível para deficientes visuais momentâneo, parcial ou total, colocamos o atributo "alt" e nele fazemos uma descrição da imagem.
@@ -71,7 +88,7 @@ Usando as tags:
 
 envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (semânticamente) que aquela legenda representa sobre aquela exata imagem.
 
-===>>> Quando colocamos a tag <!DOCTYPE html> estamos informando ao navegador que o tipo do nosso arquivo é um arquivo do tipo html na sua ultima versão de uso. (E por isso que ela tem que ficar na primiera linha pois é assim que o navegador entenderá de cara qual é a versão que estamos usando.)
+===>>> Quando colocamos a tag <!DOCTYPE html> estamos informando ao navegador que o tipo do nosso arquivo é um arquivo do tipo html na sua ultima versão de uso. (E por isso que ela tem que ficar na primiera linha pois é assim que o navegador entenderá de cara qual é a versão que estamos usando.) (indica para o navegador qual versão ele deve usar para rendereizar a página.)
 
 ===>>> A ordem do HTML é a seguinte:
 
@@ -92,9 +109,28 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
 
 (===>>> Tag div não tem semantica)
 
+===>> tags <div> e <span> são como coringas quando não sabemos com o que abrir o "início do algo" que queremos fazer. Não tem nenhum significado especial, podem servir para agrupar conteúdos (por padrão eles não tem estilo css nenhum.)
+
 ===>>> Lorem cria um conteúdo gigante, caso você precise de um texto de exemplo
 
-===>>> para colocar link, adicionamos a tag <a href=""> a - ancora e href - referencia (sem o href não funcionará)
+===>>> para colocar link, adicionamos a tag <a href=""> a - ancor (âncora = antigamente iamos NAVEGAR na internet e fazia-se isso por meio dos link, então quando parávamos é quando chegavamos no nosso objetivo - "jogando a âncora") e href - referencia (sem o href não funcionará) / podemos ainda dar mais um atributo para o <a> que é o target com o valor "_blank" (isso fará com que outra página seja aberta em uma em branco ou numa nova aba para que seu site não seja "substituido.") 
+
+        <a href="#primeiro">Primeiro</a> <!-- bookmark - referenciar dentro da página (#id) -->
+        <a href="#segundo">Segundo</a> <!-- para outra parte do site na mesma página -->
+        <a href="#terceiro">Terceiro</a>
+        <a href="sobre.html">Sobre</a> <!-- para outra página do site -->
+        <a href="https://twitter.com/marcobrunodev" target="_blank">Twitter MB</a> <!-- link externo -->
+        
+
+        <h2 id="primeiro">Primeiro</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quos ...</p>
+
+===>>> id = identification (identificação) - não podemos usar nenhum id igual ao outro. Serve para identificar um elemento específico: <h2>. Mas qual h2? então adicionamos o atributo id a tag e assim saberemos que aquele h2 específico terá uma diferença em relação aos outros. <h2 id="primeiro"> (tipo org da página)
+(não podemos repetir na página)
+
+===>>> header (cabeçalho)
+
+===>>> footer (rodapé)
 
 
         <!DOCTYPE html>
@@ -112,18 +148,28 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
 
                         <h1>A Mirror Fashion</h1>
 
-                        <p>a Mirror Fashion é a maior empresa ... </p>
-
-                        <p> nosso centro de distribuição ... </p>
-
+                        <p>
+                                A <strong>Mirror Fashion</strong> é a maior empresa comércio eletrônico no segmento de moda em todo o mundo. 
+                                Fundada em 1932, possui filiais em 124 países, sendo líder de mercado com mais de 90% de 
+                                participação em 118 deles. 
+                        </p>
+                        
+                        <p> 
+                                Nosso centro de distribuição fica em <a href="https://www.google.com.br/maps/place/Jacarezinho,+PR,+86400-000/@-23.1588226,-49.9858485,5590m/data=!3m1!1e3!4m5!3m4!1s0x94c026544d26f253:0xc66dac11dad56f73!8m2!3d-23.157939!4d-49.9777202" target="_blank">Jacarezinho, no Paraná</a>. De lá, saem 48 aviões que 
+                                distribuem nossos produtos às casas do mundo todo. Nosso centro de distribuição: 
+                        </p>
+                        
                         <figure>
                                 <img src="../img/centro-distribuicao.png" alt="Foto do centro de distribuição da Mirror Fashion"/>
                                 <figcaption>Centro de distribuição da Mirror Fashion</figcaption>
                         </figure>
 
-                        <p> Compre suas roupas e acessórios... </p>
-
-                        <h2> História </h2>
+                        <p> 
+                                Compre suas roupas e acessórios na <strong>Mirror Fashion</strong>. Acesse <a href="index.html">nossa loja</a> ou entre em contato 
+                                se tiver dúvidas. Conheça também nossa <a href="#historia">história</a> e nossos <a href="#diferenciais">diferenciais</a>. 
+                        </p>
+                        
+                        <h2 id="historia"> História </h2>
 
                         <figure>
                                 <img src="../img/familia-pelho.jpg" alt="Fot da Família pelho">
@@ -131,24 +177,32 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
                         </figure>
 
                         <p>
-                                A fundação em 1932 ocorreu no momento da descoberta econônica do interior do Paraná. A...
+                                A fundação em 1932 ocorreu no momento da descoberta econônica do interior do Paraná. A 
+                                família Pelho, tradicional da região, investiu todas as suas economias nessa nova iniciativa, 
+                                revolucionária para a época. O fundador <em>Eduardo Simões Pelho</em>, dotado de particular visão 
+                                administrativa, guiou os negócios da empresa durante mais de 50 anos, muitos deles ao lado 
+                                de seu filho <em>E. S. Pelho Filho</em>, atual CEO. O nome da empresa é inspirado no nome da família.
                         </p>
 
                         <p>
-                                O crescimento da empresa foi praticamente instantâneo. Nos primeiros 5 anos, já atendia 18 países...
+                                O crescimento da empresa foi praticamente instantâneo. Nos primeiros 5 anos, já atendia 18 países. 
+                                Bateu a marca de 100 países em apenas 15 anos de existência. Até hoje, já atendeu 740 milhões 
+                                de usuários diferentes, em bilhões de diferentes pedidos.
                         </p>
 
                         <p>
                                 O crescimento em número de funcionários é também assombroso. Hoje, é a maior empregadora do 
-                                Brasil, ...
+                                Brasil, mas mesmo após apenas 5 anos de sua existência, já possuía 30 mil funcionários. Fora do 
+                                Brasil, há 240 mil funcionários, além dos 890 mil brasileiros nas instalações de Jacarezinho e 
+                                nos escritórios em todo país.
                         </p>
 
                         <p>
                                 Dada a importância econômica da empresa para o Brasil, a família Pelho já recebeu diversos prêmios, 
-                                homenagens e ...
+                                homenagens e condecorações. Todos os presidentes do Brasil já visitaram as instalações da <strong>Mirror Fashion </strong>, além de presidentes da União Européia, Ásia e o secretário-geral da ONU.
                         </p>
 
-                        <h2>Diferenciais</h2>
+                        <h2 id="diferenciais">Diferenciais</h2>
 
                         <ul>
                                 <li>Menor preço do varejo, garantido</li>
@@ -161,9 +215,11 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
                                 <li>Mais de um milhão de funcionários em todo o mundo</li>
                         </ul>
 
+                        <div><strong>Compre já em nossa loja!</strong></div>
+
                         <footer>
-                        <img src="../img/logo-rodape.png" alt="Logo da Mirror Fashion"/> 
-                        &copy; Copyright Mirror Fashion
+                                <img src="../img/logo-rodape.png" alt="Logo da Mirror Fashion"/> 
+                                &copy; <em>Copyright Mirror Fashion</em>
                         </footer>
                 </body>
         </html>
@@ -202,7 +258,7 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
                         width:400px;
                         border: 1px solid white;
                         padding: 50px; (respiro interno)
-                        margin: 60px; (respiro externo) => não acrescenta tamanho ao elemento.
+                        margin: 60px; (respiro externo)
                 }
 
                                           width 400px
@@ -218,10 +274,10 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
                         -------------------------------------------------
                                           
 
-                                tamanho total do item: 902px x 502px
+                                tamanho total do item: 1022px x 622px
                                 
 
-(Somamos: width or height + padding + border. A margin empurra o elementos que estão a volta mas não acrescenta tamanho ao elemnto)
+                        (Somamos: width or height + padding + border + margin)
 
 
 
@@ -259,17 +315,28 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
 
         -color: cor da letra;
 
-        -border: 1px solid #000000 [tamanho, tipo e cor = em px, boda solid (sólida - contínua) e a cor preta (borda de qualquer elemento);
+        -border: 1px solid #000000 [tamanho, tipo e cor = em px, boda solid (sólida - contínua) e a cor preta (borda de qualquer elemento); EX: dashed, dotted, double, groove, etc.
         
         - E ainda é possível dizer onde queremos essa linha: se left, right, top or bottom. Caso não seja especificado, quer dizer que a borda será em tudo];
 
-        -text-align: center - alinhamento do texto (center - centralizado)* No nosso primiero caso aplicamos a tag <figure>, porém dentro dela temos além de um texto na <figcaption>, uma <img> e neste caso podemos considerar a img como texto também (como contéudo) e com isso, (a proprieadade sendo aplicada na tag pai), tudo o que estiver dentro (as tags filho) serão alteradas;
+        -text-align: center - alinhamento do texto (center - centralizado)* No nosso primiero caso aplicamos a tag <figure>, porém dentro dela temos além de um texto na <figcaption>, uma <img> e neste caso podemos considerar a img como texto também (como contéudo) e com isso, (a proprieadade sendo aplicada na tag pai), tudo o que estiver dentro (as tags filho) serão alteradas; EX: left, right, justify.
 
         -font-family: "Lucida Sans Unicode","LucidaGrande", Arial, sans-serif; (familia da fonte - Aqui, colocamos outras opções caso não haja aquela determinada fonte instalada na máquina do usuário) e por fim colocamos a sans-serif que ficaria como "qualquer fonte sem serifa";
 
+                >serif: c/serifa = Times; (padrão de vários navegadores)
+                >sans-serif: s/ serifa = Helvética;
+                >monospace: com largura fixa = courier;
+
         -font-style: italic - estilo da fonte (itálico);
 
-        -text-indent: (só afeta o texto, como o seu prefixo mostra) adicionamos o parágrafo daquele que dáriamos com o tab quando estamos escrevendo no word ou no papel, quando a professora nos ensina no primário que um bom espaço para o parágrafo é colocar um dedo no início da folha da esquerda pra direita, marca um pontinho e começa a escrever daquele ponto. A doferença com o text-indent é que esse espaço, o colocamos em px, cm, ou em qualquer unidade de medida que vocẽ esteja usando para desenvolver a sua página;
+        -text-indent: (só afeta o texto, como o seu prefixo mostra) adicionamos o parágrafo daquele que dáriamos com o tab quando estamos escrevendo no word ou no papel, quando a professora nos ensina no primário que um bom espaço para o parágrafo é colocar um dedo no início da folha da esquerda pra direita, marca um pontinho e começa a escrever daquele ponto. A doferença com o text-indent é que esse espaço, o colocamos em px, cm, ou em qualquer unidade de medida que vocẽ esteja usando para desenvolver a sua página; (Tamanho da margem da primeira linha do texto.)
+
+                Ainda:
+                        -line-height: 3px; tamanho da altura de cada linha
+
+                        -letter-spacing: 3px; tamanho do espaço entre cada letra
+
+                        -word-spacing: 5px; tamanho do espaço entre cada palavra
 
         -width: largura [Quando você não define uma largura, ele (o elemento) ocupará toda a largura da página (o height ou ultilizará a altura do elemento ou se adaptará conforme o width)***];
 
@@ -281,7 +348,7 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
 
         -margin: respiro externo [auto: centralizará o elemento, pois ele atribui o mesmo valor de lado esquerdo para o lado direito (margin-left e margin-right). (Fica melhor de visualizar quando você define um valor para o width. Caso contrário, o margin se adaptará ao tamanho da sua tela.) Contudo, o margin auto funciona com 3 regras: display, width e margin. Assim ele funcionará direitinho (no nosso exemplo, usamos a div. Por padrão a div já é em display: block)]
 
-                > margin: 10px [aplica em todas as direções];
+                > margin: 10px [aplica em todas as direções]; (shorthand property - propriedade taquigráfica)
                 > margin-top: 10px [aplica só no topo] (ainda podemos definir especificamente para right, bottom e left.)
                 > margin: 10px 11px 12px 13px [estamo fazendo a forma resumida e a ordem é 10px - top, 11px - right, 12px - bottom e 13px - left.]
                 > margin: 10px 15px [será a plicado assim: 10px top e bottom / 15px right e left]
@@ -301,9 +368,62 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
         -padding: respiro interno [idem margin** (Quase sempre)];
 
         -display: block (bloco. Utilizará o bloco da página toda** Isso poderá ter algumas diferenças.)
+        
 
+Seletores de tag, com "e"(,) e seltores filho:
+----------------------------------------------
+                (Explicação de ID e seletores)
 
+        Seletor de tag, como já diz o nome é para a tag. Veja que dessa forma aplicará para todas as tags iguais que houverem no texto.
 
+                h1{
+                background-color: red;
+                color: white;
+                width: 500px;
+                margin: auto;
+                text-align: center;
+                }
+
+        Seletor de tag com e = , (Dessa forma você aplicará os mesmos parâmetros para duas ou mais tags diferentes as separando por vígula e espaço).
+
+                h2, h3{
+                font-size: 20px;
+                margin-left: 400px;
+                }
+
+        Seletor de ID # (Damos uma identificação específica para um determinado elemento com #ID, ou seja apenas 1 elemento terá aquela config pois podemos colocar apenas um id por página.)
+
+                #email{
+                color: green;
+                }
+
+                #skype{
+                color: blue;
+                }
+
+        Seletor filho = com "espaço" (Temos a opção também de aplicar um seletor para uma tag filha, assim especificamos propriedades para aquele grupo de tags. Ou seja, caso no nosso footer tenha mais de uma tag <a> e queremos aplicar aquela config a todas as tags a do nosso footer, usamos a tag filha para passar os parâmetros. Isso funciona bem para não precisarmos ficar declarando um ID para cada coisa.)
+
+                footer a, footer p{
+                color: #fff;
+                text-decoration: none;
+                }
+
+        Tanto podemos ser mais especificos assim: "footer a strong" como com "footer strong" somente! tudo vai depender em que resultado você precisa chegar (A hierarquia não importa por exemplo se for uma tag "neta", basta que aquele strong esteja dentro de footer [mesmo que antes esteja dentro da tag<a>])
+
+                footer a strong{
+                color: #f00;
+                }
+
+                footer{
+                background-color: #000;
+                color: #fff;
+                width: 550px;
+                margin: auto;
+                text-align: center;
+                padding: 10px 0;
+                }
+
+=========================================
 
 body{
     width: 940px;
@@ -340,6 +460,16 @@ figcaption{
     font-style: italic;
     margin-top: 10px;
 }
+
+/* 
+div {
+    background-color: #dcdcf4;
+    color: #4560e2;
+    font-size: xx-large;
+    padding: 10px;
+    text-align: center;
+}
+ */
 
 
         Na explicação de margin-auto:
@@ -392,6 +522,45 @@ p{
         Na explicação de link:
         ----------------------
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link</title>
+</head>
+<body>
+    <a href="#primeiro">Primeiro</a>
+    <a href="#segundo">Segundo</a>
+    <a href="#terceiro">Terceiro</a>
+    <a href="sobre.html">Sobre</a>
+    <a href="https://twitter.com/marcobrunodev" target="_blank">Twitter MB</a>
+    
+
+        <h2 id="primeiro">Primeiro</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore... </p>
+        <h2 id="segundo">Segundo</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore... </p>
+        <h2 id="terceiro">Terceiro</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore... </p>
+
+
+========
+
+<!DOCTYPE html>
+        <html lang="pt-BR">
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sobre</title>
+        </head>
+        <body>
+        <h1>Sobre</h1>
+                <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto...
+                </p>
+        </body>
+        </html>
 
 -------------------------------------------
 
