@@ -1,11 +1,42 @@
-depois ensina a confiruar o eslint
- loading na tag img?
- resetar css
+Para começar a estudar um framework:
+Estudar:
+        - DOM
+        - ES6 do JS (arrow function, class, extends, const, metodo dentro de uma class, promisses acincaration)
+
+
+Pesquisar:
+        - ux researcher
+
+	- Interface Humano - Computador é o UX das antigas.
+
+        - confiruar o eslint
+
+        - loading na tag img?
+
+        - resetar css (o comportamento do css não funciona de forma padronizada para todos os navegadores, por isso, o que fazemos é o que chamamos de reset no css, ou seja, configuramos o css de jeito que ele irá fazer com que nosso site funcione igualmente independente do navegador que nos site será navegado.)
 
 IDEs = Integrated Development Environment 
 
+        HTML SEMÂNTICO = FACILIDADE DE MANUTENÇÃO, COMPREENSÃO DO DOCUMENTO, FACILITA ACESSIBIDADE (Progressive Enhancement*), AJUDA O SEO (técnica importante, Search Engine Optimization) => * Progressive enhancement é uma estratégia de desenvolvimento de páginas web com ênfase na acessibilidade, utilização de tags HTML semânticas, estilos CSS externos e JavaScript não obstrusivo. Nessa estratégia utilizam-se as tecnologias web em forma de camadas, permitindo que todos acessem o conteúdo básico de uma página independente de navegador e link de internet, porém, quanto maior o suporte às tecnologias visuais ou recursos mais recentes de navegação, mais rica é a experiência do usuário.
 
 
+UX/UI
+-----
+
+	UX Cursos para as pessoas que quer aprender: - Idealização - Analise de concorrencia - Pesquisa (UX research) - Sitemap e arquitetura da 		informação - Wireframes - Testes de usabilidade UI - Prototipação - Guia de Estilo - Motion design
+	
+	UX - Idealização - Analise de concorrencia - Pesquisa (UX research) - Sitemap e arquitetura da informação - Wireframes - Testes de 		usabilidade
+	
+	UI - Prototipação - Guia de Estilo - Motion design
+	
+Wireframes = esboço da visão da página (ele vai guiar o resto do processo do design). O que resulta desse trabalho que o designer desenvolve (Esse trabalho geralmente é desenvolvido por um designer ou alguém que seja formado em comunicação) em cada wireframe é chamado de LAYOUT. 
+
+Então basicamente o pessoal de UX já define as páginas, o conteúdo de cada uma delas e produz alguns Wireframes. Depois a equipe de design adiciona o visual desejado pela cliente como resultado final do projeto. E é onde entramos, onde transformamos esse layout em html.
+
+
+===>>> boa parte da segurança fica terceirizada, isto é : tirando boas praticas de segurança os servidores que hospedam seu conteudo é que vao garantir a maior parte da sua seguranca. desde hostigator ate AWS.
+
+===>>> O DevOps é como se fosse um arquiteto, ele sabe exatamente onde colocar as colunas para o "sistema" ser levantado e escalável.
 
 
 <html>
@@ -15,7 +46,9 @@ IDEs = Integrated Development Environment
         
         //(head e boddy são tags irmãs pois tem o mesmo nível hierarquico, sendo filhas da tag html)
         
-        <body></body>
+        <body>
+                Todo o conteúdo da página
+        </body>
 
 </html>
 
@@ -67,26 +100,6 @@ Usando as tags:
 
                 <h1> <h2> <h3> <h4> <h5> <h6> .h-heading 1 => foi criado o html para criar teses cientificas dentro da Web. * Não use até o h6 - Varie do h1 até no máximo h3. Você pode acabar atrapalhando a semântica do pág.
 
-===>>> Tags de ênfase:
-        <strong>Deixa o texto em negrito (de forma semantica)</strong>
-        <em>Deixa o texto em itálico (de forma semantica) - emphasis accentuated / (ênfase acentuada)</em>
-        <small>Deixa o texto menor que o padrão (de forma semantica)</small>
-
-===>>> Tudo o que for conteúdo, colocamos denro da tag <body>
-===>>> Porém, precisamos dar um nome para a página para que ele fique visível ao usuário, para que ele saiba em qual página está navegando. Colocamos assim a tag <title> (Ficará na aba do documento ou será exibido na barra de título)
-
-                >>> (A baixo veremos a construção do nosso site) <<<
-
-===>>> Alguns navegadores não conseguem entender as acentuções (ã, ç, à, ü, ô, etc). Então, a partir de uma tabela que já existe, nos add as configs dela na nossa página para que o texto fique correto. Colocamos a tag <meta charset="UTF-8"/> .meta-metadados / #charset = char: caracteres e set: definir (característica, parâmetro ou config) (charset ou encoding = conf da codificação de caracteres) / "UTF-8"-valor (definimos qual é a tabela de caracteres) (UTF-8 = Unicode)
-*** TAG> ATRIBUTO> VALOR *** (Não tem tag de fechamento porque não tem conteúdo.)
-
-===>>> tag que add imagens: <img src="../img/logo.png"/" alt="Logo da marca Mirror Fashion"/> .img-imagem / #src-source (caminho)/ "entre aspas, o local onde está a imagem, o endereço dela." (../ volta uma pasta) / Para deixar a imagem acessível para deficientes visuais momentâneo, parcial ou total, colocamos o atributo "alt" e nele fazemos uma descrição da imagem.
-
-===>>> Colocamos a tag figcaption para colocar a legenda da imagem (muitas pessoas colocam a tag <p> de forma genérica mas para o html5 foi criada essa rag própria para as legendas)
-
-??? E se nós tivessemos mais de uma imagem? Como eu sei que aquela legenda é daquela figura em específico?
-
-envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (semânticamente) que aquela legenda representa sobre aquela exata imagem.
 
 ===>>> Quando colocamos a tag <!DOCTYPE html> estamos informando ao navegador que o tipo do nosso arquivo é um arquivo do tipo html na sua ultima versão de uso. (E por isso que ela tem que ficar na primiera linha pois é assim que o navegador entenderá de cara qual é a versão que estamos usando.) (indica para o navegador qual versão ele deve usar para rendereizar a página.)
 
@@ -96,7 +109,29 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
 
 ===>>> Na tag <html> colocamos o atributo lang (linguagem) que assim, nessa tag global, indicamos em que idioma o site está sendo escrito. (com o valor "pt-BR", pois está em português.)
 
-===>>> colocamos uma tag <link> para usarmos o css fora do html e ficaria assim: <link rel="stylesheet" href="../css/style.css"> rel - relation (relacionado ao que: ao valor "stylesheet" que é o estilo do css) e href - é o local do endereço de onde se encontra o arquivo css que eu estou criando
+===>>> head (cabeça) = tudo o que for de conf da página.
+
+===>>> Porém, precisamos dar um nome para a página para que ele fique visível ao usuário, para que ele saiba em qual página está navegando. Colocamos assim a tag <title> (Ficará na aba do documento ou será exibido na barra de título) [tag semantica]
+
+===>>> Alguns navegadores não conseguem entender as acentuções (ã, ç, à, ü, ô, etc). Então, a partir de uma tabela que já existe, nos add as configs dela na nossa página para que o texto fique correto. Colocamos a tag <meta charset="UTF-8"/> .meta-metadados / #charset = char: caracteres e set: definir (característica, parâmetro ou config) (charset ou encoding = conf da codificação de caracteres) / "UTF-8"-valor (definimos qual é a tabela de caracteres) (UTF-8 = Unicode)
+*** TAG> ATRIBUTO> VALOR *** (Não tem tag de fechamento porque não tem conteúdo.)
+
+===>>> colocamos uma tag <link> para usarmos o css fora do html e ficaria assim: <link rel="stylesheet" href="../css/style.css"> rel - relation (relacionado ao que: ao valor "stylesheet" que é o estilo do css) e href - é o local do endereço de onde se encontra o arquivo css que eu estou criando.
+
+===>>> body (corpo) = Tudo o que for conteúdo colocamos dentro dessa tag [tag semantica]
+
+===>>> Tags de ênfase:
+        <strong>Deixa o texto em negrito (de forma semantica)</strong>
+        <em>Deixa o texto em itálico (de forma semantica) - emphasis accentuated / (ênfase acentuada)</em>
+        <small>Deixa o texto menor que o padrão (de forma semantica)</small>
+
+===>>> tag que add imagens: <img src="../img/logo.png"/" alt="Logo da marca Mirror Fashion"/> .img-imagem / #src-source (caminho)/ "entre aspas, o local onde está a imagem, o endereço dela." (../ volta uma pasta) / Para deixar a imagem acessível para deficientes visuais momentâneo, parcial ou total, colocamos o atributo "alt" e nele fazemos uma descrição da imagem. (alt quer dizer contéudo alternativo - alternative)
+
+===>>> Colocamos a tag figcaption para colocar a legenda da imagem (muitas pessoas colocam a tag <p> de forma genérica mas para o html5 foi criada essa rag própria para as legendas)
+
+??? E se nós tivessemos mais de uma imagem? Como eu sei que aquela legenda é daquela figura em específico?
+
+envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (semânticamente) que aquela legenda representa sobre aquela exata imagem.
 
 ===>>> Listas:
 
@@ -109,7 +144,7 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
 
 (===>>> Tag div não tem semantica)
 
-===>> tags <div> e <span> são como coringas quando não sabemos com o que abrir o "início do algo" que queremos fazer. Não tem nenhum significado especial, podem servir para agrupar conteúdos (por padrão eles não tem estilo css nenhum.)
+===>> tags <div> e <span> são como coringas quando não sabemos com o que abrir o "início do algo" que queremos fazer. Não tem nenhum significado especial, podem servir para agrupar conteúdos para que eu possa alterar o seu comportamento nesse grupo (por padrão eles não tem estilo css nenhum.) [diferente das tags header e footer que tem valor semantico.] Então a div é apenas uma "divisão". [tag não tem semantica]
 
 ===>>> Lorem cria um conteúdo gigante, caso você precise de um texto de exemplo
 
@@ -128,10 +163,41 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
 ===>>> id = identification (identificação) - não podemos usar nenhum id igual ao outro. Serve para identificar um elemento específico: <h2>. Mas qual h2? então adicionamos o atributo id a tag e assim saberemos que aquele h2 específico terá uma diferença em relação aos outros. <h2 id="primeiro"> (tipo org da página)
 (não podemos repetir na página)
 
-===>>> header (cabeçalho)
+        ===>>> Então quando usar id e quando usar class?? Id sempre será único por página. A classe facilita o reuso de código e flexibilidade. Um elemento pode ter mais de uma classe ao mesmo tempo, por exemplo: 
 
-===>>> footer (rodapé)
+                <nav class="menu-opcoes menu-cabecalho">
+                ...
+                </nav>
 
+                no CSS
+                ------
+                .menu-opcoes {
+                        // código
+                        // regras serão aplicadas ao nav
+                }
+                
+                .menu-cabecalho{
+                        // código
+                        // Essas regras também serão aplicadas ao nav
+                }
+
+                O que é recomendado é sempre tentar usar o máximo de seletor de class possível e menos de seletor de id ou de tag. No CSS a ordem de prioridade são os seletores que estão abaixo. 
+
+===>>> header (cabeçalho) [tag semantica]
+
+===>>> nav (navegation) = navegação (geralmente é onde fica aquele menu, menu hamburguer, etc) que fica dentro da tag header. [tag semantica] (Podemos ainda ter um menu nav secundário, onde daremos outro menu de navegação para o site, mas vai depender do que o site pede. Mas sim, é uma boa prática de prog ter um menu nav fora do header quando FOR NECESSÁRIO)        
+
+===>>> footer (rodapé) [tag semantica]
+
+                        >>> (A baixo veremos a construção do nosso site) <<<
+
+                INDEX.html
+                ----------
+
+        
+                
+                SOBRE.html
+                ----------
 
         <!DOCTYPE html>
         <html lang="pt-BR">
@@ -159,7 +225,7 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
                                 distribuem nossos produtos às casas do mundo todo. Nosso centro de distribuição: 
                         </p>
                         
-                        <figure>
+                        <figure id="centro-de-distribuicao">
                                 <img src="../img/centro-distribuicao.png" alt="Foto do centro de distribuição da Mirror Fashion"/>
                                 <figcaption>Centro de distribuição da Mirror Fashion</figcaption>
                         </figure>
@@ -215,12 +281,12 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
                                 <li>Mais de um milhão de funcionários em todo o mundo</li>
                         </ul>
 
-                        <div><strong>Compre já em nossa loja!</strong></div>
+                        <div id="compra"><strong>Compre já em nossa loja!</strong></div>
 
-                        <footer>
-                                <img src="../img/logo-rodape.png" alt="Logo da Mirror Fashion"/> 
+                        <div id="rodape">
+                                <img src="img/logo.png" alt="Logo da Mirror Fashion"/> 
                                 &copy; <em>Copyright Mirror Fashion</em>
-                        </footer>
+                        </div>
                 </body>
         </html>
 
@@ -455,13 +521,23 @@ figure{
     margin: 30px;
 }
 
+#centro-de-distribuicao{
+    width: 550px;
+    margin: 0 auto;
+}
+
+#familia-pelho {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+
 figcaption{
     font-style: italic;
     margin-top: 10px;
 }
 
 /* 
-div {
+#compra {
     background-color: #dcdcf4;
     color: #4560e2;
     font-size: xx-large;
@@ -469,6 +545,18 @@ div {
     text-align: center;
 }
  */
+
+ #rodape {
+    color: #777777;
+    margin: 30px 0;
+    padding: 30px 0;
+}
+
+#rodape img {
+    margin-right: 30px;
+    vertical-align: middle;
+    width: 94px;
+}
 
 
         Na explicação de margin-auto:
@@ -542,6 +630,114 @@ p{
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore... </p>
         <h2 id="terceiro">Terceiro</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore... </p>
+
+
+        Na explicação de ID e Seletores:
+        --------------------------------
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicação seletor de ID e filho</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Contato</h1>
+        <a href="index.html">Home</a>
+        <p>Entre em contato conosco:</p>
+    </header>
+
+    <h2 id="email">Email:</h2>
+
+    <h2 id="skype">Skype:</h2>
+
+    <h3>Exemplo do e no css</h3>
+        <p>
+            O "e" será reprentado pela virgula (Veja no css nas tags h2 e h3 e p)
+        </p>
+
+    <footer>
+        <a href="https://twitter.com/marcobrunodev" target="_blank"><strong>Twitter</strong> Marco Bruno</a> | 
+        <a href="https://twitch.com/marcobrunodev" target="_blank"><strong>Twitch</strong> Marco Bruno</a>
+        <p>exemplo do seletor filho + ,</p>
+    </footer>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <header>
+        <h1>Home</h1>
+        <a href="contato.html">Contato</a>
+    </header>
+</body>
+</html>
+
+
+/* Seletor de tag*/
+
+h1{
+    background-color: red;
+    color: white;
+    width: 500px;
+    margin: auto;
+    text-align: center;
+}
+
+/* seletor de tag com e = , */
+
+h2, h3{
+    font-size: 20px;
+    margin-left: 400px;
+}
+
+/* Seletor de ID # */
+
+#email{
+    color: green;
+}
+
+#skype{
+    color: blue;
+}
+
+/* Seletor filho = com "espaço" */
+
+footer a, footer p{
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Tanto podemos ser mais especificos assim: "footer a strong" como com "footer strong" somente! tudo vai depender em que resultado você precisa chegar*/
+
+footer a strong{
+    color: #f00;
+}
+
+footer{
+    background-color: #000;
+    color: #fff;
+    width: 550px;
+    margin: auto;
+    text-align: center;
+    padding: 10px 0;
+}
+
 
 
 ========
