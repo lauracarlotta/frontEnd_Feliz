@@ -712,8 +712,194 @@ li {
         Na explicação de display:
         --------------------------------------------------------------------
 
+        >>> Block:
+            ------
+
+    O display block tem as seguintes caracateristicas:
+
+        - USA A LINHA TODA;
+        - A ALTURA É DEFINIDA PELO CONTEÚDO;
+        - PODEMOS CONFIG WIDTH;
+        - PODEMOS CONFIG HEIGHT;
+        - NÃO DÁ PRA COLOCAR UM ELEMENTO DO LADO*; (até dá mas dá um trabalhinho)
+
+    Algumas tags já tem por padrão o display block, por exemplo a div que estamos usando como exemplo.
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicação do Display: Block</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="quadrado primeiro">Primeiro</div>
+    <div class="quadrado segundo">Segundo</div>
+    <div class="quadrado terceiro">Terceiro</div>
+</body>
+</html>
 
 
+.quadrado {
+    display: block; /* a div já tem por padrão o display block */
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+.primeiro {
+    background-color: #ff0000;
+}
+
+.segundo {
+    background-color: #00ff00;
+}
+
+.terceiro {
+    background-color: #0000ff;
+}
+
+
+
+
+
+        >>> Inline:
+            -------
+
+    O display Inline tem as seguintes caracateristicas:
+
+        - LARGURA E ALTURA SÃO DEFINIDAS PELO CONTEÚDO;
+        - OS ELEMENTOS FICAM UM DO LADO DO OUTRO;
+        - NÃO CONSEGUIMOS CONFIG WIDTH; 
+        - NÃO CONSEGUIMOS CONFIG HEIGHT;
+        (Caso coloquemos width e height o próprio VSCode já nos apresenta o erro, pois no display inline, não conseguimos configurar a propriedade.)
+        - COMPORTAMENTO DE PALAVRAS; (Tendo o comportamento de palavras, o espaço e o enter funcionam nessa propriedade da mesma forma - deixam um espaço entre as divs - e caso queiramos deixar as divs sem espaços - literalmente um do lado do outro, bem coladinho -  podemos comentar os espaços ou enters no html que funcionará.)
+
+        - Temos outro exemplo: um aluno deu outro exemplo com o word-spacing na tag pai (class .paragrafo) com -5px e depois na class .quadrado voltando o word-spacing pra normal. [DESCOMENTAMOS NO HTML]
+
+
+
+    > EXEMPLO 1 (MARCO BRUNO):
+    --------------------------
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicação do Display: Inline</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div>
+        <div class="quadrado primeiro">Primeiro</div><!--
+     --><div class="quadrado segundo">Segundo</div><!--
+     --><div class="quadrado terceiro">Terceiro</div>
+    </div>
+
+    <p>
+        Primeiro
+        Segundo
+        Terceiro
+    </p>
+</body>
+</html>
+
+
+
+.quadrado {
+    display: inline; /* tem o comportamento de palavra */
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.primeiro {
+    background-color: #ff0000;
+}
+
+.segundo {
+    background-color: #00ff00;
+}
+
+.terceiro {
+    background-color: #0000ff;
+}
+
+
+    > EXEMPLO 2 (ALUNO):
+    --------------------------
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicação do Display: Inline</title>
+    <link rel="stylesheet" href="index2.css">
+</head>
+<body>
+    <!-- Um aluno na live deu outro exemplo com o word-spacing na tag pai (class .paragrafo) com -5px configurando no css. -->
+    
+    <div class="paragrafo">
+        <div class="quadrado primeiro">Primeiro quadrado que eu fiz</div>
+        <div class="quadrado segundo">Segundo</div>
+        <div class="quadrado terceiro">Terceiro</div>
+    </div>
+
+    <p>
+        Primeiro
+        Segundo
+        Terceiro
+    </p>
+</body>
+</html>
+
+
+
+
+/* um aluno deu outro exemplo com o word-spacing na tag pai (class .paragrafo) com -5px */
+
+.paragrafo {
+    word-spacing: -5px;
+}
+
+.quadrado {
+    display: inline; /* tem o comportamento de palavra */
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    padding: 5px;
+    word-spacing: normal;
+}
+
+.primeiro {
+    background-color: #ff0000;
+}
+
+.segundo {
+    background-color: #00ff00;
+}
+
+.terceiro {
+    background-color: #0000ff;
+}
+
+
+
+
+        >>> Inline-Block:
+            -------------
+
+
+
+==========================================================================================================
 
         Na explicação de link:
         --------------------------------------------------------------------
