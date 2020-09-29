@@ -9,16 +9,19 @@ h1 {
     background-image:url(../img/sobre-background.jpg);
     color: #000000;
     padding: 10px;
+    margin-bottom: 10px;
 }
 
 h2 {
     border-bottom: 1px solid #333333;
-    margin-top: 30px;
+    margin: 20px 0;
+
 }
 
 p {
     padding: 0 45px;
     text-indent: 15px;
+    margin: 10px 0;
 }
 
 figure {
@@ -44,12 +47,21 @@ figcaption {
     margin-top: 10px;
 }
 
+ul {
+    list-style-type: circle;
+}
+
+li {
+    text-indent: 50px;
+}
+
 #compra {
     background-color: #dcdcf4;
     color: #4560e2;
     font-size: xx-large;
     padding: 10px;
     text-align: center;
+    margin-top: 20px;
 }
 
 #rodape {

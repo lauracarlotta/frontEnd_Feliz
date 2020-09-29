@@ -2,7 +2,7 @@ Para começar a estudar um framework:
 Estudar:
         - DOM
         - ES6 do JS (arrow function, class, extends, const, metodo dentro de uma class, promisses acincaration)
-
+        - Ajax
 
 Pesquisar:
         - ux researcher
@@ -13,7 +13,7 @@ Pesquisar:
 
         - loading na tag img?
 
-        - resetar css (o comportamento do css não funciona de forma padronizada para todos os navegadores, por isso, o que fazemos é o que chamamos de reset no css, ou seja, configuramos o css de jeito que ele irá fazer com que nosso site funcione igualmente independente do navegador que nos site será navegado.)
+        
 
 IDEs = Integrated Development Environment 
 
@@ -163,6 +163,9 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
 ===>>> id = identification (identificação) - não podemos usar nenhum id igual ao outro. Serve para identificar um elemento específico: <h2>. Mas qual h2? então adicionamos o atributo id a tag e assim saberemos que aquele h2 específico terá uma diferença em relação aos outros. <h2 id="primeiro"> (tipo org da página)
 (não podemos repetir na página)
 
+
+===>>> Quando você usa um css escalável, reutilizavel, bonito, etc não será feito com id e sim com class, ele te dará essa versatilidade.
+
         ===>>> Então quando usar id e quando usar class?? Id sempre será único por página. A classe facilita o reuso de código e flexibilidade. Um elemento pode ter mais de uma classe ao mesmo tempo, por exemplo: 
 
                 <nav class="menu-opcoes menu-cabecalho">
@@ -189,7 +192,11 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
 
 ===>>> footer (rodapé) [tag semantica]
 
-                        >>> (A baixo veremos a construção do nosso site) <<<
+
+
+                        >>> (A baixo veremos a construção do nosso site) <<<    (HTML)
+==========================================================================================================
+
 
                 INDEX.html
                 ----------
@@ -199,102 +206,168 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
                 SOBRE.html
                 ----------
 
-        <!DOCTYPE html>
-        <html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
+    
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>A Mirror Fashion</title>
+        <link rel="stylesheet" href="css/sobre.css">
+    </head>
 
-                <head>
-                        <meta charset="UTF-8"/>
-                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                        <title> A Mirror Fashion</title>
-                        <link rel="stylesheet" href="../css/style.css">
-                </head>
+    <body>
 
-                <body>
-                        <img src="../img/logo.png"/" alt="Logo da marca Mirror Fashion"/>
+        <img src="../img/logo.png" alt="Logo da marca Mirror Fashion">
+        
+        <h1>A Mirror Fashion</h1>
+        
+        <p>
+            A <strong>Mirror Fashion</strong> é a maior empresa comércio eletrônico no segmento de moda em todo o mundo. 
+            Fundada em 1932, possui filiais em 124 países, sendo líder de mercado com mais de 90% de 
+            participação em 118 deles.
+        </p>
+        
+        <p> 
+            Nosso centro de distribuição fica em <a href="https://www.google.com.br/maps/place/Jacarezinho,+PR,+86400-000/@-23.1588226,-49.9858485,5590m/data=!3m1!1e3!4m5!3m4!1s0x94c026544d26f253:0xc66dac11dad56f73!8m2!3d-23.157939!4d-49.9777202" target="_blank">Jacarezinho, no Paraná</a>. De lá, saem 48 aviões que 
+            distribuem nossos produtos às casas do mundo todo. Nosso centro de distribuição: 
+        </p>
+        
+        <figure id="centro-de-distribuicao">
+            <img src="../img/centro-distribuicao.png" alt="Foto do centro de distribuição da Mirror Fashion"/>
+            <figcaption>Centro de distribuição da Mirror Fashion</figcaption>
+        </figure>
 
-                        <h1>A Mirror Fashion</h1>
+        <p> 
+            Compre suas roupas e acessórios na <strong>Mirror Fashion</strong>. Acesse <a href="index.html">nossa loja</a> ou entre em contato 
+            se tiver dúvidas. Conheça também nossa <a href="#historia">história</a> e nossos <a href="#diferenciais">diferenciais</a>. 
+        </p>
+        
+        <h2 id="historia"> História </h2>
 
-                        <p>
-                                A <strong>Mirror Fashion</strong> é a maior empresa comércio eletrônico no segmento de moda em todo o mundo. 
-                                Fundada em 1932, possui filiais em 124 países, sendo líder de mercado com mais de 90% de 
-                                participação em 118 deles. 
-                        </p>
-                        
-                        <p> 
-                                Nosso centro de distribuição fica em <a href="https://www.google.com.br/maps/place/Jacarezinho,+PR,+86400-000/@-23.1588226,-49.9858485,5590m/data=!3m1!1e3!4m5!3m4!1s0x94c026544d26f253:0xc66dac11dad56f73!8m2!3d-23.157939!4d-49.9777202" target="_blank">Jacarezinho, no Paraná</a>. De lá, saem 48 aviões que 
-                                distribuem nossos produtos às casas do mundo todo. Nosso centro de distribuição: 
-                        </p>
-                        
-                        <figure id="centro-de-distribuicao">
-                                <img src="../img/centro-distribuicao.png" alt="Foto do centro de distribuição da Mirror Fashion"/>
-                                <figcaption>Centro de distribuição da Mirror Fashion</figcaption>
-                        </figure>
+        <figure id="familia-pelho">
+            <img src="../img/familia-pelho.jpg" alt="Fot da Família pelho">
+            <figcaption>Família Pelho</figcaption>
+        </figure>
 
-                        <p> 
-                                Compre suas roupas e acessórios na <strong>Mirror Fashion</strong>. Acesse <a href="index.html">nossa loja</a> ou entre em contato 
-                                se tiver dúvidas. Conheça também nossa <a href="#historia">história</a> e nossos <a href="#diferenciais">diferenciais</a>. 
-                        </p>
-                        
-                        <h2 id="historia"> História </h2>
+        <p>
+            A fundação em 1932 ocorreu no momento da descoberta econônica do interior do Paraná. A 
+            família Pelho, tradicional da região, investiu todas as suas economias nessa nova iniciativa, 
+            revolucionária para a época. O fundador <em>Eduardo Simões Pelho</em>, dotado de particular visão 
+            administrativa, guiou os negócios da empresa durante mais de 50 anos, muitos deles ao lado 
+            de seu filho <em>E. S. Pelho Filho</em>, atual CEO. O nome da empresa é inspirado no nome da família.
+        </p>
 
-                        <figure>
-                                <img src="../img/familia-pelho.jpg" alt="Fot da Família pelho">
-                                <figcaption>Família Pelho</figcaption>
-                        </figure>
+        <p>
+            O crescimento da empresa foi praticamente instantâneo. Nos primeiros 5 anos, já atendia 18 países. 
+            Bateu a marca de 100 países em apenas 15 anos de existência. Até hoje, já atendeu 740 milhões 
+            de usuários diferentes, em bilhões de diferentes pedidos.
+        </p>
 
-                        <p>
-                                A fundação em 1932 ocorreu no momento da descoberta econônica do interior do Paraná. A 
-                                família Pelho, tradicional da região, investiu todas as suas economias nessa nova iniciativa, 
-                                revolucionária para a época. O fundador <em>Eduardo Simões Pelho</em>, dotado de particular visão 
-                                administrativa, guiou os negócios da empresa durante mais de 50 anos, muitos deles ao lado 
-                                de seu filho <em>E. S. Pelho Filho</em>, atual CEO. O nome da empresa é inspirado no nome da família.
-                        </p>
+        <p>
+            O crescimento em número de funcionários é também assombroso. Hoje, é a maior empregadora do 
+            Brasil, mas mesmo após apenas 5 anos de sua existência, já possuía 30 mil funcionários. Fora do 
+            Brasil, há 240 mil funcionários, além dos 890 mil brasileiros nas instalações de Jacarezinho e 
+            nos escritórios em todo país.
+        </p>
 
-                        <p>
-                                O crescimento da empresa foi praticamente instantâneo. Nos primeiros 5 anos, já atendia 18 países. 
-                                Bateu a marca de 100 países em apenas 15 anos de existência. Até hoje, já atendeu 740 milhões 
-                                de usuários diferentes, em bilhões de diferentes pedidos.
-                        </p>
+        <p>
+            Dada a importância econômica da empresa para o Brasil, a família Pelho já recebeu diversos prêmios, 
+            homenagens e condecorações. Todos os presidentes do Brasil já visitaram as instalações da <strong>Mirror Fashion </strong>, além de presidentes da União Européia, Ásia e o secretário-geral da ONU.
+        </p>
 
-                        <p>
-                                O crescimento em número de funcionários é também assombroso. Hoje, é a maior empregadora do 
-                                Brasil, mas mesmo após apenas 5 anos de sua existência, já possuía 30 mil funcionários. Fora do 
-                                Brasil, há 240 mil funcionários, além dos 890 mil brasileiros nas instalações de Jacarezinho e 
-                                nos escritórios em todo país.
-                        </p>
+        <h2 id="diferenciais">Diferenciais</h2>
 
-                        <p>
-                                Dada a importância econômica da empresa para o Brasil, a família Pelho já recebeu diversos prêmios, 
-                                homenagens e condecorações. Todos os presidentes do Brasil já visitaram as instalações da <strong>Mirror Fashion </strong>, além de presidentes da União Européia, Ásia e o secretário-geral da ONU.
-                        </p>
+        <ul>
+            <li>Menor preço do varejo, garantido</li>
+            <li>Se você achar uma loja mais barata, leva o produto de graça</li>
+            <li>Pague em reais, dólares, euros ou bitcoins</li>
+            <li>Todas as compras com frete grátis para o mundo todo</li>
+            <li>Maior comércio eletrônico de moda do mundo</li>
+            <li>Atendimento via telefone, email, chat, twitter, facebook, carta, fax e telegrama</li>
+            <li>Presente em 124 países</li>
+            <li>Mais de um milhão de funcionários em todo o mundo</li>
+        </ul>
 
-                        <h2 id="diferenciais">Diferenciais</h2>
+        <div id="compra"><strong>Compre já em nossa loja!</strong></div>
 
-                        <ul>
-                                <li>Menor preço do varejo, garantido</li>
-                                <li>Se você achar uma loja mais barata, leva o produto de graça</li>
-                                <li>Pague em reais, dólares, euros ou bitcoins</li>
-                                <li>Todas as compras com frete grátis para o mundo todo</li>
-                                <li>Maior comércio eletrônico de moda do mundo</li>
-                                <li>Atendimento via telefone, email, chat, twitter, facebook, carta, fax e telegrama</li>
-                                <li>Presente em 124 países</li>
-                                <li>Mais de um milhão de funcionários em todo o mundo</li>
-                        </ul>
+        <div id="rodape">
+            <img src="img/logo.png" alt="Logo da Mirror Fashion"/> 
+            &copy; <em>Copyright Mirror Fashion</em>
+        </div>
 
-                        <div id="compra"><strong>Compre já em nossa loja!</strong></div>
+    </body>
+</html>
 
-                        <div id="rodape">
-                                <img src="img/logo.png" alt="Logo da Mirror Fashion"/> 
-                                &copy; <em>Copyright Mirror Fashion</em>
-                        </div>
-                </body>
-        </html>
 
+
+
+==========================================================================================================
 
 
                         *** CSS ***
 
-                        (seletor > propriedade > valor)
+
+- resetar css [reset css] (o comportamento do css não funciona de forma padronizada para todos os navegadores, por isso, o que fazemos é o que chamamos de reset no css, ou seja, configuramos o css de jeito que ele irá fazer com que nosso site funcione igualmente independente do navegador que nos site será navegado.)
+
+        Podemos usar arquivos prontos que já existe na internet, por exemplo esse abaixo que foi tirado do site https://meyerweb.com/eric/tools/css/reset/
+
+                /* http://meyerweb.com/eric/tools/css/reset/ 
+                v2.0 | 20110126
+                License: none (public domain)
+                */
+
+                html, body, div, span, applet, object, iframe,
+                h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+                a, abbr, acronym, address, big, cite, code,
+                del, dfn, em, img, ins, kbd, q, s, samp,
+                small, strike, strong, sub, sup, tt, var,
+                b, u, i, center,
+                dl, dt, dd, ol, ul, li,
+                fieldset, form, label, legend,
+                table, caption, tbody, tfoot, thead, tr, th, td,
+                article, aside, canvas, details, embed, 
+                figure, figcaption, footer, header, hgroup, 
+                menu, nav, output, ruby, section, summary,
+                time, mark, audio, video {
+                        margin: 0;
+                        padding: 0;
+                        border: 0;
+                        font-size: 100%;
+                        font: inherit;
+                        vertical-align: baseline;
+                }
+                /* HTML5 display-role reset for older browsers */
+                article, aside, details, figcaption, figure, 
+                footer, header, hgroup, menu, nav, section {
+                        display: block;
+                }
+                body {
+                        line-height: 1;
+                }
+                ol, ul {
+                        list-style: none;
+                }
+                blockquote, q {
+                        quotes: none;
+                }
+                blockquote:before, blockquote:after,
+                q:before, q:after {
+                        content: '';
+                        content: none;
+                }
+                table {
+                        border-collapse: collapse;
+                        border-spacing: 0;
+                }
+
+        { Ele funcionará muito bem para site pequenos, porém, para sites maiores, mais complexos ou com mais recursos, podemos usar o "Normalize". }
+
+        === >>> Usar o reset css é basicamente obrigatório.
+
+
+                CSS => (seletor > propriedade > valor)
+                -------------------------------------- 
 
         Agora, vamos estilizar a página:
 
@@ -379,6 +452,54 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
 
         -background-image: url() coloca uma imagem no fundo e seu valor será sua url (seu end.);
 
+                Quando usar img no html e no css??? Temos que verificar primeiramente qual a semantica da imagem. O que queremos dizer com isso: O que a imagem representa pra nós? Ela apresenta contéudo ou é apenas uma reprensentação visual? Um exemplo seria o logo de uma empresa. Esse seria o primeiro elemento que estamos vendo, seria uma assosciação com a marca entre várias outras infomações que podemos colher 
+        
+        -background-repeat: no-repeat; por padão o navegador repete a imagem e assim configuramos ela para não tenha repetição e sim uma imagem só.
+
+        -background-position: top right; /* x = horizontal, y = vertical */
+
+                
+                                           | y (+)
+                                           |
+                                           |
+                                           |
+                                           |
+                                           |
+               (-) ________________________|_____________________ x (+)
+                                          0|
+                                           |
+                                           |
+                                           |
+                                           |
+                                           |
+                                           |
+                                           | (-)
+
+                (Este é o plano cartesiano que ja conhecemos)
+
+                Porém, o eixo do computador funciona de forma diferente:
+
+                _________________________________________________
+                |navegador                                      |
+                |_______________________________________________|
+                |                                               |
+                |  0____________________________________ x (+)  |
+                |  | y (-)                                      |
+                |  |                                            |        
+                |  |                                            |
+                |  |                                            |
+                |  |                                            |
+                |  |                                            |
+                |  |                                            | 
+                |  | y (+)                                      |
+                |_______________________________________________|
+
+                O eixo 0 fica no topo, a esquerda. O x é o eixo horizontal também porém, o eixo y trabalha a vertical de forma diferente:
+                        - se colocarmos negativo, o elemento sobe (ficando mais próximo ao topo)
+                        - se colocarmos positivo, o elemento desce (ficando mais próximo do rodapé)
+
+                        Ainda podemos utilizar palavras para movimentar nos nossos eixos (top, right, bottom, left e center sendo sempre dois valores: um pra x [horizontal] e outro pra y [vertical])
+
         -color: cor da letra;
 
         -border: 1px solid #000000 [tamanho, tipo e cor = em px, boda solid (sólida - contínua) e a cor preta (borda de qualquer elemento); EX: dashed, dotted, double, groove, etc.
@@ -435,85 +556,104 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
 
         -display: block (bloco. Utilizará o bloco da página toda** Isso poderá ter algumas diferenças.)
 
-Seletores de tag, com "e"(,) e seltores filho:
-----------------------------------------------
-                (Explicação de ID e seletores)
 
-        Seletor de tag, como já diz o nome é para a tag. Veja que dessa forma aplicará para todas as tags iguais que houverem no texto.
 
-                h1{
-                background-color: red;
-                color: white;
-                width: 500px;
-                margin: auto;
-                text-align: center;
-                }
+                        >>> (A baixo veremos a construção do nosso site) <<<    (CSS)
+===================================================================================================================
 
-        Seletor de tag com e = , (Dessa forma você aplicará os mesmos parâmetros para duas ou mais tags diferentes as separando por vígula e espaço).
+                RESET.css
+                ---------
 
-                h2, h3{
-                font-size: 20px;
-                margin-left: 400px;
-                }
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-        Seletor de ID # (Damos uma identificação específica para um determinado elemento com #ID, ou seja apenas 1 elemento terá aquela config pois podemos colocar apenas um id por página.)
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
-                #email{
-                color: green;
-                }
+        ====>>> basicamente o reset.css, serve para desconfigurar as configs padrões que já vem nos browsers. Em seguida eu aplico as minhas configs (de como eu quero que fique o layout da minha página), assim todas as esperiencias em browsers diferentes ficaram com o mesmo resultado. 
 
-                #skype{
-                color: blue;
-                }
 
-        Seletor filho = com "espaço" (Temos a opção também de aplicar um seletor para uma tag filha, assim especificamos propriedades para aquele grupo de tags. Ou seja, caso no nosso footer tenha mais de uma tag <a> e queremos aplicar aquela config a todas as tags a do nosso footer, usamos a tag filha para passar os parâmetros. Isso funciona bem para não precisarmos ficar declarando um ID para cada coisa.)
 
-                footer a, footer p{
-                color: #fff;
-                text-decoration: none;
-                }
 
-        Tanto podemos ser mais especificos assim: "footer a strong" como com "footer strong" somente! tudo vai depender em que resultado você precisa chegar (A hierarquia não importa por exemplo se for uma tag "neta", basta que aquele strong esteja dentro de footer [mesmo que antes esteja dentro da tag<a>])
+                INDEX.css
+                ---------
 
-                footer a strong{
-                color: #f00;
-                }
 
-                footer{
-                background-color: #000;
-                color: #fff;
-                width: 550px;
-                margin: auto;
-                text-align: center;
-                padding: 10px 0;
-                }
 
-=========================================
+                SOBRE.css
+                ---------
 
-body{
+
+body {
     width: 940px;
     color: #333333;
     font-family: "Lucida Sans Unicode","LucidaGrande", Arial, sans-serif;
     margin: 0 auto;
 }
 
-h1{
+h1 {
     background-image:url(../img/sobre-background.jpg);
     color: #000000;
     padding: 10px;
+    margin-bottom: 10px;
 }
 
-h2{
+h2 {
     border-bottom: 1px solid #333333;
-    margin-top: 30px;
+    margin: 20px 0;
+
 }
 
-p{
+p {
     padding: 0 45px;
     text-indent: 15px;
+    margin: 10px 0;
 }
 
-figure{
+figure {
     background-color:#f2eded;
     text-align: center;
     border: 1px solid #cecece;
@@ -521,7 +661,7 @@ figure{
     margin: 30px;
 }
 
-#centro-de-distribuicao{
+#centro-de-distribuicao {
     width: 550px;
     margin: 0 auto;
 }
@@ -531,22 +671,29 @@ figure{
     margin: 0 0 10px 10px;
 }
 
-figcaption{
+figcaption {
     font-style: italic;
     margin-top: 10px;
 }
 
-/* 
+ul {
+    list-style-type: circle;
+}
+
+li {
+    text-indent: 50px;
+}
+
 #compra {
     background-color: #dcdcf4;
     color: #4560e2;
     font-size: xx-large;
     padding: 10px;
     text-align: center;
+    margin-top: 20px;
 }
- */
 
- #rodape {
+#rodape {
     color: #777777;
     margin: 30px 0;
     padding: 30px 0;
@@ -559,55 +706,17 @@ figcaption{
 }
 
 
-        Na explicação de margin-auto:
-        -----------------------------
+                >>>>>>>> EXPLICAÇÕES <<<<<<<<
+==========================================================================================================
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explicação Margin-Auto</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div>
-        First => Aprendendo o Margin-Auto
-    </div>
-
-    <p>
-        Aprendendo o text-indent </br></br>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ad dolor nostrum pariatur quos error veniam quibusdam illo, iusto repellendus, temporibus nisi sunt ullam, id maxime corrupti doloribus sed laboriosam!
-    </p>
-</body>
-</html>
-
-=======
-
-body{
-    color: #fff;
-    background-color: #000;
-}
-
-div{
-    font-size: 30px;
-    background-color: rgb(138, 22, 22);
-    display: block;
-    width: 500px;
-    margin: auto; /* ou margin: 0 auto; */
-    text-align: center;
-}
-
-p{
-    font-size: 20px;
-    text-indent: 20px;
-}
+        Na explicação de display:
+        --------------------------------------------------------------------
 
 
 
 
         Na explicação de link:
-        ----------------------
+        --------------------------------------------------------------------
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -632,8 +741,60 @@ p{
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore... </p>
 
 
+
+==========================================================================================================
+
+
+        Na explicação de margin-auto:
+        ---------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicação Margin-Auto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        First => Aprendendo o Margin-Auto
+    </div>
+
+    <p>
+        Aprendendo o text-indent </br></br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ad dolor nostrum pariatur quos error veniam quibusdam illo, iusto repellendus, temporibus nisi sunt ullam, id maxime corrupti doloribus sed laboriosam!
+    </p>
+</body>
+</html>
+
+-----------
+
+body{
+    color: #fff;
+    background-color: #000;
+}
+
+div{
+    font-size: 30px;
+    background-color: rgb(138, 22, 22);
+    display: block;
+    width: 500px;
+    margin: auto; /* ou margin: 0 auto; */
+    text-align: center;
+}
+
+p{
+    font-size: 20px;
+    text-indent: 20px;
+}
+
+
+==========================================================================================================
+
+
         Na explicação de ID e Seletores:
-        --------------------------------
+        ----------------------------------------------------------------------
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -669,6 +830,7 @@ p{
 </body>
 </html>
 
+-------------
 
 <!DOCTYPE html>
 <html lang="pt-BR">
@@ -688,6 +850,7 @@ p{
 </body>
 </html>
 
+--------------------
 
 /* Seletor de tag*/
 
@@ -738,24 +901,106 @@ footer{
     padding: 10px 0;
 }
 
+==========================================================================================================
 
 
-========
+        Seletores de tag, com "e"(,) e seltores filho:
+        ----------------------------------------------------------------------
+
+        (Explicação de ID e seletores)
+
+Seletor de tag, como já diz o nome é para a tag. Veja que dessa forma aplicará para todas as tags iguais que houverem no texto.
+
+        h1{
+        background-color: red;
+        color: white;
+        width: 500px;
+        margin: auto;
+        text-align: center;
+        }
+
+Seletor de tag com e = , (Dessa forma você aplicará os mesmos parâmetros para duas ou mais tags diferentes as separando por vígula e espaço).
+
+        h2, h3{
+        font-size: 20px;
+        margin-left: 400px;
+        }
+
+Seletor de ID # (Damos uma identificação específica para um determinado elemento com #ID, ou seja apenas 1 elemento terá aquela config pois podemos colocar apenas um id por página.)
+
+        #email{
+        color: green;
+        }
+
+        #skype{
+        color: blue;
+        }
+
+Seletor filho = com "espaço" (Temos a opção também de aplicar um seletor para uma tag filha, assim especificamos propriedades para aquele grupo de tags. Ou seja, caso no nosso footer tenha mais de uma tag <a> e queremos aplicar aquela config a todas as tags a do nosso footer, usamos a tag filha para passar os parâmetros. Isso funciona bem para não precisarmos ficar declarando um ID para cada coisa.)
+
+        footer a, footer p{
+        color: #fff;
+        text-decoration: none;
+        }
+
+Tanto podemos ser mais especificos assim: "footer a strong" como com "footer strong" somente! tudo vai depender em que resultado você precisa chegar (A hierarquia não importa por exemplo se for uma tag "neta", basta que aquele strong esteja dentro de footer [mesmo que antes esteja dentro da tag<a>])
+
+        footer a strong{
+        color: #f00;
+        }
+
+        footer{
+        background-color: #000;
+        color: #fff;
+        width: 550px;
+        margin: auto;
+        text-align: center;
+        padding: 10px 0;
+        }
+
+
+==========================================================================================================
+
+        Na explicação de seletores, class, id e tag:
+        ----------------------------------------------------------------------
 
 <!DOCTYPE html>
-        <html lang="pt-BR">
-        <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sobre</title>
-        </head>
-        <body>
-        <h1>Sobre</h1>
-                <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto...
-                </p>
-        </body>
-        </html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Explicação seletores- class, id e tag</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p class="base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, adipisci.</p>
+    <p class="destaque base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, adipisci.</p>
+    <p class="base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, adipisci.</p>
+    <p class="base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, adipisci.</p>
+    <p class="destaque">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, adipisci.</p>
+    <p class="base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, adipisci.</p>
+    <p class="base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, adipisci.</p>
+    <p class="destaque">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, adipisci.</p>
+    <p class="base">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, adipisci.</p>
+</body>
+</html>
+
+
+----------
+
+
+.base {
+    font-size: 40px;
+    color: #ff0000;
+}
+
+.destaque {
+    color: #00ff00;
+}
+
+
+
+
 
 -------------------------------------------
 
