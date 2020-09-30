@@ -1,0 +1,42 @@
+.quadrado {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.primeiro {
+    background-color: #ff0000;
+    position: static; /* fica estático, não faz nada. "O Fred na copa de 2014" kkkkk */
+    left: 10px; /* não acontece nada!
+    /*  left: 10px; eixo x
+        x right: 10px;
+        bottom: 20px; eixo y
+        x top: 40px;
+        */
+}
+
+.segundo {
+    background-color: #00ff00;
+    position: relative;
+    left: 10px; /* vai empurrar para a direita 
+    bottom: 15px;
+    /* position relative usa a posição de onde o elemento foi criado (se usarmos valores negativos ele irá mudar para o lado contrário como se tivesse um eixo) */
+}
+
+.terceiro {
+    background-color: #0000ff;
+    position: absolute; /* Referente a tela */
+    top: 20px;
+    left: 160px;
+}
+
+.quarto {
+    background-color: #ff00ff;
+}
+
+.interna {
+    background-color: #000000;
+    color: #ffffff;    
+}

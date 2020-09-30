@@ -141,10 +141,12 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
         unordered list: lista não-ordenada <ul>
                 (não existe hierarquia de impostancia)
                 <li> list item - item da lista
+    (a <li> tem por padrão o valor block para a proprieadade display. Se quisermos que a lista fique na horizontal, devemos colocá-lo com o valor inline)
+
 
 (===>>> Tag div não tem semantica)
 
-===>> tags <div> e <span> são como coringas quando não sabemos com o que abrir o "início do algo" que queremos fazer. Não tem nenhum significado especial, podem servir para agrupar conteúdos para que eu possa alterar o seu comportamento nesse grupo (por padrão eles não tem estilo css nenhum.) [diferente das tags header e footer que tem valor semantico.] Então a div é apenas uma "divisão". [tag não tem semantica]
+===>> tags <div> (divisão) [comportamento padrão = display:block] e <span> (marcação de atributos) [comportamento padrão = display: inline] são como coringas quando não sabemos com o que abrir o "início do algo" que queremos fazer. Não tem nenhum significado especial, podem servir para agrupar conteúdos para que eu possa alterar o seu comportamento nesse grupo (por padrão eles não tem estilo css nenhum.) [diferente das tags header e footer que tem valor semantico.] Então a div é apenas uma "divisão". [tag não tem semantica]
 
 ===>>> Lorem cria um conteúdo gigante, caso você precise de um texto de exemplo
 
@@ -516,6 +518,8 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
 
         -font-style: italic - estilo da fonte (itálico);
 
+        -font-size: tamanho da fonte;
+
         -text-indent: (só afeta o texto, como o seu prefixo mostra) adicionamos o parágrafo daquele que dáriamos com o tab quando estamos escrevendo no word ou no papel, quando a professora nos ensina no primário que um bom espaço para o parágrafo é colocar um dedo no início da folha da esquerda pra direita, marca um pontinho e começa a escrever daquele ponto. A doferença com o text-indent é que esse espaço, o colocamos em px, cm, ou em qualquer unidade de medida que vocẽ esteja usando para desenvolver a sua página; (Tamanho da margem da primeira linha do texto.)
 
                 Ainda:
@@ -554,7 +558,20 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
 
         -padding: respiro interno [idem margin** (Quase sempre)];
 
+        -display: é a forma de como o conteúdo vai se comportar.
+        
         -display: block (bloco. Utilizará o bloco da página toda** Isso poderá ter algumas diferenças.)
+
+        -display: inline (em linha. O conteúdo passa a se comportar como texto*)
+
+        -position: static (posição: estática - static é o valor default da position. será a referencia de onde ele foi criado. É o padrão da propriedade)[pode ser usado também quando queremos tirar um comportamento anterior. Ex: Caso eu tenha colocado o position: absolute no mobile e para o desktop euq não quero mais aquele comportamento. seria a mesma coisa que usar o unset.]
+
+        -position: relative (relativo - onde ele foi criado quando ele era static. Então caso queiramos usar o left, right, top e bottom vai usar a referencia de quando ele era static. ex: left: 10px - Iremos empurrar 10px para a direita.)
+        [se usarmos valores negativos ele irá mudar para o lado contrário como se tivesse um eixo]
+        o valor padrão do left é auto, que assim passamos a resposabilidade para o browser. (não é zero! Zero seria parecido mais não é igual!! NÃO CONFUNDA!!)
+
+        -position: absolute (funciona da seguinte maneira: o elemento x que recebe o position absolute sai do contexto do eixo y e passa para um outro contexto, um contexto novo a frente de tudo e todos. Todos os outros elementos que estão na tela ocupam o espaço daquele elemento x. *CASO TENHA DÚVIDA VALE LEMBRAR DA EXPLICAÇÃO DO MARCO BRUNO COM AS PEÇAS LEGO, ONDE É COMO SE VIRASSEMOS O BROWSER E CONSEGUISSEMOS VER OS ELEMENTOS DE PERFIL*)
+        {O position absolute deixa seu contexto vago e cria um novo contexto na mesma camada.}
 
 
 
@@ -974,6 +991,16 @@ p{
     font-size: 20px;
     text-indent: 20px;
 }
+
+
+
+==========================================================================================================
+
+
+        Na explicação de Position:
+        ----------------------------------------------------------------------
+
+
 
 
 ==========================================================================================================

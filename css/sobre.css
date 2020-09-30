@@ -5,23 +5,56 @@ body {
     margin: 0 auto;
 }
 
-h1 {
+.sacola {
+    background-image: url(../img/sacola.png);
+    background-repeat: no-repeat;
+    background-position: right top; /* x = horizontal, y = vertical */
+        
+        font-size: 14px;
+        padding-top: 8px;
+        padding-right: 35px;
+        text-align: right;
+        width: 140px;
+}
+
+.menu-opcoes ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.mirror-fashion-h1 {
     background-image:url(../img/sobre-background.jpg);
     color: #000000;
     padding: 10px;
-    margin-bottom: 10px;
+    margin: 10px 0;
+    font-size: x-large;
+    font-style: italic;
 }
 
 h2 {
+    font-size: large;
     border-bottom: 1px solid #333333;
     margin: 20px 0;
 
 }
 
 p {
+    font-size: 16px;
     padding: 0 45px;
     text-indent: 15px;
     margin: 10px 0;
+}
+
+a {
+    color: #036;
+}
+
+strong {
+    font-weight: bolder;
+}
+
+em {
+    font-style: italic;
 }
 
 figure {
@@ -47,7 +80,7 @@ figcaption {
     margin-top: 10px;
 }
 
-ul {
+.diferencas {
     list-style-type: circle;
 }
 
