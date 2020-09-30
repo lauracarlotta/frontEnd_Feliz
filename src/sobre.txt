@@ -573,7 +573,7 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
         -position: absolute (funciona da seguinte maneira: o elemento x que recebe o position absolute sai do contexto do eixo y e passa para um outro contexto, um contexto novo a frente de tudo e todos. Todos os outros elementos que estão na tela ocupam o espaço daquele elemento x. *CASO TENHA DÚVIDA VALE LEMBRAR DA EXPLICAÇÃO DO MARCO BRUNO COM AS PEÇAS LEGO, ONDE É COMO SE VIRASSEMOS O BROWSER E CONSEGUISSEMOS VER OS ELEMENTOS DE PERFIL*)
         {O position absolute deixa seu contexto vago e cria um novo contexto na mesma camada.}
 
-
+teste
 
                         >>> (A baixo veremos a construção do nosso site) <<<    (CSS)
 ===================================================================================================================
