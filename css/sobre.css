@@ -1,8 +1,8 @@
 body {
-    width: 940px;
     color: #333333;
-    font-family: "Lucida Sans Unicode","LucidaGrande", Arial, sans-serif;
+    font-family: "Lucida Sans Unicode","Lucida Grande", Arial, sans-serif;
     margin: 0 auto;
+    width: 926px; /* diferença */
 }
 
 header {
@@ -12,15 +12,23 @@ header {
 .sacola {
     background-image: url(../img/sacola.png);
     background-repeat: no-repeat;
-    background-position: right top; /* x = horizontal, y = vertical */
+    background-position: right top; 
+        
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 0px; /* diferença */
+        right: 0px; /* diferença */
         font-size: 14px;
         padding-top: 8px;
         padding-right: 35px;
         text-align: right;
         width: 140px;
+}
+
+.menu-opcoes ul {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 16px;
 }
 
 .menu-opcoes ul li {

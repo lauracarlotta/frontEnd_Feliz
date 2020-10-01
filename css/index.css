@@ -1,24 +1,23 @@
-body{
-    color: #333;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+body {
+    color: #333333;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, sans-serif;
+    margin: 0 auto;
+    width: 940px; /* diferença */
 }
 
 header {
     position: relative;
-}
 
-.container {
-    margin: 0 auto;
-    width: 940px;
 }
 
 .sacola {
     background-image: url(../img/sacola.png);
     background-repeat: no-repeat;
     background-position: right top; /* x = horizontal, y = vertical */
+        
         position: absolute;
-        top: 0px;
-        right: 0px;
+        top: 10px; /* diferença */
+        right: 14px; /* diferença */
         font-size: 14px;
         padding-top: 8px;
         padding-right: 35px;
@@ -29,7 +28,7 @@ header {
 .menu-opcoes ul {
     position: absolute;
     bottom: 0;
-    right: 0;
+    right: 14px;
     font-size: 16px;
 }
 
