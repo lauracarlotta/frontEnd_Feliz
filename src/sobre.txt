@@ -7,13 +7,13 @@ Estudar:
 Pesquisar:
         - ux researcher
 
-	- Interface Humano - Computador é o UX das antigas.
+	    - Interface Humano - Computador é o UX das antigas.
 
         - confiruar o eslint
 
         - loading na tag img?
 
-        
+RESPONSIVO: É quando você consegue atende a todos os tamanhos de tela, desde um celular até um desktop maior. (Dar suporte a todos os tamanhos de tela.)         
 
 IDEs = Integrated Development Environment 
 
@@ -564,6 +564,8 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
 
         -display: inline (em linha. O conteúdo passa a se comportar como texto*)
 
+as propriedades top, right, bottom e left (propriedades de coordenandas) são propriedades que posicionam os elementos na página, contudo, eleas não funcionam sem o position! (essa proprieadade determina qual é o posicionamento do elemento)
+
         -position: static (posição: estática - static é o valor default da position. será a referencia de onde ele foi criado. É o padrão da propriedade)[pode ser usado também quando queremos tirar um comportamento anterior. Ex: Caso eu tenha colocado o position: absolute no mobile e para o desktop euq não quero mais aquele comportamento. seria a mesma coisa que usar o unset.]
 
         -position: relative (relativo - onde ele foi criado quando ele era static. Então caso queiramos usar o left, right, top e bottom vai usar a referencia de quando ele era static. ex: left: 10px - Iremos empurrar 10px para a direita.)
@@ -571,9 +573,19 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
         o valor padrão do left é auto, que assim passamos a resposabilidade para o browser. (não é zero! Zero seria parecido mais não é igual!! NÃO CONFUNDA!!)
 
         -position: absolute (funciona da seguinte maneira: o elemento x que recebe o position absolute sai do contexto do eixo y e passa para um outro contexto, um contexto novo a frente de tudo e todos. Todos os outros elementos que estão na tela ocupam o espaço daquele elemento x. *CASO TENHA DÚVIDA VALE LEMBRAR DA EXPLICAÇÃO DO MARCO BRUNO COM AS PEÇAS LEGO, ONDE É COMO SE VIRASSEMOS O BROWSER E CONSEGUISSEMOS VER OS ELEMENTOS DE PERFIL*)
-        {O position absolute deixa seu contexto vago e cria um novo contexto na mesma camada.}
 
-teste
+            {left, right, bottom e top usam como referencia o navegador, a tela em si.}
+
+            {O position absolute deixa seu contexto vago e cria um novo contexto na mesma camada.} (Não mexe com o eixo z).
+
+            {O position absolute será aplicado independente da hierarquia. Por exemplo, se temos uma div dentro de outra div e precisarmos manipular a div interna, ela não respeitará a div pai, ficará em position absolute sobre o navegador também, ignorando a div pai. Caso queiramos que a div pai seja respeitada, podemos colocar o pai como position relative ou o pai tem que estar com a position diferente de static (pode estar com relative, absolute, fixed, não importa, a filha irá respeitar o pai.)}
+
+        -position: fixed (fixa - literalmente tem as propriedades do absolute, porém quando diminuimos o tamanho da página, o elemento fica fixo na tela quando damos o scroll ficará fixo o elemento.)
+
+            {O fixed respeita o pai somente se estiver SEM as propriedades top e bottom}
+
+
+
 
                         >>> (A baixo veremos a construção do nosso site) <<<    (CSS)
 ===================================================================================================================
@@ -999,6 +1011,158 @@ p{
 
         Na explicação de Position:
         ----------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicação do Position</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="quadrado primeiro">Primeiro</div>
+    <div class="quadrado segundo">Segundo</div>
+    <div class="quadrado terceiro">Terceiro</div>
+    <div class="quadrado quarto"> Quarto
+        <div class="quadrado interna">Interna</div>
+    </div>
+    <div class="quadrado quinto">Quinto</div>
+</body>
+</html>
+
+
+
+.quadrado {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    font-size: x-large;
+    font-weight: bolder;
+}
+
+.primeiro {
+    background-color: #ff0000;
+    position: static; /* fica estático, não faz nada. "O Fred na copa de 2014" kkkkk */
+    left: 10px; /* não acontece nada!
+    /*  left: 10px; eixo x
+        x right: 10px;
+        bottom: 20px; eixo y
+        x top: 40px;
+        */
+}
+
+.segundo {
+    background-color: #0000ff;
+    position: absolute; /* Referente a tela */
+    top: 50px;
+    left: 170px;
+}
+
+.terceiro {
+    
+    background-color: #00ff00;
+    position: relative;
+    left: 10px; /* vai empurrar para a direita 
+    bottom: 15px;
+    /* position relative usa a posição de onde o elemento foi criado (se usarmos valores negativos ele irá mudar para o lado contrário como se tivesse um eixo) */
+}
+
+.quarto {
+    background-color: #ff00ff;
+    position: absolute;
+    font-size: 10px;
+    padding: 10px;
+    
+}
+
+.interna {
+    background-color: #000000;
+    color: #ffffff; 
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+}
+
+.quinto {
+    background-color: #ffff00;
+    position: fixed; /* literalmente com as mesmas propriedades do absolute, porém quando damos o scroll, o elemento ficará fixo na tela ou mesmo só se diminuirmos a tela. */
+    top: 0;
+    right: 50px;
+}
+
+
+ex- apostila:
+-------------
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Ex-apostila: position</title>
+    <link rel="stylesheet" href="ex-apostila.css">
+</head>
+<body>
+    <div class="quadrado primeiro">Quadrado 1</div>
+    <div class="quadrado segundo">Quadrado 2</div>
+    <div class="quadrado terceiro">Quadrado 3 
+        <div class="quadrado interno">Quadrado interno</div>
+    </div>
+    <div class="quadrado quarto">Quadrado 4</div>
+</body>
+</html>
+
+
+
+.quadrado {
+    height: 200px;
+    width: 200px;
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: center;
+    padding: 10px;
+}
+
+.primeiro {
+    background-color: #ff0000;
+    position: static;
+}
+
+.segundo {
+    background-color: #00ff00;
+    position: relative;
+    left: 100px;
+    top: 20px;
+}
+
+.terceiro {
+    background-color: #0000ff;
+    position: absolute;
+    left: 400px;
+    top: 50px;
+}
+
+.interno {
+    background-color: #000000;
+    color: #fff;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.quarto {
+    background-color: #ffff00;
+    position: fixed;
+    top: 20px;
+    right: 50px;
+}
+
 
 
 

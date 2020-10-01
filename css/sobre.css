@@ -5,11 +5,17 @@ body {
     margin: 0 auto;
 }
 
+header {
+    position: relative;
+}
+
 .sacola {
     background-image: url(../img/sacola.png);
     background-repeat: no-repeat;
     background-position: right top; /* x = horizontal, y = vertical */
-        
+        position: absolute;
+        top: 0;
+        right: 0;
         font-size: 14px;
         padding-top: 8px;
         padding-right: 35px;

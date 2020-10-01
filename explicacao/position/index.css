@@ -18,6 +18,14 @@
 }
 
 .segundo {
+    background-color: #0000ff;
+    position: absolute; /* Referente a tela */
+    top: 50px;
+    left: 170px;
+}
+
+.terceiro {
+    
     background-color: #00ff00;
     position: relative;
     left: 10px; /* vai empurrar para a direita 
@@ -25,18 +33,27 @@
     /* position relative usa a posição de onde o elemento foi criado (se usarmos valores negativos ele irá mudar para o lado contrário como se tivesse um eixo) */
 }
 
-.terceiro {
-    background-color: #0000ff;
-    position: absolute; /* Referente a tela */
-    top: 20px;
-    left: 160px;
-}
-
 .quarto {
     background-color: #ff00ff;
+    position: absolute;
+    font-size: 10px;
+    padding: 10px;
+    
 }
 
 .interna {
     background-color: #000000;
-    color: #ffffff;    
+    color: #ffffff; 
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+}
+
+.quinto {
+    background-color: #ffff00;
+    position: fixed; /* literalmente com as mesmas propriedades do absolute, porém quando damos o scroll, o elemento ficará fixo na tela ou mesmo só se diminuirmos a tela. */
+    top: 0;
+    right: 50px;
 }
