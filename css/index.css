@@ -1,13 +1,64 @@
 body {
     color: #333333;
     font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, sans-serif;
-    margin: 0 auto;
-    width: 940px; /* diferença */
 }
 
 header {
     position: relative;
 
+}
+.container {
+    width: 940px;
+    margin: 0 auto;
+}
+
+.busca, .menu-departamentos {
+    background-color: #dcdcdc;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    margin-right: 10px;
+    width: 230px;
+    float: left;
+}
+
+.menu-departamentos {
+    clear: left;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+#search {
+    border-radius: 10px;
+    position: relative;
+    bottom: 7px;
+}
+
+#buscar {
+    position: relative;
+    bottom: 5px;
+
+}
+
+.busca h2, .busca form, .menu-departamentos h2 {
+    margin: 10px;
+    padding: 5px;
+}
+
+.busca input {
+    width: 150px;
+    margin-right: 10px;
+}
+
+.menu-departamentos li {
+    background-color: #fff;
+    margin: 1px;
+    padding: 5px 10px;
+}
+
+.menu-departamentos a {
+    color: #333333;
+    text-decoration: none;
 }
 
 .sacola {
@@ -39,4 +90,8 @@ header {
 
 .menu-opcoes a {
     color: #036;
+}
+
+.destaque {
+    margin-top: 10px;
 }

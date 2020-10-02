@@ -7,6 +7,9 @@
         <title>Home</title>
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/index.css">
+        <!--[if lt IE 9]>
+            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
     </head>
     
     <body>
@@ -27,6 +30,42 @@
 
         <div id="main">
             <!-- Principal -->
+            <div class="container destaque">
+                <section class="busca">
+                    <h2>Busca</h2>
+
+                    <form>
+                        <input id="search" type="search">
+                        <button id="buscar"><img src="img/busca.png" alt="Botão de pesquisar"></button>
+                    </form>
+                </section>
+                <!-- Fim da busca -->
+
+                <section class="menu-departamentos">
+                    <h2>Departamentos</h2>
+
+                    <nav>
+                        <ul>
+                            <li><a href="#">Blusas e Camisas</a></li>
+                            <li><a href="#">Calças</a></li>
+                            <li><a href="#">Saias</a></li>
+                            <li><a href="#">Vestidos</a></li>
+                            <li><a href="#">Sapatos</a></li>
+                            <li><a href="#">Bolsas e Carteiras</a></li>
+                            <li><a href="#">Acessórios</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <!-- Fim menu-departamentos -->
+
+                <section class="banner-destaque">
+                    <figure>
+                        <img src="img/destaque-home.png" alt="Promoção: Big City Night">
+                    </figure>
+                </section>
+                <!-- Fim do banner-destaque -->
+            </div>
+            <!-- Fim .contaneir .destaque -->
         </div>
 
         <div id="destaques">
