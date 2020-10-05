@@ -1,0 +1,27 @@
+.quadrado {
+    width: 200px;
+    height: 200px;
+    font-size: x-large;
+    font-weight: bolder;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+.primeiro {
+    background-color: #ff0000;
+    float: left;
+}
+
+.segundo {
+    background-color: #0000ff;
+    color: #ff0000;
+    float: left;
+}
+
+p {
+    background-color: #00ff0009;
+    font-size: 20px;
+    text-align: justify;
+    margin: 5px;
+}

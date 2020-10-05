@@ -209,7 +209,7 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
 
 ===>>> textarea (área de texto - geralmente usado nos forms para o usuário digitar um texto com as suas dúvidas, sugestões, reclamações, etc.)
 
-===>>> button (botão - geralmente usado apra cancelar ou limpar as infos, ou como botão secundário. nele gerelamente é usado JS)
+===>>> button (botão - geralmente usado apra cancelar ou limpar as infos, ou como botão secundário, dentro do form. Quando é usado fora do form, gerelamente é usado JS para algum efeito)
 
 
 ===>>> label - ajuda a acessibilidade do usuário para saber o que identificar (geralemte usado com o form) adicionamos o for no label para identificar o que estamos guardando precisamos de uma identidade única = id. Adicionamos um for no label e um id no input. Dessa forma, falamos para o navegador que x label está associado a x input. (o cursor fica focado) (Não necessariamente precisamos colocar o for. Se envolvermos a tag input no label, o navegador já entende que elas - label e input - estão associadas)Ex: 
@@ -624,7 +624,7 @@ as propriedades top, right, bottom e left (propriedades de coordenandas) são pr
 
             {O fixed respeita o pai somente se estiver SEM as propriedades top e bottom}
 
-
+        float: left / right (flutuante) [cria um novo contexto, parecido com o absolute mas é diferente. Nunca esconde o conteúdo (img e texto) nem os elementos inline e inline-block]
 
 
                         >>> (A baixo veremos a construção do nosso site) <<<    (CSS)
@@ -966,12 +966,78 @@ li {
         >>> Inline-Block:
             -------------
 
+==========================================================================================================
+
+
+        Na explicação de float:
+        ----------------------------------------------------------------------
+
 
 ==========================================================================================================
 
 
         Na explicação de Formulários:
         ----------------------------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicação sobre Formulários</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Contato: </h1>
+
+    <form>
+        <label for="nome">Nome:</label>
+        <input id="nome" type="text"> <br>
+            
+        <label>Telefone:
+            <input type="phone">
+        </label> <br>
+    
+        <label for="email">E-mail:</label>
+        <input id="email" type="email"> <br>
+    
+        <label for="msg">Mensagem:</label>
+        <textarea id="msg"> </textarea> <br>
+    
+        <input id="send" type="submit" value="Enviar"> <!-- é um input porque o usuário vai clicar no botão de enviar para salvar as infos preenchidas no form-->
+        <button id="cancel" type="reset">Cancelar</button>
+    </form>
+
+</body>
+</html>
+
+
+
+h1 {
+    text-shadow: 1px 1px 3px rgba(00, 00, 00, 0.5);
+}
+
+form {
+    margin: 10px;
+    padding: 10px;
+    border: solid 1px #000000;
+    box-shadow: 2px 2px 4px rgba(00, 00, 00, 0.5);
+    width: 400px;
+}
+
+input, textarea {
+    margin: 4px 0px;
+}
+
+#send {
+    position: relative;
+    right: -250px;
+}
+
+#cancel {
+    position: relative;
+    right: -260px;
+}
 
 
         
