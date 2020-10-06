@@ -626,6 +626,35 @@ as propriedades top, right, bottom e left (propriedades de coordenandas) são pr
 
         float: left / right (flutuante) [cria um novo contexto, parecido com o absolute mas é diferente. Nunca esconde o conteúdo (img e texto) nem os elementos inline e inline-block]
 
+        clear: left / right / both (juntamente usado com float para a flutuação de textos e imagens) - limpa o contexto. Ele irá verificar todos os contextos do float (ele é específico do float), e se tiver algum elementoflutuando a esuqerda, a direita ou ambos, ele limpa ess novo contexto e reage como era o padrão, que era o texto ficar embaixo.
+
+        overflow: hidden [hidden - escondida] (mantem o texto num quadrado ao invés de ir contornando todos os elementos da página. Por padrão, ele é overflow: visible, com o hidden mantem escondida e com o scroll, cria uma barra de rolagem para que você possa conseguir verificar todo o texto - Quando colocamos um width e um height fica mais fácil de entender. O navegador irá verificar se há algo nos contestos, conforme tenha - se não for dado valores de width e heght - ele mesmo irá colocar um tanho do texto e por isso, desse comportamento.)
+        {POR QUE ISSO ACONTECE? (Teoria de um dos internautas) Cria um scroll por causa do conteudo e por causa dos blocos que estão flutuando, e o <p> ocupa o lugar de origem. Já que tá flutuando não pode ficar em cima do conteúdo do <p>.} Mas na realidade a questão está referente ao comportamento do browser sobre o algoritmo que ele usa para renderizar a página.
+
+        inherit: herda do pai (No navegador p tem por padrão: 
+
+                p {
+                    color: inherit
+                } 
+
+        para o link é diferente: 
+        
+                a{
+                    color:blue
+                        click: purple
+                } */
+    body {
+        color: green;
+    }
+
+    a {
+        color: inherit; 
+    }
+
+    Então modificamos manualmente com o inherit, ou seja, dizemos a tag que herdará o mesmo valor sobre o pai daquela propriedade. Se a tag a estivesse envolvida em uma div, logo esta sendo a sua tag pai, o a respeitaria essa hierarquia de herança.
+
+
+
 
                         >>> (A baixo veremos a construção do nosso site) <<<    (CSS)
 ===================================================================================================================
@@ -973,6 +1002,73 @@ li {
         ----------------------------------------------------------------------
 
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicação de Float</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="quadrado primeiro">Primeiro</div>
+    <div class="quadrado segundo">Segundo</div>
+    <!-- <div class="quadrado terceiro">Terceiro</div> -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque sint iure sapiente sequi officiis eius dolorum ipsa quo soluta expedita iste provident fugit accusantium autem illum, laborum non. Dolore maiores laudantium dicta quae, possimus reprehenderit libero consectetur cum voluptates eaque voluptatibus, ipsa reiciendis incidunt amet necessitatibus omnis veniam placeat accusantium nulla ex? Distinctio corrupti modi necessitatibus, obcaecati aliquam repellat qui accusantium eius...
+    </p>
+    <!-- <p> é display: block, o conteúdo dentro do texto é display: inline -->
+</body>
+</html>
+
+
+
+body {
+    background-color: rgba(128, 128, 128, 0.212);
+}
+
+.quadrado {
+    width: 200px;
+    height: 200px;
+    font-size: x-large;
+    font-weight: bolder;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    opacity: .5;
+}
+
+.primeiro {
+    background-color: #ff0000;
+    /* float: left; */
+    margin-left: 12px;
+}
+
+.segundo {
+    background-color: #0000ff;
+    color: #ff0000;
+    float: left;
+    width: 100px;
+    height: 100px;
+}
+
+.terceiro {
+    background-color: #ffff00;
+    color: #ff0000;
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin-right: 12px;
+}
+
+p {
+    font-size: 20px;
+    text-align: justify;
+    margin: 0 8px;
+    clear: right;
+    overflow: hidden;
+}
+
+
 ==========================================================================================================
 
 
@@ -1039,6 +1135,74 @@ input, textarea {
     right: -260px;
 }
 
+
+==========================================================================================================
+
+
+        Na explicação de Inherit-Texto:
+        ----------------------------------------------------------------------
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text e inherit</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+        <div>
+            <a href="#">Laura Carlotta</a>
+        </div>
+        
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, ab amet veritatis aspernatur at nam sint, illum voluptas consequatur porro vitae, numquam et! Exercitationem, quaerat. Animi adipisci consequatur mollitia fugiat.
+        </p>
+        
+    </body>
+
+</html>
+
+
+
+body {
+    color: #0000ff;
+}
+
+div {
+    background-color: gray;
+    color: #ffffff;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    margin: auto;
+    margin-top: 10px;
+    padding-top: 15px;
+    vertical-align: middle;
+    
+}
+
+/* inherit: herda do pai */
+
+/* No navegador
+
+    p {
+        color: inherit
+    } 
+
+    para o link é diferente: 
+    a{
+        color:blue
+            click: purple
+    } */
+
+a {
+    color: inherit; /* Então modificamos manualmente */
+    
+}
 
         
 ==========================================================================================================

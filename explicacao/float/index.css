@@ -1,3 +1,7 @@
+body {
+    background-color: rgba(128, 128, 128, 0.212);
+}
+
 .quadrado {
     width: 200px;
     height: 200px;
@@ -6,22 +10,36 @@
     margin: 5px;
     padding: 10px;
     text-align: center;
+    opacity: .5;
 }
 
 .primeiro {
     background-color: #ff0000;
-    float: left;
+    /* float: left; */
+    margin-left: 12px;
 }
 
 .segundo {
     background-color: #0000ff;
     color: #ff0000;
     float: left;
+    width: 100px;
+    height: 100px;
+}
+
+.terceiro {
+    background-color: #ffff00;
+    color: #ff0000;
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin-right: 12px;
 }
 
 p {
-    background-color: #00ff0009;
     font-size: 20px;
     text-align: justify;
-    margin: 5px;
+    margin: 0 8px;
+    clear: right;
+    overflow: hidden;
 }
