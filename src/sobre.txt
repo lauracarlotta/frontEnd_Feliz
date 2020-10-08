@@ -134,7 +134,7 @@ tags que não existiam no html5:
         <em>Deixa o texto em itálico (de forma semantica) - emphasis accentuated / (ênfase acentuada)</em>
         <small>Deixa o texto menor que o padrão (de forma semantica)</small>
 
-===>>> tag que add imagens: <img src="../img/logo.png"/" alt="Logo da marca Mirror Fashion"/> .img-imagem / #src-source (caminho)/ "entre aspas, o local onde está a imagem, o endereço dela." (../ volta uma pasta) / Para deixar a imagem acessível para deficientes visuais momentâneo, parcial ou total, colocamos o atributo "alt" e nele fazemos uma descrição da imagem. (alt quer dizer contéudo alternativo - alternative)
+===>>> tag que add imagens: <img src="../img/logo.png"/" alt="Logo da marca Mirror Fashion"/> .img-imagem / #src-source (caminho)/ "entre aspas, o local onde está a imagem, o endereço dela." (../ volta uma pasta) / Para deixar a imagem acessível para deficientes visuais momentâneo, parcial ou total, colocamos o atributo "alt" e nele fazemos uma descrição da imagem. (alt quer dizer contéudo alternativo - alternative) => img por padrão já vem com display:inline-block;
 
 ===>>> Colocamos a tag figcaption para colocar a legenda da imagem (muitas pessoas colocam a tag <p> de forma genérica mas para o html5 foi criada essa rag própria para as legendas)
 
@@ -600,9 +600,11 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
 
         -display: é a forma de como o conteúdo vai se comportar.
         
-        -display: block (bloco. Utilizará o bloco da página toda** Isso poderá ter algumas diferenças.)
+        -display: block (bloco. Utilizará o bloco da página toda** Isso poderá ter algumas diferenças.) [*Veja as explicações*]
 
         -display: inline (em linha. O conteúdo passa a se comportar como texto*)
+
+        -display: inline-block (Junção dos comportamentos do inline+block)
 
 as propriedades top, right, bottom e left (propriedades de coordenandas) são propriedades que posicionam os elementos na página, contudo, eleas não funcionam sem o position! (essa proprieadade determina qual é o posicionamento do elemento)
 
@@ -654,6 +656,15 @@ as propriedades top, right, bottom e left (propriedades de coordenandas) são pr
     Então modificamos manualmente com o inherit, ou seja, dizemos a tag que herdará o mesmo valor sobre o pai daquela propriedade. Se a tag a estivesse envolvida em uma div, logo esta sendo a sua tag pai, o a respeitaria essa hierarquia de herança.
 
 
+        Unidades de Medida:
+
+            = Medidas absolutas: Unidades que não mudam nunca e que sabemos exatamente como funcionam (definidas pela física. Ex: pixel, cm, metro, etc.)
+
+            = 
+
+                - px:Unidade de medida de resolução (EX: quantos pixel uma imagem usa para se compor na tela = 1px - menor unidade de medida num dispositivo de resolução)
+
+                - %: Será referente ao seu pai. ou seja: se seu pai tem 500px, 100% dela será 500px (divisão em porcentagem da tela)
 
 
                         >>> (A baixo veremos a construção do nosso site) <<<    (CSS)
@@ -819,7 +830,7 @@ li {
         - A ALTURA É DEFINIDA PELO CONTEÚDO;
         - PODEMOS CONFIG WIDTH;
         - PODEMOS CONFIG HEIGHT;
-        - NÃO DÁ PRA COLOCAR UM ELEMENTO DO LADO*; (até dá mas dá um trabalhinho)
+        - NÃO DÁ PRA COLOCAR UM ELEMENTO DO LADO*; (até dá, mas dá um trabalhinho)
 
     Algumas tags já tem por padrão o display block, por exemplo a div que estamos usando como exemplo.
 
@@ -877,6 +888,8 @@ li {
         - COMPORTAMENTO DE PALAVRAS; (Tendo o comportamento de palavras, o espaço e o enter funcionam nessa propriedade da mesma forma - deixam um espaço entre as divs - e caso queiramos deixar as divs sem espaços - literalmente um do lado do outro, bem coladinho -  podemos comentar os espaços ou enters no html que funcionará.)
 
         - Temos outro exemplo: um aluno deu outro exemplo com o word-spacing na tag pai (class .paragrafo) com -5px e depois na class .quadrado voltando o word-spacing pra normal. [DESCOMENTAMOS NO HTML]
+
+        (Tanto o padding quanto o margin, para o display:inline tem um comportamento diferente: se houver um elemento com display:inline um embaixo do outro, o margin se sobreporá {se os elementos tiverem margens de valor igual (ex: 10px) a distancia entre elas não se tornará 20px, eles se sobreporão = o browser faz o que: tira 5px de um e 5 px de outro mantendo ainda os 10px iniciais})
 
 
 
@@ -994,6 +1007,324 @@ li {
 
         >>> Inline-Block:
             -------------
+
+
+    O display Inline tem as seguintes caracateristicas:
+
+        - OS ELEMENTOS FICAM UM DO LADO DO OUTRO (ficam na mesma linha);
+        - CONSEGUIMOS CONFIG WIDTH; 
+        - CONSEGUIMOS CONFIG HEIGHT;
+        - COMPORTAMENTO DE PALAVRA (Fica com os espaços. Caso eu queira retirar os espaços, eu posso comentar os espaços e enters como também posso apenas remover os enters que também dará certo. o jeito mais usado é comentar os espaços como está no nosso código.)
+
+            => Junção do Block+Inline
+            -------------------------
+
+        (Se dessemos só float: left para cada um deles já os deixariam inline - um do lado do outro [para divs] porém caso quisessemos colocar outros tipos de efeitos o float não permitiria por conta da config inicial que o mesmo possui.)
+
+
+Exemplo 1:
+----------
+
+    <!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Explicação display: inline-block</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+            <div class="quadrado primeiro">Primeiro</div><!--
+         --><div class="quadrado segundo">Segundo</div><!--  
+         --><div class="quadrado terceiro">Terceiro</div>
+    </body>
+
+</html>
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Explicação display: inline-block (Como era feito antes)</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+        <!-- Como era feito antes do surgimento do display: flex e sua família -->
+        <div class="pai"> <!-- Criavamos uma div pai e assim manipulavamos por ela -->
+            <div class="quadrado primeiro">Primeiro</div>
+            <div class="quadrado segundo">Segundo</div>
+            <div class="quadrado terceiro">Terceiro</div>
+            <div class="quadrado primeiro">Primeiro</div>
+            <div class="quadrado segundo">Segundo</div>
+            <div class="quadrado terceiro">Terceiro</div>
+            <div class="quadrado primeiro">Primeiro</div>
+            <div class="quadrado segundo">Segundo</div>
+            <div class="quadrado terceiro">Terceiro</div>
+            <div class="ultima">Ultima</div>
+        </div>
+
+        <p> <!-- div .pai tem o comportamento do p (texto) -->
+            Primeiro
+            Segundo
+            Terceiro
+            Primeiro
+            Segundo
+            Terceiro
+            Primeiro
+            Segundo
+            Terceiro
+        </p>
+
+        <p class="exemplo">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci debitis amet doloribus dolore, autem illo dolorum dolores error animi aperiam repudiandae beatae nesciunt voluptates? Harum sit dolorum animi tenetur nobis, voluptate quis beatae possimus odio eveniet, sunt et quas labore tempore repudiandae unde. Dolorum, porro a dolor ex neque eos quam atque nemo itaque laboriosam quis id eaque saepe repellendus nobis exercitationem. Nobis quibusdam et impedit placeat doloribus, quidem ut nemo dolorem harum velit illum accusamus sit provident, voluptas, eius rem. Deleniti assumenda maiores reprehenderit exercitationem repellat cumque, numquam laboriosam voluptas rerum doloribus, quidem, aliquid harum modi quibusdam quia dicta!
+        </p>
+    </body>
+
+</html>
+
+
+
+
+.pai {
+    text-align: justify; /* Comportamento de texto, por isso align-items e align-contents não funcionam */
+}
+
+.quadrado {
+    width: 200px;
+    height: 200px;
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    display: inline-block;
+}
+
+.primeiro {
+    background-color: #FFB900;
+}
+
+.segundo {
+    background-color: #0063B1;
+}
+
+.terceiro {
+    background-color: #00CC6A
+}
+
+.ultima { /* para fazermos a ultima linha ser sempre a ultima referente ao Justify, configuramos da seguinte maneira:  */
+    display: inline-block;
+    width: 100%; /* A porcentagem usa como referencia o tamanho do pai. Se o pai tem width 500px, 100% dela será de 500px */
+    background-color: #ffff00;
+    text-align: center;
+    /* visibility: hidden; */ /* 1ª opção */
+    /* opacity: 0; */ /* 2ª opção */
+    height: 0; /* 3ª opção, mas o texto continua aparecendo */
+    overflow: hidden; /* Para retirar o texto */
+}
+
+p {
+    color: #ff0000;
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: right;
+}
+
+.exemplo {
+    color: #000;
+    text-align: justify;
+}
+
+
+
+Exemplo 2:
+----------
+
+    <!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Explicação display: inline-block (Como era feito antes)</title>
+        <link rel="stylesheet" href="index2.css">
+    </head>
+
+    <body>
+        <!-- Como faríamos atualemente? Utilizando o flex! => veja no css -->
+        <div class="pai"> 
+            <div class="quadrado primeiro">Primeiro</div>
+            <div class="quadrado segundo">Segundo</div>
+            <div class="quadrado terceiro">Terceiro</div>
+        </div>
+
+        <p> <!-- div .pai tem o comportamento do p (texto) -->
+            Primeiro
+            Segundo
+            Terceiro
+        </p>
+
+        <p class="exemplo">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci debitis amet doloribus dolore, autem illo dolorum dolores error animi aperiam repudiandae beatae nesciunt voluptates? Harum sit dolorum animi tenetur nobis, voluptate quis beatae possimus odio eveniet, sunt et quas labore tempore repudiandae unde. Dolorum, porro a dolor ex neque eos quam atque nemo itaque laboriosam quis id eaque saepe repellendus nobis exercitationem. Nobis quibusdam et impedit placeat doloribus, quidem ut nemo dolorem harum velit illum accusamus sit provident, voluptas, eius rem. Deleniti assumenda maiores reprehenderit exercitationem repellat cumque, numquam laboriosam voluptas rerum doloribus, quidem, aliquid harum modi quibusdam quia dicta!
+        </p>
+    </body>
+
+</html>
+
+
+.pai {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.quadrado {
+    width: 200px;
+    height: 200px;
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 5px;
+    padding-top: 5px;
+}
+
+.primeiro {
+    background-color: #FFB900;
+}
+
+.segundo {
+    background-color: #0063B1;
+}
+
+.terceiro {
+    background-color: #00CC6A
+}
+
+p {
+    color: #ff0000;
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: right;
+}
+
+.exemplo {
+    color: #000;
+    text-align: justify;
+}
+
+
+
+Exemplo 3:
+----------
+
+    <!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Explicação display: inline-block (Como era feito antes)</title>
+        <link rel="stylesheet" href="index3.css">
+    </head>
+
+    <body>
+        <!-- E se os elementos tivessem tamanhos diferentes e quisessemos alinha-los de jeitos diferentes? Como configurariamos? -->
+        <div class="pai"> 
+            <div class="quadrado primeiro">Primeiro</div>
+            <div class="quadrado segundo">Segundo</div>
+            <div class="quadrado terceiro">Terceiro</div>
+            <div class="ultima">Ultima</div>
+        </div>
+
+        <p> <!-- div .pai tem o comportamento do p (texto) -->
+            Primeiro
+            Segundo
+            Terceiro
+            Primeiro
+            Segundo
+            Terceiro
+            Primeiro
+            Segundo
+            Terceiro
+        </p>
+
+        <p class="exemplo">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci debitis amet doloribus dolore, autem illo dolorum dolores error animi aperiam repudiandae beatae nesciunt voluptates? Harum sit dolorum animi tenetur nobis, voluptate quis beatae possimus odio eveniet, sunt et quas labore tempore repudiandae unde. Dolorum, porro a dolor ex neque eos quam atque nemo itaque laboriosam quis id eaque saepe repellendus nobis exercitationem. Nobis quibusdam et impedit placeat doloribus, quidem ut nemo dolorem harum velit illum accusamus sit provident, voluptas, eius rem. Deleniti assumenda maiores reprehenderit exercitationem repellat cumque, numquam laboriosam voluptas rerum doloribus, quidem, aliquid harum modi quibusdam quia dicta!
+        </p>
+    </body>
+
+</html>
+
+
+
+
+    .pai {
+    text-align: justify; /* Por padrão, essa propriedade alinha sob o valor do topo. */
+}
+
+.quadrado {
+    width: 200px;
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    display: inline-block;
+    vertical-align: middle; /* Funciona bem apenas para propriedades inline, as outras como float, por exemplo não funcionaria ou não funcionaria bem (funciona de boa para display: inline e inline-block ou ainda com dsplay:table ou cell que seria para comportamento de tabelas, pois o vertical-align foi criado para a manipulação de tabelas e para elementos que eram inline.) */
+}
+
+.primeiro {
+    background-color: #FFB900;
+    height: 200px;
+}
+
+.segundo {
+    background-color: #0063B1;
+    height: 400px;
+}
+
+.terceiro {
+    background-color: #00CC6A;
+    height: 150px;
+}
+
+.ultima {
+    display: inline-block;
+    width: 100%; 
+    background-color: #ffff00;
+    text-align: center;
+    height: 0; /* O height:0 + o overflow:hidden é para que o utlimo item não apareça */
+    overflow: hidden;
+}
+
+p {
+    color: #ff0000;
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: right;
+}
+
+.exemplo {
+    color: #000;
+    text-align: justify;
+}
+
+
+
+        
+        >>> Flex:
+            -----
+
+
+    O display Flex tem as seguintes caracateristicas:
+
+        - O elemento que ganha o display:flex também fica com o comportamento de bloco (block, parecido com o display:block. Porém conseguimos colocar "coisas" au lado. )
 
 ==========================================================================================================
 
@@ -1654,9 +1985,19 @@ Tanto podemos ser mais especificos assim: "footer a strong" como com "footer str
 
 
 
+==========================================================================================================
 
 
--------------------------------------------
+        Na explicação de Seletores de Atribuição:
+        ----------------------------------------------------------------------
+
+
+
+
+
+
+
+==========================================================================================================
 
 README.md
 

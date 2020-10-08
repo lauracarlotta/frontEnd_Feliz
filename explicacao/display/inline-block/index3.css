@@ -1,0 +1,50 @@
+.pai {
+    text-align: justify; /* Por padrão, essa propriedade alinha sob o valor do topo. */
+}
+
+.quadrado {
+    width: 200px;
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    display: inline-block;
+    vertical-align: middle; /* Funciona bem apenas para propriedades inline, as outras como float, por exemplo não funcionaria ou não funcionaria bem (funciona de boa para display: inline e inline-block ou ainda com dsplay:table ou cell que seria para comportamento de tabelas, pois o vertical-align foi criado para a manipulação de tabelas e para elementos que eram inline.) */
+}
+
+.primeiro {
+    background-color: #FFB900;
+    height: 200px;
+}
+
+.segundo {
+    background-color: #0063B1;
+    height: 400px;
+}
+
+.terceiro {
+    background-color: #00CC6A;
+    height: 150px;
+}
+
+.ultima {
+    display: inline-block;
+    width: 100%; 
+    background-color: #ffff00;
+    text-align: center;
+    height: 0; /* O height:0 + o overflow:hidden é para que o utlimo item não apareça */
+    overflow: hidden;
+}
+
+p {
+    color: #ff0000;
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: right;
+}
+
+.exemplo {
+    color: #000;
+    text-align: justify;
+}
