@@ -667,6 +667,146 @@ as propriedades top, right, bottom e left (propriedades de coordenandas) são pr
 
                 - %: Será referente ao seu pai. ou seja: se seu pai tem 500px, 100% dela será 500px (divisão em porcentagem da tela)
 
+        ==>> Seletor de tag:
+
+            começa com a tag, e a propriedade será aplicada a todas as tags que houverem dela mesma no html. EX:
+
+                p {
+                    color: #FFF
+                }
+
+        ==>> Seletor de classe:
+
+            As propriedades serão aplicadas a todas tags que tiverem essa determinada classe. (Representado pelo .) EX:
+
+                HTML
+
+                    <div class="menu departamentos calças-femininas">
+
+                CSS
+
+                    .menu, .departamentos {
+                        width: 495px;
+                        height: 480px;
+                    }
+
+                    .menu h2 {
+                        text-transform: uppercase;
+                    }
+
+                    .departamentos {
+                        background-color: #FF0;
+                        text-align: justify;
+                    }
+
+                    .calcas-femininas {
+                        
+                    }
+
+        ==>> Seletor de ID:
+
+            Haverá apenas um ID na página, ams o principio será parecido ao da classe: aplicar a determinada propriedade apenas aquele ID. (Representado pela #) EX:
+
+                HTML:
+
+                    <footer id="rodape-final">
+
+                CSS:
+
+                    #rodape-final {
+                        width: 800px;
+                        height: 150px;
+                        background-image: url(img/logos/mirror-fashion.png)
+                    }
+
+        ==>> Seletor de atributos:
+
+            Conseguimos atribuir propriedades para atributos das tags de forma ainda que conseguimos fazer com que o css pesquise no html as tags que existem, ou pelo começo, ou pelo final, etc... Serve para qualquer atributo: src, alt, href... (representado pelos []) Veja os EXs:
+
+                HTML:
+
+                    <ul class="social-media">
+
+                        <li class="items">
+                            <a href="http://twitter.com/marcobrunodev" class="link" target="_blank">Twitter</a>
+                        </li>
+                    
+                        <li class="items">
+                            <a href="http://instagram.com/marcobrunodev" class="link" target="_blank">Instagram</a>
+                        </li>
+
+                        <li class="items">
+                            <a href="http://linkedin.com/in/marcobrunobr" class="link" target="_blank">Linkedin</a>
+                        </li>
+
+                        <li class="items">
+                            <a href="https://gmail.com" class="link">Login</a>
+                        </li>
+
+                        <li class="items">
+                            <a href="https://linkedin.com.uk" class="link"><br>Visite nosso site em inglês também</a>
+                        </li>
+
+                    </ul>
+
+
+                CSS:
+
+                    [href="http://instagram.com/marcobrunodev"] {
+                        background-image: url(img/instagram.png);
+                        margin-top: -8px;
+                    } 
+                    
+                    => Neste caso como só temos depois do href o simbolo de igual, significa que o browser só procurará o href exatamente igual. 
+
+                --------------------------------------------------
+
+                    [href*="twitter"] {
+                        background-image: url(img/twitter.png);
+                    } 
+                    
+                    => O browser irá procurar se a palavra "twitter" contém no link.
+                    (Com o asterísco, o browser irá procurar todas as srcs que contenham a palavra logo no link ou no caminho ou enfim, sob o atributo que estamos procurando.)
+                
+                --------------------------------------------------
+
+                    [href^="https"] {
+                        background-image: url(img/cadeado.png);
+                    } 
+                    
+                    => Para a verificação no começo do site (se ele começa com https) =>
+                    Muito utilizado em sites do governo quando há um campo para login acrescentamos o cadeado.
+
+                --------------------------------------------------
+
+                    [href$=".uk"] {
+                        text-indent: 0px;
+                        padding-left: 110px;
+                        background-image: url(img/reino-unido.png);
+                    } 
+                    
+                    => Geralmente utilizado para a verificação de linguagens para cada país =>
+                    faz a verificação ao final do site. Como no ex acima, com o final .uk significa que o site é britanico, ou seja, ele estará em ingles. 
+
+                --------------------------------------------------
+
+                    li[value~="marco"] {
+                        color: #CC0000;
+                    }
+
+                    => Também é possível buscar por uma palavra específica no valor, não importando o valor completo do atributo. 
+
+                --------------------------------------------------
+
+                    Podemos criar atributos customizados. EX:
+                    [data-coiso="coisado"] { config } <= todo atributo criado tem que começar com o "data-" e o nome do atributo (coiso) com o valor (coisado) 
+                    ou
+                    [data-coiso*="coisado"] <= data-coiso QUE CONTÉM OU CONTENHA coisado
+
+                    Todo atributo criado tem que começar com data-
+
+
+
 
                         >>> (A baixo veremos a construção do nosso site) <<<    (CSS)
 ===================================================================================================================

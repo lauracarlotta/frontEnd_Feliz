@@ -36,9 +36,15 @@ header {
 }
 
 #buscar {
+    background-image: url(../img/busca.png);
+    background-color: #dcdcdc;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
     position: relative;
-    bottom: 5px;
-
+    bottom: 8px;
+    border: none;
+    text-indent: -9999px;
 }
 
 .busca h2, .busca form, .menu-departamentos h2 {
@@ -134,4 +140,45 @@ header {
     font-size: 14px;
     text-align: center;
     text-decoration: none;
+}
+
+footer {
+    background-image: url(../img/fundo-rodape.png);
+    clear: both;
+    padding: 15px 0;
+}
+
+footer .container {
+    position: relative;
+}
+
+.social-media {
+    position: absolute;
+    top: 15px;
+    right: 0;
+}
+
+.items {
+    float: left;
+    margin-left: 14px;
+}
+
+.social-media a {
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+}
+
+[href*="twitter.com"] {
+    background-image: url(../img/twitter.png);
+}
+
+[href*="facebook.com"] {
+    background-image: url(../img/facebook.png);
+}
+
+[href*="plus"] {
+    background-image: url(../img/googleplus.png);
 }
