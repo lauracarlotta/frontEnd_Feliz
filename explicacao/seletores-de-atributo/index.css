@@ -1,0 +1,57 @@
+.social-media {
+    list-style: none;
+}
+
+.items {
+    font-size: xx-large;
+    margin-bottom: 10px;
+}
+
+.link {
+    display: block;
+    height: 100px;
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+}
+
+/* Serve para qualquer atributo (src, alt, href...) */
+
+[href="http://instagram.com/marcobrunodev"] {
+    background-image: url(img/instagram.png);
+    margin-top: -8px;
+} /* Neste caso como só temos depois do href o simbolo de igual, significa que o browser só procurará o href exatamente igual. */
+
+[href="http://linkedin.com/in/marcobrunobr"] {
+    background-image: url(img/linkedin.png);
+}
+
+[href*="twitter"] {
+    background-image: url(img/twitter.png);
+} /* "Contém" a palavra no link */
+
+/* Outros ex */
+
+[href^="https"] {
+    background-image: url(img/cadeado.png);
+} /* Para a verificação no começo do site (se ele começa com https) =>
+Muito utilizado em sites do governo quando há um campo para login acrescentamos o cadeado */
+
+[href$=".uk"] {
+    text-indent: 0px;
+    padding-left: 110px;
+    background-image: url(img/reino-unido.png);
+} /* Geralmente utilizado para a verificação de linguagens para cada país =>
+faz a verificação ao final do site. Como no ex acima, com o final .uk significa que o site 
+é britanico, ou seja, ele estará em ingles. */
+
+[src*="logo"] {
+    background-image: url(logo.png);
+} /* Com o asterísco, o browser irá procurar todas as srcs que contenham a palavra logo no link ou no caminho ou enfim, sob o atributo que estamos procurando. */
+
+/* Podemos criar atributos customizados. EX:
+[data-coiso="coisado"] { config } <= todo atributo criado tem que começar com o "data-" e o nome do atributo (coiso) com o valor (coisado) 
+ou
+[data-coiso*="coisado"] <= data-coiso QUE CONTÉM OU CONTENHA coisado
+
+Todo atributo criado tem que começar com data-*/
