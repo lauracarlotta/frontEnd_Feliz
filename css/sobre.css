@@ -105,23 +105,51 @@ li {
     text-indent: 50px;
 }
 
-#compra {
+.compra {
     background-color: #dcdcf4;
     color: #4560e2;
     font-size: xx-large;
     padding: 10px;
     text-align: center;
-    margin-top: 20px;
+    margin: 20px 0px;
 }
 
-#rodape {
-    color: #777777;
-    margin: 30px 0;
-    padding: 30px 0;
+footer {
+  background-image: url(../img/fundo-rodape.png);
+  padding: 15px 0;
 }
 
-#rodape img {
-    margin-right: 30px;
-    vertical-align: middle;
-    width: 94px;
+footer .container {
+    position: relative;
+}
+
+.social-media {
+    position: absolute;
+    top: 15px;
+    right: 0;
+}
+
+.items {
+    float: left;
+    margin-left: 14px;
+}
+
+.social-media a {
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    display: block;
+    width: 32px;
+    height: 32px;
+}
+
+[href*="facebook.com"] {
+    background-image: url(../img/facebook.png);
+}
+
+[href*="twitter.com"] {
+    background-image: url(../img/twitter.png);
+}
+
+[href*="plus"] {
+    background-image: url(../img/googleplus.png);
 }
