@@ -1,0 +1,28 @@
+.container {
+    width: 600px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1:hover {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
+}
+
+form {
+    font-size: x-large;
+}
+
+label:hover + input{
+    border: 1px dotted #000000;
+}
+
+input {
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+input:focus {
+    background-color: rgba(0, 0, 0, .1);
+}

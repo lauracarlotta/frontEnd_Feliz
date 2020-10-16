@@ -1,32 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@500&display=swap');
+
 body {
-    color: #333333;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", Arial, sans-serif;
+    color: #360707;
+    font-family: 'Alegreya Sans', Arial, Helvetica, sans-serif;
+}
+
+.cabecalho {
+    background-image: url(../img/fundo-cabecalho.jpg);
+    opacity: 0.9;
+}
+
+.logo {
+    width: 230px;
+    margin: 10px 0 20px 0;
 }
 
 header {
     position: relative;
-
 }
 
 .container {
     width: 940px;
     margin: 0 auto;
-}
-
-.busca, .menu-departamentos {
-    background-color: #dcdcdc;
-    font-weight: bold;
-    text-transform: uppercase;
-    float: left;
-    margin-right: 10px;
-    width: 230px;
-    
-}
-
-.menu-departamentos {
-    clear: left;
-    margin-top: 10px;
-    padding-bottom: 10px;
 }
 
 #search {
@@ -37,7 +33,7 @@ header {
 
 #buscar {
     background-image: url(../img/busca.png);
-    background-color: #dcdcdc;
+    background-color: #9d3d3b;
     width: 20px;
     height: 20px;
     background-repeat: no-repeat;
@@ -57,6 +53,41 @@ header {
     margin-right: 10px;
 }
 
+.busca, .menu-departamentos {
+    background-color: #9d3d3b;
+    font-weight: bold;
+    text-transform: uppercase;
+    float: left;
+    margin-right: 10px;
+    width: 230px;
+    
+}
+
+.menu-departamentos {
+    clear: left;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.menu-departamentos li ul {
+    display: none;
+}
+
+.menu-departamentos li:hover ul {
+    display: block;
+    font-style: italic;
+}
+
+.menu-departamentos ul ul li {
+    background-color: #f5dcdc;
+}
+
+.menu-departamentos li li a::before {
+    content: '\2756';
+    padding-right: 5px;
+    opacity: .8;
+}
+
 .menu-departamentos li {
     background-color: #fff;
     margin: 1px;
@@ -64,21 +95,33 @@ header {
 }
 
 .menu-departamentos a {
-    color: #333333;
+    color: #6D2B1D;
     text-decoration: none;
+}
+.bolsas-e-carteiras {
+    margin: 3px 0px;
+    padding-top: 5px;
+}
+
+h3 {
+    padding: 3px 0px;
+    text-align: center;
+    background-color: #FBC3C3;
+    color: #6D2B1D;
 }
 
 .sacola {
     background-image: url(../img/sacola.png);
     background-repeat: no-repeat;
     background-position: right top; /* x = horizontal, y = vertical */
-        
+        color: #FFF;
         position: absolute;
-        top: 10px; /* diferença */
-        right: 14px; /* diferença */
+        top: 6px; 
+        right: 0px; 
         font-size: 14px;
-        padding-top: 8px;
-        padding-right: 35px;
+        font-weight: bold;
+        padding-top: 16px;
+        padding-right: 50px;
         text-align: right;
         width: 140px;
 }
@@ -86,8 +129,9 @@ header {
 .menu-opcoes ul {
     position: absolute;
     bottom: 0;
-    right: 14px;
+    right: 0px;
     font-size: 16px;
+    margin-bottom: 10px;
 }
 
 .menu-opcoes ul li {
@@ -96,7 +140,20 @@ header {
 }
 
 .menu-opcoes a {
-    color: #036;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 22px; 
+}
+
+.menu-opcoes a:hover {
+    font-size: 26px;
+    font-family: 'Sansita Swashed', cursive;
+    text-decoration: underline;
+
+}
+
+.menu-opcoes a:active {
+    color: #FBC3C3;
 }
 
 .destaque {
@@ -109,14 +166,22 @@ header {
     width: 444px;
 }
 
+#destaque, .novidades, .mais-vendidos {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .6);
+}
+
+.novidades h2, .mais-vendidos h2 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .6);
+}
+
 .novidades {
     float: left;
-    background-color: #f5dcdc;
+    background-color: #f5c2c3;
 }
 
 .mais-vendidos {
     float: right;
-    background-color: #dcdcf5;
+    background-color: #f5dcdc;
 }
 
 .painel li {
@@ -154,19 +219,19 @@ footer .container {
 
 .social-media {
     position: absolute;
-    top: 15px;
+    top: 14px;
     right: 0;
 }
 
 .items {
     float: left;
-    margin-left: 14px;
+    margin-left: 20px;
 }
 
 .social-media a {
     display: block;
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
     background-repeat: no-repeat;
     text-indent: -9999px;
 }
@@ -179,6 +244,6 @@ footer .container {
     background-image: url(../img/facebook.png);
 }
 
-[href*="plus"] {
-    background-image: url(../img/googleplus.png);
+[href*="instagram.com"] {
+    background-image: url(../img/instagram.png);
 }

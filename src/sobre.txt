@@ -561,6 +561,8 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
 
         -font-size: tamanho da fonte;
 
+        -font-variant: small-caps => combinada com o o pseudo-elemento ::first-line, a linha toda ficará com a fonte um pouco menos do que o resto do texto e toda em letra maiúscula. 
+
         -text-indent: (só afeta o texto, como o seu prefixo mostra) adicionamos o parágrafo daquele que dáriamos com o tab quando estamos escrevendo no word ou no papel, quando a professora nos ensina no primário que um bom espaço para o parágrafo é colocar um dedo no início da folha da esquerda pra direita, marca um pontinho e começa a escrever daquele ponto. A doferença com o text-indent é que esse espaço, o colocamos em px, cm, ou em qualquer unidade de medida que vocẽ esteja usando para desenvolver a sua página; (Tamanho da margem da primeira linha do texto.)
 
                 Ainda:
@@ -807,9 +809,386 @@ as propriedades top, right, bottom e left (propriedades de coordenandas) são pr
 
 
 
+        ==>> Seletor avançados:
+        -----------------------
 
+
+    *** Pseudo-classe = Classes já pré-definidas pelo CSS. (É como se o navegador já colocasse classes por padrão para certos elementos utilizadas em situações comuns.)
+
+
+        +   =   Seletor irmão => Irá selecionar o irmão seguinte ou o ultimo da combinação. (o mais significa "o irmão seguinte") EX: 
+
+                HTML
+                ----
+                
+                    <body>
+
+                        <h1>Title</h1>
+
+                        <p>Lorem</p>
+
+                        <p>Lorem</p>
+
+                    </body>
+
+                
+                CSS
+                ---
+
+                    h1 + p {
+                        font-size: 20px;
+                    }   
+                        OU
+
+                    p + p {
+                        color: #FF0000;
+                    }   
+                        OU
+
+                    h1 + p + p {
+                        font-style: italic;
+                    }
+
+
+
+        >   =   Seletor filho direto => Irá selecionar o somente o filho direto (SOMENTE) EX: 
+
+                HTML
+                ----
+                
+                    <body>
+
+                        <article>
+
+                            <h1>Title</h1>
+
+                            <p>Lorem</p>
+
+                            <p>Lorem</p>
+
+                            <section>
+
+                                <h2>Subtitle</h2>
+
+                                <p>Lorem</p>
+
+                            </section>
+
+                        </article>
+                    </body>
+
+                
+                CSS
+                ---
+
+                    article > p {
+                        color: #FF0000;
+                    }
+
+
+        ~   =   Seletor siblins (irmãos) => Iremos selecionar todos os que são irmãos diretos, como no exemplo abaixo, todos os Ps que são inrmãos do h2 EX: 
+
+                HTML
+                ----
+                
+                    <body>
+
+                        <article>
+
+                            <h1>Title</h1>
+
+                            <p>Lorem</p>
+
+                            <p>Lorem</p>
+
+                            <section>
+
+                                <h2>Subtitle</h2>
+
+                                <p>Lorem</p>
+
+                                <p>Lorem</p>
+                                
+                                <p>Lorem</p>
+
+                            </section>
+
+                        </article>
+                    </body>
+
+                
+                CSS
+                ---
+
+                    h2 ~ p {
+                        color: #FF0000;
+                    }
+
+
+        :not    =   Seletor de negação => Sempre será aconpanhado de um identificador (ID ou class). 
+            "Aquilo que estiver com tal classe, não receberá a config e todas as demais receberão EX: 
+
+                HTML
+                ----
+                
+                    <body>
+
+                        <article>
+
+                            <h1>Title</h1>
+
+                            <p>Lorem</p>
+
+                            <p>Lorem</p>
+
+                            <section>
+
+                                <h2>Subtitle</h2>
+
+                                <p>Lorem</p>
+
+                                <p class="especial">Lorem</p>
+                                
+                                <p>Lorem</p>
+
+                            </section>
+
+                        </article>
+                    </body>
+
+                
+                CSS
+                ---
+
+                    h2 ~ p:not(.especial) {
+                        color: #FF0000;
+                    }
+
+                        OU SEJA: Os irmãos diretos do h2 receberão a cor da fonte vermelha, exceto o 2º P pois o mesmo está com a classe .especial
+
+
+        :hover  =   Quando eu passar o mouse por cima, acontece tal coisa. (Pseudo-classe) EX:
+
+                HTML
+                ----
+
+                    <form>
+                        <label for="nome">Nome:</label>
+                        <input id="nome" type="text">
+                    </form>
+
+                CSS
+                ---
+
+                    input:hover {
+                        font-size: 20px;
+                    }
+
+
+        :focus  =   pseudo-classe - Quando o foco ou quando eu clicar, acontece tal coisa. EX:
+
+                HTML
+                ----
+
+                    <form>
+                        <label for="nome">Nome:</label>
+                        <input id="nome" type="text">
+                    </form>
+
+                CSS
+                ---
+
+                    input:focus {
+                        background-color: rgba(0, 0, 0, .5);
+                    }
+
+
+                    AINDA TEMOS:
+                    ------------
+
+                        /* seleciona todas as âncoras que têm o atributo "href", ou seja, links */
+                        a:link {
+                            background-color:#FF0000;
+                        }
+
+                        /* seleciona todos os links cujo valor de "href" é um endereço já visitado */
+                        a:visited {
+                            background-color:#00FF00;
+                        }
+
+                        /* seleciona o link no exato momento em que clicamos nele */
+                        a:active {
+                        background-color:#0000FF;
+                        }
+
+
+        :first-child    =   pseudo-classe - Muito aplicado em listas, usamos quando queremos modificar o primeiro item dela EX:
+
+                HTML
+                ----
+
+                    <div>  
+
+                        <ul>
+                            <li>Primeiro Item</li>
+                            <li>Segundo Item</li>
+                            <li>Terceiro Item</li>
+                            <li>Quarto Item</li>
+                        </ul>
+
+                    </div>
+
+                CSS
+                ---
+
+                    li:first-child {
+                        color: #ffff00;
+                    }
+
+
+        :last-child     =   pseudo-classe - Muito aplicado em listas, usamos quando queremos modificar o último item dela EX:
+
+                HTML
+                ----
+
+                    <div>  
+
+                        <ul>
+                            <li>Primeiro Item</li>
+                            <li>Segundo Item</li>
+                            <li>Terceiro Item</li>
+                            <li>Quarto Item</li>
+                        </ul>
+
+                    </div>
+
+                CSS
+                ---
+
+                    li:last-child {
+                        font-style: italic;
+                    }
+
+        :nth-child()    =   Como se fosse um array no qual você consegue selecionar um item especifico de uma lista (tipo o índice) E ainda conseguimos dar como parametros opeações aritmeticas, ou seja, podemos fazer lista coloridas de itens par e impar, podemos colocar uma lista para multiplos de 3 e por ai vai. EX:        
+                
+                HTML
+                ----
+
+                <header>
+                    <nav>
+                        <ul class="menu">
+                            <li class="item">Primeiro Item</li>
+                            <li>Segundo Item</li>
+                            <li>Terceiro Item</li>
+                            <li class="item">Quarto Item</li>
+                        </ul>
+                    </nav>
+                </header>
+
+                <div>
+                    <ul class="segundo-menu">
+                        <li>Um</li>
+                        <li>Dois</li>
+                        <li>Três</li>
+                        <li>Quatro</li>
+                        <li>Cinco</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <ul class="terceiro-menu">
+                        <li>Par</li>
+                        <li>Ímpar</li>
+                        <li>Par</li>
+                        <li>Ímpar</li>
+                        <li>Par</li>
+                        <li>Ímpar</li>
+                        <li>Par</li>
+                        <li>Ímpar</li>
+                        <li>Par</li>
+                        <li>Ímpar</li>
+                        <li>Par</li>
+                        <li>Ímpar</li>
+                    </ul>
+                </div>
+
+
+                CSS
+                ---
+
+                    /* Terceiro elemento da lista de LIs */
+                    .segundo-menu > li:nth-child(3){
+                        background-color: orange;
+                    }
+
+                    /* Elementos pares */
+                    .terceiro-menu > li:nth-child(2n) {
+                        background-color: orangered;
+                    }
+
+                    /* Elementos ímpares */
+
+                    .terceiro-menu > li:nth-child(2n+1) {
+                        background-color: rgb(3, 3, 39);
+                        color: #ffffff;
+                    }
+
+    *** Pseudo-elementos = São elementos que não existem no documento mas podem ser selecionados pelo CSS. É como se houvesse um elemento lá!  
+
+            ::first-letter  =   Um exemplo da sua aplicabilidade, seria caso quisessemos colocar a primeira letra dos parágrafos em maiúsculas como em revistas. Seria um problema se tivessemos que colocar uma classe pra cada um. EX:
+
+                HTML
+                ----
+
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima perferendis voluptatibus voluptatum facere saepe error recusandae quaerat autem neque adipisci.
+                    </p>
+
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima perferendis voluptatibus voluptatum facere saepe error recusandae quaerat autem neque adipisci.
+                    </p>
+
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima perferendis voluptatibus voluptatum facere saepe error recusandae quaerat autem neque adipisci.
+                    </p>
+
+                CSS
+                ---
+
+                    p::first-letter {
+                        font-size: 200%;
+                    }
+
+            
+            ::first-line    =   Pega a linha toda. EX:
+
+                HTML
+                ----
+                    
+                    <p>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima perferendis voluptatibus voluptatum facere saepe error recusandae quaerat autem neque adipisci.
+                    </p>
+
+                CSS
+                ---
+
+                    p::first-line {
+                        font-variant: small-caps;
+                    }
+
+            
+            []
+
+                    
+
+
+
+
+
+
+==========================================================================================================
                         >>> (A baixo veremos a construção do nosso site) <<<    (CSS)
-===================================================================================================================
+==========================================================================================================
 
                 RESET.css
                 ---------
@@ -2083,6 +2462,15 @@ Tanto podemos ser mais especificos assim: "footer a strong" como com "footer str
         text-align: center;
         padding: 10px 0;
         }
+
+
+
+==========================================================================================================
+
+        Na explicação de seletores-avançados:
+        ----------------------------------------------------------------------
+
+
 
 
 ==========================================================================================================

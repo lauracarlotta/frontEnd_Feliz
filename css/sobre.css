@@ -1,6 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+
 body {
-    color: #333333;
-    font-family: "Lucida Sans Unicode","Lucida Grande", Arial, sans-serif;
+    color: #42454d;
+    font-family: 'Alegreya Sans', Arial, Helvetica, sans-serif;
+}
+
+.cabecalho {
+    background-image: url(../img/fundo-cabecalho.jpg);
+    opacity: 0.9;
+}
+
+.logo {
+    width: 230px;
+    margin: 10px 0 20px 0;
 }
 
 header {
@@ -8,7 +21,7 @@ header {
 }
 
 .container {
-    width: 926px;
+    width: 940px;
     margin: 0 auto;
 }
 
@@ -16,22 +29,24 @@ header {
     background-image: url(../img/sacola.png);
     background-repeat: no-repeat;
     background-position: right top; 
-        
+        color: #FFF;
         position: absolute;
-        top: 0px; /* diferença */
-        right: 0px; /* diferença */
+        top: 6px; 
+        right: 0px; 
         font-size: 14px;
-        padding-top: 8px;
-        padding-right: 35px;
+        font-weight: bold;
+        padding-top: 16px;
+        padding-right: 50px;
         text-align: right;
         width: 140px;
 }
 
 .menu-opcoes ul {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    bottom: 0px;
+    right: 0px;
     font-size: 16px;
+    margin-bottom: 10px;
 }
 
 .menu-opcoes ul li {
@@ -39,10 +54,28 @@ header {
     margin-left: 20px;
 }
 
+.menu-opcoes a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 22px; 
+}
+
+.menu-opcoes a:hover {
+    font-size: 26px;
+    font-style: italic;
+    text-decoration: underline;
+
+}
+
+.menu-opcoes a:active {
+    color: #FBC3C3;
+}
+
+
 .mirror-fashion-h1 {
-    background-image:url(../img/sobre-background.jpg);
-    color: #000000;
-    padding: 10px;
+    background-color: #9d3d3b;
+    color: #360707;
+    padding: 10px 0px 10px 30px;
     margin: 10px 0;
     font-size: x-large;
     font-style: italic;
@@ -62,8 +95,37 @@ p {
     margin: 10px 0;
 }
 
+p::first-letter {
+    font-weight: bold;
+    font-size: 150%;
+    font-style: italic;
+}
+
+h2 ~ p::first-line {
+    font-variant: small-caps;
+}
+
+p:not(.primeiro) {
+    text-indent: 0px;
+}
+
+.menu-opcoes a {
+    font-size: 22px;
+}
+
 a {
-    color: #036;
+    color: #9d3d3b;
+    text-decoration: none;
+}
+
+a:hover {
+    font-size: 26px;
+    font-family: 'Niconne', cursive;
+    text-decoration: underline;
+}
+
+a:active {
+    color: #FBC3C3;
 }
 
 strong {
@@ -75,9 +137,11 @@ em {
 }
 
 figure {
-    background-color:#f2eded;
+    color: #FBC3C3;
+    background-color:#360707;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+    border: 1px solid #FBC3C3;
     text-align: center;
-    border: 1px solid #cecece;
     padding: 15px;
     margin: 30px;
 }
@@ -106,8 +170,8 @@ li {
 }
 
 .compra {
-    background-color: #dcdcf4;
-    color: #4560e2;
+    background-color:  #FBC3C3;
+    color: #360707;
     font-size: xx-large;
     padding: 10px;
     text-align: center;
@@ -138,8 +202,8 @@ footer .container {
     text-indent: -9999px;
     background-repeat: no-repeat;
     display: block;
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
 }
 
 [href*="facebook.com"] {
@@ -150,6 +214,6 @@ footer .container {
     background-image: url(../img/twitter.png);
 }
 
-[href*="plus"] {
-    background-image: url(../img/googleplus.png);
+[href*="instagram.com"] {
+    background-image: url(../img/instagram.png);
 }
