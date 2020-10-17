@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Niconne&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@500&display=swap');
 
 body {
     color: #42454d;
@@ -62,9 +62,7 @@ header {
 
 .menu-opcoes a:hover {
     font-size: 26px;
-    font-style: italic;
     text-decoration: underline;
-
 }
 
 .menu-opcoes a:active {
@@ -98,7 +96,6 @@ p {
 p::first-letter {
     font-weight: bold;
     font-size: 150%;
-    font-style: italic;
 }
 
 h2 ~ p::first-line {
@@ -119,8 +116,8 @@ a {
 }
 
 a:hover {
-    font-size: 26px;
-    font-family: 'Niconne', cursive;
+    font-size: 18px;
+    font-family: 'Sansita Swashed', cursive;
     text-decoration: underline;
 }
 
@@ -140,7 +137,7 @@ figure {
     color: #FBC3C3;
     background-color:#360707;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
-    border: 1px solid #FBC3C3;
+    border: 4px double  #FBC3C3;
     text-align: center;
     padding: 15px;
     margin: 30px;
