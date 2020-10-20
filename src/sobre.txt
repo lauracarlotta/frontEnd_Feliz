@@ -4,7 +4,12 @@ Estudar:
         - ES6 do JS (arrow function, class, extends, const, metodo dentro de uma class, promisses acincaration)
         - Ajax
 
+------------
+
 Pesquisar:
+
+        - RSCSS e ITCSS
+
         - ux researcher
 
 	    - Interface Humano - Computador é o UX das antigas.
@@ -19,6 +24,7 @@ IDEs = Integrated Development Environment
 
         HTML SEMÂNTICO = FACILIDADE DE MANUTENÇÃO, COMPREENSÃO DO DOCUMENTO, FACILITA ACESSIBIDADE (Progressive Enhancement*), AJUDA O SEO (técnica importante, Search Engine Optimization) => * Progressive enhancement é uma estratégia de desenvolvimento de páginas web com ênfase na acessibilidade, utilização de tags HTML semânticas, estilos CSS externos e JavaScript não obstrusivo. Nessa estratégia utilizam-se as tecnologias web em forma de camadas, permitindo que todos acessem o conteúdo básico de uma página independente de navegador e link de internet, porém, quanto maior o suporte às tecnologias visuais ou recursos mais recentes de navegação, mais rica é a experiência do usuário.
 
+------------
 
 UX/UI
 -----
@@ -28,16 +34,21 @@ UX/UI
 	UX - Idealização - Analise de concorrencia - Pesquisa (UX research) - Sitemap e arquitetura da informação - Wireframes - Testes de 		usabilidade
 	
 	UI - Prototipação - Guia de Estilo - Motion design
+
 	
 Wireframes = esboço da visão da página (ele vai guiar o resto do processo do design). O que resulta desse trabalho que o designer desenvolve (Esse trabalho geralmente é desenvolvido por um designer ou alguém que seja formado em comunicação) em cada wireframe é chamado de LAYOUT. 
 
 Então basicamente o pessoal de UX já define as páginas, o conteúdo de cada uma delas e produz alguns Wireframes. Depois a equipe de design adiciona o visual desejado pela cliente como resultado final do projeto. E é onde entramos, onde transformamos esse layout em html.
 
+------------
 
 ===>>> boa parte da segurança fica terceirizada, isto é : tirando boas praticas de segurança os servidores que hospedam seu conteudo é que vao garantir a maior parte da sua seguranca. desde hostigator ate AWS.
 
+------------
+
 ===>>> O DevOps é como se fosse um arquiteto, ele sabe exatamente onde colocar as colunas para o "sistema" ser levantado e escalável.
 
+------------
 
 <html>
         <head>
@@ -52,8 +63,7 @@ Então basicamente o pessoal de UX já define as páginas, o conteúdo de cada u
 
 </html>
 
-
-
+------------
 
 logo mirror fashon (imagem)=> E-commerce
         => É uma loja focada em roupas femininas para o público de classe média alta. (Também tem roupas para o público masculino, porém o foco é do feminino = importante para o UX)
@@ -244,104 +254,20 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
                 INDEX.html
                 ----------
 
-        
+                CONTA.html
+                ----------
+
+                DESEJOS.html
+                ------------
+
+                CARTAO.html
+                -----------
                 
                 SOBRE.html
                 ----------
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-    
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>A Mirror Fashion</title>
-        <link rel="stylesheet" href="css/sobre.css">
-    </head>
-
-    <body>
-
-        <img src="../img/logo.png" alt="Logo da marca Mirror Fashion">
-        
-        <h1>A Mirror Fashion</h1>
-        
-        <p>
-            A <strong>Mirror Fashion</strong> é a maior empresa comércio eletrônico no segmento de moda em todo o mundo. 
-            Fundada em 1932, possui filiais em 124 países, sendo líder de mercado com mais de 90% de 
-            participação em 118 deles.
-        </p>
-        
-        <p> 
-            Nosso centro de distribuição fica em <a href="https://www.google.com.br/maps/place/Jacarezinho,+PR,+86400-000/@-23.1588226,-49.9858485,5590m/data=!3m1!1e3!4m5!3m4!1s0x94c026544d26f253:0xc66dac11dad56f73!8m2!3d-23.157939!4d-49.9777202" target="_blank">Jacarezinho, no Paraná</a>. De lá, saem 48 aviões que 
-            distribuem nossos produtos às casas do mundo todo. Nosso centro de distribuição: 
-        </p>
-        
-        <figure id="centro-de-distribuicao">
-            <img src="../img/centro-distribuicao.png" alt="Foto do centro de distribuição da Mirror Fashion"/>
-            <figcaption>Centro de distribuição da Mirror Fashion</figcaption>
-        </figure>
-
-        <p> 
-            Compre suas roupas e acessórios na <strong>Mirror Fashion</strong>. Acesse <a href="index.html">nossa loja</a> ou entre em contato 
-            se tiver dúvidas. Conheça também nossa <a href="#historia">história</a> e nossos <a href="#diferenciais">diferenciais</a>. 
-        </p>
-        
-        <h2 id="historia"> História </h2>
-
-        <figure id="familia-pelho">
-            <img src="../img/familia-pelho.jpg" alt="Fot da Família pelho">
-            <figcaption>Família Pelho</figcaption>
-        </figure>
-
-        <p>
-            A fundação em 1932 ocorreu no momento da descoberta econônica do interior do Paraná. A 
-            família Pelho, tradicional da região, investiu todas as suas economias nessa nova iniciativa, 
-            revolucionária para a época. O fundador <em>Eduardo Simões Pelho</em>, dotado de particular visão 
-            administrativa, guiou os negócios da empresa durante mais de 50 anos, muitos deles ao lado 
-            de seu filho <em>E. S. Pelho Filho</em>, atual CEO. O nome da empresa é inspirado no nome da família.
-        </p>
-
-        <p>
-            O crescimento da empresa foi praticamente instantâneo. Nos primeiros 5 anos, já atendia 18 países. 
-            Bateu a marca de 100 países em apenas 15 anos de existência. Até hoje, já atendeu 740 milhões 
-            de usuários diferentes, em bilhões de diferentes pedidos.
-        </p>
-
-        <p>
-            O crescimento em número de funcionários é também assombroso. Hoje, é a maior empregadora do 
-            Brasil, mas mesmo após apenas 5 anos de sua existência, já possuía 30 mil funcionários. Fora do 
-            Brasil, há 240 mil funcionários, além dos 890 mil brasileiros nas instalações de Jacarezinho e 
-            nos escritórios em todo país.
-        </p>
-
-        <p>
-            Dada a importância econômica da empresa para o Brasil, a família Pelho já recebeu diversos prêmios, 
-            homenagens e condecorações. Todos os presidentes do Brasil já visitaram as instalações da <strong>Mirror Fashion </strong>, além de presidentes da União Européia, Ásia e o secretário-geral da ONU.
-        </p>
-
-        <h2 id="diferenciais">Diferenciais</h2>
-
-        <ul>
-            <li>Menor preço do varejo, garantido</li>
-            <li>Se você achar uma loja mais barata, leva o produto de graça</li>
-            <li>Pague em reais, dólares, euros ou bitcoins</li>
-            <li>Todas as compras com frete grátis para o mundo todo</li>
-            <li>Maior comércio eletrônico de moda do mundo</li>
-            <li>Atendimento via telefone, email, chat, twitter, facebook, carta, fax e telegrama</li>
-            <li>Presente em 124 países</li>
-            <li>Mais de um milhão de funcionários em todo o mundo</li>
-        </ul>
-
-        <div id="compra"><strong>Compre já em nossa loja!</strong></div>
-
-        <div id="rodape">
-            <img src="img/logo.png" alt="Logo da Mirror Fashion"/> 
-            &copy; <em>Copyright Mirror Fashion</em>
-        </div>
-
-    </body>
-</html>
-
+                AJUDA.html
+                ----------
 
 
 
@@ -349,7 +275,7 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
 
 
                         *** CSS ***
-
+                        -----------
 
 - resetar css [reset css] (o comportamento do css não funciona de forma padronizada para todos os navegadores, por isso, o que fazemos é o que chamamos de reset no css, ou seja, configuramos o css de jeito que ele irá fazer com que nosso site funcione igualmente independente do navegador que nos site será navegado.)
 
@@ -407,7 +333,28 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
         { Ele funcionará muito bem para site pequenos, porém, para sites maiores, mais complexos ou com mais recursos, podemos usar o "Normalize". }
 
         === >>> Usar o reset css é basicamente obrigatório.
+--------------------
+Prefixo: 
 
+    Algumas propriedades nos navegadores não são oficiais. É necessário sempre verificar qual o suporte pelas mesmas para que possamos ter uma melhor experiencia com o usuário final. Porém, mesmo ainda não sendo as definitivas, os navegadores implementam para que os desenvolvedores possa aplicar na prática as funcionalidades e ver o resultado. Um exemplo era o border-radius que ainda não era oficial e por isso tinhamos que colocar o profixo dos navegadores para que não houvesse falha ou para que o browser não deixasse de carregar as configs.
+
+    -webkit- = Chrome e Safari
+    -moz- = Firefox
+    -ms- = IE
+    -o- = opera
+
+        p {
+        /* Chrome até versão 3, Safari até versão 4 */
+        -webkit-border-radius: 5px;
+        /* Firefox até versão 3.6 */
+        -moz-border-radius: 5px;
+        /* Todas as versões modernas dos navegadores,
+        incluindo IE e Opera que nunca precisaram de
+        prefixo pra isso */
+        border-radius: 5px;
+        }
+
+--------------------
 
                 CSS => (seletor > propriedade > valor)
                 -------------------------------------- 
@@ -419,6 +366,45 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
         É uma boa prática de programação quando separamos os arquivos, pois para a manutenção por exemplo, separamos os arquivos e assim facará muito mais fácil de saber onde eu devo alterar ou fazer a manutenção x, do que colocar nas tags html. (É como se deixassemos quando um cumprir com o seu papel. Caso colocassemos o css no html é como se "sobrecarregassemos" o html desnecessáriemante.) deixamos cada qual fazer o seu trabalho: html cuidando do conteúdo e o css cuidando da estilização. 
 
         ===>>> Para colocarmos uma linha abaixo do h2 nós usamos o border-bottom, porque a tag hr é semântica e é utilizada para separar estrofes e aqui queremos fazer algo visual, queremos colocar uma linha no background do h2
+
+--------------------
+
+        -width: largura [Quando você não define uma largura, ele (o elemento) ocupará toda a largura da página (o height ou ultilizará a altura do elemento ou se adaptará conforme o width)***];
+
+                *** Lembrando que: nem toda a tag tem esse mesmo comportamento. isso (ocupar toda a largura da página) acontece para as tags <div>, <p>, etc. Já, por exemplo com a tag <a> (link) isso não acontecerá (irá ocupar só o espaço do link);
+
+                *** Quando a largura vaza, causa um scroll (pode acontecer apra qualquer propriedade quando o valor que atribuimos ultrapassa ao tamanho da página atual.)
+
+--------------------
+
+        -height: altura [quando você não a declara ela se ajustará com o width e caso você não coloque o width se adaptará ao tamanho da sua tela, caso você tenha declarado a tag <meta name="viewport" content="width=device-width, initial-scale=1.0">];
+
+--------------------
+
+        -margin: respiro externo [auto: centralizará o elemento, pois ele atribui o mesmo valor de lado esquerdo para o lado direito (margin-left e margin-right). (Fica melhor de visualizar quando você define um valor para o width. Caso contrário, o margin se adaptará ao tamanho da sua tela.) Contudo, o margin auto funciona com 3 regras: display, width e margin. Assim ele funcionará direitinho (no nosso exemplo, usamos a div. Por padrão a div já é em display: block)]
+
+                > margin: 10px [aplica em todas as direções]; (shorthand property - propriedade taquigráfica)
+                > margin-top: 10px [aplica só no topo] (ainda podemos definir especificamente para right, bottom e left.)
+                > margin: 10px 11px 12px 13px [estamo fazendo a forma resumida e a ordem é 10px - top, 11px - right, 12px - bottom e 13px - left.]
+                > margin: 10px 15px [será a plicado assim: 10px top e bottom / 15px right e left]
+                        (então, margin: 0 auto [ficaria 0 para top e bottom / auto para right e left])
+                > margin: 10px 12px 14px [10px para top, 12px para right e left, 14px para bottom]
+
+                                         10px
+                                      -----------
+                                      |         |
+                                 12px |         | 12px
+                                      |         |
+                                      -----------  
+                                          14px
+
+                        (Essa lógica acima, quando eu coloco só um valor, ou 2 ou 4 ou 3, se aplica para padding e border também [só temos que lembrar que pra toda regra, temos excessões] mas por padrão, funciona assim.)
+
+--------------------
+
+        -padding: respiro interno [idem margin** (Quase sempre)];
+
+--------------------
 
         ===>>> Como funciona o "box model"? (modelo de caixa)
 
@@ -461,21 +447,56 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
 
                         (Somamos: width or height + padding + border + margin)
 
+--------------------
+
+        -box-shadow: sombra da caixa.
+
+            20px - deslocamento x,
+            20px - deslocamento y e 
+            black - cor da sombra.
+            div {
+                box-shadow: 20px 20px black;
+            }
+
+                        OU
 
 
-* Podemos usar o body para deixar a página padronizada, por exemplo, cor de fundo, estilo de letra, etc... 
+            20px - deslocamento x,
+            20px - deslocamento y,
+            30px - grau de espalhamento [blur - borrão] (é aquele "embassadinho") e 
+            black - cor da sombra.
+            div {
+                box-shadow: 20px 20px 30px black;
+            }
+                        
+                        OU
 
-** sobre cores:
+            COM O QUARTO VALOR A SOMBRA AUMENTA OU DIMINUI:            
+            div {
+                box-shadow: 20px 20px 30px 40px black;
+            }
 
-        1.Por nome: Red,
-        2.Por hexadecimal: #ffffff => Baseado em luz,
-        3.Por rgb (ou rgba):rgb(48, 47, 47) / rgba(48, 47, 47, 0.1); => 
+        -box-shadow: inset 0px 0px 40px black; 
+            (keyword inset para uma borda interna)
 
-                2. (RRGGBB) = Red, Green, Blue 0 - F.
-                3. (rgb - red, green, blue 0 - 255)
+--------------------
+
+* Podemos usar o body para deixar a página padronizada, por exemplo, cor de fundo, estilo de letra, etc...
+
+--------------------
+
+        *** SOBRE CORES:
+        ================
+
+        1.Red: Por nome,
+        2.#FFFFFF: Por hexadecimal => Baseado em luz,
+        3.rgb(48, 47, 47) / rgba(48, 47, 47, 0.1): Por rgb (ou rgba); => 
+
+                2. (RRGGBB) = Red, Green, Blue (Vai de 0 - F).
+                3. (rgb - red, green, blue [0 - 255])
                 (rgba - red, green, blue, alpha => r, g, b = 0 - 255 e alpha 0 - 1) ALPHA dá uma transparencia a cor.
 
-                [Já para colocar transparencia na imagem, add no css uma propriedade a tag <img> que a opacity: 0.5 (exemplo) Que é exatamente igual ao canal alpha do rgba] Exemplo:
+                [Já para colocar transparencia na imagem, add no css uma propriedade a tag <img>  opacity: 0.5 (exemplo) Que é exatamente igual ao canal alpha do rgba] Exemplo:
 
                         HTML:
                         <img src="logo.png">
@@ -487,9 +508,19 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
                         }
 
                         A opacidade será aplicada a toda a tag img e na borda também pois ficará na tag toda.
+--------------------
 
+        -color: cor da letra;
+
+--------------------
+
+        -oppacity: 0.3; varia de 0 a 1 e deixa o elemento com transparencia, onde 0 é totalmente invisível e 1 é totalmente visível.  
+
+--------------------
 
 ===>>> Temos que lembrar que tudo tem um padrão, no início. Exemplo: o texto todo sempre começará da esquerda apra a direita e de cima para baixo. Então, tudo, eu disse TUDO, sempre tem um coportamento padão para que possamos formata-los conforme nossa necessidade.
+
+--------------------
 
         -background-color: cor do fundo;
 
@@ -542,14 +573,81 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
                         - se colocarmos positivo, o elemento desce (ficando mais próximo do rodapé)
 
                         Ainda podemos utilizar palavras para movimentar nos nossos eixos (top, right, bottom, left e center sendo sempre dois valores: um pra x [horizontal] e outro pra y [vertical])
+--------------------
 
-        -color: cor da letra;
+        
+
+--------------------
 
         -border: 1px solid #000000 [tamanho, tipo e cor = em px, boda solid (sólida - contínua) e a cor preta (borda de qualquer elemento); EX: dashed, dotted, double, groove, etc.
         
         - E ainda é possível dizer onde queremos essa linha: se left, right, top or bottom. Caso não seja especificado, quer dizer que a borda será em tudo];
 
+        -border-radius: borda arredondada; Ex:
+
+            border-radius: 5px; 
+                aplicará 5px em todas as bordas do elemento;
+
+            border-radius: 5px 20px;
+                aplicará
+                    5px para a borda superior esquerda e inferior direita e 
+                    20px para a borda superior direita e para a inferior esquerda.
+
+            border-radius: 5px 20px 50px;
+                aplicará
+                    5px para a borda superior esquerda,
+                    20px para a borda superior direita e para a inferior esquerda e 
+                    50px para a borda inferior direita.
+
+            borde-radius: 5px 20px 50px 100px;
+                aplicará
+                    aplicará
+                    5px para a borda superior esquerda,
+                    20px para a borda superior direita,
+                    50px para a borda inferior direita e 
+                    100px para a borda inferior esquerda.
+
+--------------------
+
         -text-align: center - alinhamento do texto (center - centralizado)* No nosso primiero caso aplicamos a tag <figure>, porém dentro dela temos além de um texto na <figcaption>, uma <img> e neste caso podemos considerar a img como texto também (como contéudo) e com isso, (a proprieadade sendo aplicada na tag pai), tudo o que estiver dentro (as tags filho) serão alteradas; EX: left, right, justify.
+
+        -text-indent: (só afeta o texto, como o seu prefixo mostra) adicionamos o parágrafo daquele que dáriamos com o tab quando estamos escrevendo no word ou no papel, quando a professora nos ensina no primário que um bom espaço para o parágrafo é colocar um dedo no início da folha da esquerda pra direita, marca um pontinho e começa a escrever daquele ponto. A doferença com o text-indent é que esse espaço, o colocamos em px, cm, ou em qualquer unidade de medida que vocẽ esteja usando para desenvolver a sua página; (Tamanho da margem da primeira linha do texto.)
+
+                Ainda:
+                        -line-height: 3px; tamanho da altura de cada linha
+
+                        -letter-spacing: 3px; tamanho do espaço entre cada letra
+
+                        -word-spacing: 5px; tamanho do espaço entre cada palavra
+
+        -text-shadow: sombra do texto.
+
+            10px - deslocamento x,
+            10px - deslocamento y e 
+            red - cor da sombra.
+            p {
+                text-shadow: 10px 10px red;
+            }
+
+                        OU
+
+
+            10px - deslocamento x,
+            10px - deslocamento y,
+            5px - grau de espalhamento [blur - borrão] (é aquele "embassadinho") e 
+            red - cor da sombra.
+            p {
+                text-shadow: 10px 10px 5px red;
+            }
+                        
+                        OU
+
+            COM DUAS SOMBRAS AO MESMO TEMPO:            
+            p {
+                text-shadow: 10px 10px 5px red, -5px -5px -4px red;
+            }              
+
+--------------------
 
         -font-family: "Lucida Sans Unicode","LucidaGrande", Arial, sans-serif; (familia da fonte - Aqui, colocamos outras opções caso não haja aquela determinada fonte instalada na máquina do usuário) e por fim colocamos a sans-serif que ficaria como "qualquer fonte sem serifa";
 
@@ -563,43 +661,7 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
 
         -font-variant: small-caps => combinada com o o pseudo-elemento ::first-line, a linha toda ficará com a fonte um pouco menos do que o resto do texto e toda em letra maiúscula. 
 
-        -text-indent: (só afeta o texto, como o seu prefixo mostra) adicionamos o parágrafo daquele que dáriamos com o tab quando estamos escrevendo no word ou no papel, quando a professora nos ensina no primário que um bom espaço para o parágrafo é colocar um dedo no início da folha da esquerda pra direita, marca um pontinho e começa a escrever daquele ponto. A doferença com o text-indent é que esse espaço, o colocamos em px, cm, ou em qualquer unidade de medida que vocẽ esteja usando para desenvolver a sua página; (Tamanho da margem da primeira linha do texto.)
-
-                Ainda:
-                        -line-height: 3px; tamanho da altura de cada linha
-
-                        -letter-spacing: 3px; tamanho do espaço entre cada letra
-
-                        -word-spacing: 5px; tamanho do espaço entre cada palavra
-
-        -width: largura [Quando você não define uma largura, ele (o elemento) ocupará toda a largura da página (o height ou ultilizará a altura do elemento ou se adaptará conforme o width)***];
-
-                *** Lembrando que: nem toda a tag tem esse mesmo comportamento. isso (ocupar toda a largura da página) acontece para as tags <div>, <p>, etc. Já, por exemplo com a tag <a> (link) isso não acontecerá (irá ocupar só o espaço do link);
-
-                *** Quando a largura vaza, causa um scroll (pode acontecer apra qualquer propriedade quando o valor que atribuimos ultrapassa ao tamanho da página atual.)
-
-        -height: altura [quando você não a declara ela se ajustará com o width e caso você não coloque o width se adaptará ao tamanho da sua tela, caso você tenha declarado a tag <meta name="viewport" content="width=device-width, initial-scale=1.0">];
-
-        -margin: respiro externo [auto: centralizará o elemento, pois ele atribui o mesmo valor de lado esquerdo para o lado direito (margin-left e margin-right). (Fica melhor de visualizar quando você define um valor para o width. Caso contrário, o margin se adaptará ao tamanho da sua tela.) Contudo, o margin auto funciona com 3 regras: display, width e margin. Assim ele funcionará direitinho (no nosso exemplo, usamos a div. Por padrão a div já é em display: block)]
-
-                > margin: 10px [aplica em todas as direções]; (shorthand property - propriedade taquigráfica)
-                > margin-top: 10px [aplica só no topo] (ainda podemos definir especificamente para right, bottom e left.)
-                > margin: 10px 11px 12px 13px [estamo fazendo a forma resumida e a ordem é 10px - top, 11px - right, 12px - bottom e 13px - left.]
-                > margin: 10px 15px [será a plicado assim: 10px top e bottom / 15px right e left]
-                        (então, margin: 0 auto [ficaria 0 para top e bottom / auto para right e left])
-                > margin: 10px 12px 14px [10px para top, 12px para right e left, 14px para bottom]
-
-                                         10px
-                                      -----------
-                                      |         |
-                                 12px |         | 12px
-                                      |         |
-                                      -----------  
-                                          14px
-
-                        (Essa lógica acima, quando eu coloco só um valor, ou 2 ou 4 ou 3, se aplica para padding e border também [só temos que lembrar que pra toda regra, temos excessões] mas por padrão, funciona assim.)
-
-        -padding: respiro interno [idem margin** (Quase sempre)];
+--------------------
 
         -display: é a forma de como o conteúdo vai se comportar.
         
@@ -610,6 +672,8 @@ envolvemos as tags <img> e <figcaption> na tag <figure> assim eu identifico (sem
         -display: inline-block (Junção dos comportamentos do inline+block)
 
 as propriedades top, right, bottom e left (propriedades de coordenandas) são propriedades que posicionam os elementos na página, contudo, eleas não funcionam sem o position! (essa proprieadade determina qual é o posicionamento do elemento)
+
+--------------------
 
         -position: static (posição: estática - static é o valor default da position. será a referencia de onde ele foi criado. É o padrão da propriedade)[pode ser usado também quando queremos tirar um comportamento anterior. Ex: Caso eu tenha colocado o position: absolute no mobile e para o desktop euq não quero mais aquele comportamento. seria a mesma coisa que usar o unset.]
 
@@ -629,12 +693,17 @@ as propriedades top, right, bottom e left (propriedades de coordenandas) são pr
 
             {O fixed respeita o pai somente se estiver SEM as propriedades top e bottom}
 
-        float: left / right (flutuante) [cria um novo contexto, parecido com o absolute mas é diferente. Nunca esconde o conteúdo (img e texto) nem os elementos inline e inline-block]
 
-        clear: left / right / both (juntamente usado com float para a flutuação de textos e imagens) - limpa o contexto. Ele irá verificar todos os contextos do float (ele é específico do float), e se tiver algum elementoflutuando a esuqerda, a direita ou ambos, ele limpa ess novo contexto e reage como era o padrão, que era o texto ficar embaixo.
+--------------------
 
-        overflow: hidden [hidden - escondida] (mantem o texto num quadrado ao invés de ir contornando todos os elementos da página. Por padrão, ele é overflow: visible, com o hidden mantem escondida e com o scroll, cria uma barra de rolagem para que você possa conseguir verificar todo o texto - Quando colocamos um width e um height fica mais fácil de entender. O navegador irá verificar se há algo nos contestos, conforme tenha - se não for dado valores de width e heght - ele mesmo irá colocar um tanho do texto e por isso, desse comportamento.)
+        -float: left / right (flutuante) [cria um novo contexto, parecido com o absolute mas é diferente. Nunca esconde o conteúdo (img e texto) nem os elementos inline e inline-block]
+
+        -clear: left / right / both (juntamente usado com float para a flutuação de textos e imagens) - limpa o contexto. Ele irá verificar todos os contextos do float (ele é específico do float), e se tiver algum elementoflutuando a esuqerda, a direita ou ambos, ele limpa ess novo contexto e reage como era o padrão, que era o texto ficar embaixo.
+
+        -overflow: hidden [hidden - escondida] (mantem o texto num quadrado ao invés de ir contornando todos os elementos da página. Por padrão, ele é overflow: visible, com o hidden mantem escondida e com o scroll, cria uma barra de rolagem para que você possa conseguir verificar todo o texto - Quando colocamos um width e um height fica mais fácil de entender. O navegador irá verificar se há algo nos contestos, conforme tenha - se não for dado valores de width e heght - ele mesmo irá colocar um tanho do texto e por isso, desse comportamento.)
         {POR QUE ISSO ACONTECE? (Teoria de um dos internautas) Cria um scroll por causa do conteudo e por causa dos blocos que estão flutuando, e o <p> ocupa o lugar de origem. Já que tá flutuando não pode ficar em cima do conteúdo do <p>.} Mas na realidade a questão está referente ao comportamento do browser sobre o algoritmo que ele usa para renderizar a página.
+
+--------------------
 
         inherit: herda do pai (No navegador p tem por padrão: 
 
@@ -658,8 +727,10 @@ as propriedades top, right, bottom e left (propriedades de coordenandas) são pr
 
     Então modificamos manualmente com o inherit, ou seja, dizemos a tag que herdará o mesmo valor sobre o pai daquela propriedade. Se a tag a estivesse envolvida em uma div, logo esta sendo a sua tag pai, o a respeitaria essa hierarquia de herança.
 
+------------
 
-        Unidades de Medida:
+    *** Unidades de Medida:
+
 
             = Medidas absolutas: Unidades que não mudam nunca e que sabemos exatamente como funcionam (definidas pela física. Ex: pixel, cm, metro, etc.)
 
@@ -669,7 +740,9 @@ as propriedades top, right, bottom e left (propriedades de coordenandas) são pr
 
                 - %: Será referente ao seu pai. ou seja: se seu pai tem 500px, 100% dela será 500px (divisão em porcentagem da tela)
 
-        ==>> Seletor de tag:
+------------
+
+    *** Seletor de tag:
 
             começa com a tag, e a propriedade será aplicada a todas as tags que houverem dela mesma no html. EX:
 
@@ -677,7 +750,7 @@ as propriedades top, right, bottom e left (propriedades de coordenandas) são pr
                     color: #FFF
                 }
 
-        ==>> Seletor de classe:
+    *** Seletor de classe:
 
             As propriedades serão aplicadas a todas tags que tiverem essa determinada classe. (Representado pelo .) EX:
 
@@ -705,7 +778,7 @@ as propriedades top, right, bottom e left (propriedades de coordenandas) são pr
                         
                     }
 
-        ==>> Seletor de ID:
+    *** Seletor de ID:
 
             Haverá apenas um ID na página, ams o principio será parecido ao da classe: aplicar a determinada propriedade apenas aquele ID. (Representado pela #) EX:
 
@@ -721,7 +794,7 @@ as propriedades top, right, bottom e left (propriedades de coordenandas) são pr
                         background-image: url(img/logos/mirror-fashion.png)
                     }
 
-        ==>> Seletor de atributos:
+    *** Seletor de atributos:
 
             Conseguimos atribuir propriedades para atributos das tags de forma ainda que conseguimos fazer com que o css pesquise no html as tags que existem, ou pelo começo, ou pelo final, etc... Serve para qualquer atributo: src, alt, href... (representado pelos []) Veja os EXs:
 
@@ -809,7 +882,7 @@ as propriedades top, right, bottom e left (propriedades de coordenandas) são pr
 
 
 
-        ==>> Seletor avançados:
+    *** Seletor avançados:
         -----------------------
 
 
@@ -1069,7 +1142,7 @@ as propriedades top, right, bottom e left (propriedades de coordenandas) são pr
                         font-style: italic;
                     }
 
-        :nth-child()    =   Como se fosse um array no qual você consegue selecionar um item especifico de uma lista (tipo o índice) E ainda conseguimos dar como parametros opeações aritmeticas, ou seja, podemos fazer lista coloridas de itens par e impar, podemos colocar uma lista para multiplos de 3 e por ai vai. EX:        
+        :nth-child()    =   [N - number / TH - "...fourTH, fiveTH, sixTH, sevenTH..."] = enésino número que tenha relação de irmão, ENTRE IRMÃOS. Como se fosse um array no qual você consegue selecionar um item especifico de uma lista (tipo o índice) E ainda conseguimos dar como parametros opeações aritmeticas, ou seja, podemos fazer lista coloridas de itens par e impar, podemos colocar uma lista para multiplos de 3 e por ai vai. EX:        
                 
                 HTML
                 ----
@@ -1126,12 +1199,30 @@ as propriedades top, right, bottom e left (propriedades de coordenandas) são pr
                         background-color: orangered;
                     }
 
-                    /* Elementos ímpares */
+                      OU
+
+                    .terceiro-menu > li:nth-child(even) {
+                        background-color: rgb(3, 3, 39);
+                       
+                        color: #ffffff;
+                    } 
+
+                    /* Elementos ímpares :nth-child(an+b) */
 
                     .terceiro-menu > li:nth-child(2n+1) {
                         background-color: rgb(3, 3, 39);
                         color: #ffffff;
                     }
+
+                      OU
+
+                    .terceiro-menu > li:nth-child(odd) {
+                        background-color: rgb(3, 3, 39);
+                        color: #ffffff;
+                    } 
+                    
+                        (odd - ímpar) ou (even - par)
+                        ----------------------------
 
     *** Pseudo-elementos = São elementos que não existem no documento mas podem ser selecionados pelo CSS. É como se houvesse um elemento lá!  
 
@@ -1177,7 +1268,33 @@ as propriedades top, right, bottom e left (propriedades de coordenandas) são pr
                     }
 
             
-            []
+            NOVOS ELEMENTOS: Imagine que queremos colocar [] antes e depois de cada item de uma lista de links.
+
+                Ao invés de colocarmos isso no html, inserimos o mesmo pelo css, assim:
+
+                    HTML
+                    ----
+                    
+                    <body>
+
+                        <a href="...">Link1</a>
+
+                        <a href="...">Link2</a>
+
+                        <a href="...">Link3</a>
+
+                    </body>
+
+                    CSS
+                    ---
+
+                        a::before {
+                            content: '[ ';
+                        }
+
+                        a::after {
+                            content: ' ]';
+                        }
 
                     
 
@@ -1190,152 +1307,84 @@ as propriedades top, right, bottom e left (propriedades de coordenandas) são pr
                         >>> (A baixo veremos a construção do nosso site) <<<    (CSS)
 ==========================================================================================================
 
-                RESET.css
-                ---------
+                        RESET.css
+                        ---------
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+        /* http://meyerweb.com/eric/tools/css/reset/ 
+        v2.0 | 20110126
+        License: none (public domain)
+        */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed, 
+        figure, figcaption, footer, header, hgroup, 
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+        }
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure, 
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+        body {
+            line-height: 1;
+        }
+        ol, ul {
+            list-style: none;
+        }
+        blockquote, q {
+            quotes: none;
+        }
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
 
         ====>>> basicamente o reset.css, serve para desconfigurar as configs padrões que já vem nos browsers. Em seguida eu aplico as minhas configs (de como eu quero que fique o layout da minha página), assim todas as esperiencias em browsers diferentes ficaram com o mesmo resultado. 
 
 
+                        INDEX.html
+                        ----------
+
+                        CONTA.html
+                        ----------
+
+                        DESEJOS.html
+                        ------------
+
+                        CARTAO.html
+                        -----------
+                        
+                        SOBRE.html
+                        ----------
+
+                        AJUDA.html
+                        ----------
 
 
-                INDEX.css
-                ---------
 
 
-
-                SOBRE.css
-                ---------
-
-
-body {
-    width: 940px;
-    color: #333333;
-    font-family: "Lucida Sans Unicode","LucidaGrande", Arial, sans-serif;
-    margin: 0 auto;
-}
-
-h1 {
-    background-image:url(../img/sobre-background.jpg);
-    color: #000000;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-h2 {
-    border-bottom: 1px solid #333333;
-    margin: 20px 0;
-
-}
-
-p {
-    padding: 0 45px;
-    text-indent: 15px;
-    margin: 10px 0;
-}
-
-figure {
-    background-color:#f2eded;
-    text-align: center;
-    border: 1px solid #cecece;
-    padding: 15px;
-    margin: 30px;
-}
-
-#centro-de-distribuicao {
-    width: 550px;
-    margin: 0 auto;
-}
-
-#familia-pelho {
-    float: right;
-    margin: 0 0 10px 10px;
-}
-
-figcaption {
-    font-style: italic;
-    margin-top: 10px;
-}
-
-ul {
-    list-style-type: circle;
-}
-
-li {
-    text-indent: 50px;
-}
-
-#compra {
-    background-color: #dcdcf4;
-    color: #4560e2;
-    font-size: xx-large;
-    padding: 10px;
-    text-align: center;
-    margin-top: 20px;
-}
-
-#rodape {
-    color: #777777;
-    margin: 30px 0;
-    padding: 30px 0;
-}
-
-#rodape img {
-    margin-right: 30px;
-    vertical-align: middle;
-    width: 94px;
-}
-
-
-                >>>>>>>> EXPLICAÇÕES <<<<<<<<
+==========================================================================================================
+                        >>>>>>>> EXPLICAÇÕES <<<<<<<<
 ==========================================================================================================
 
         Na explicação de display:
@@ -2298,7 +2347,7 @@ ex- apostila:
 ==========================================================================================================
 
 
-        Na explicação de ID e Seletores:
+        Na explicação de SELETOR ID FILHO:
         ----------------------------------------------------------------------
 
 <!DOCTYPE html>
@@ -2409,7 +2458,7 @@ footer{
 ==========================================================================================================
 
 
-        Seletores de tag, com "e"(,) e seltores filho:
+        Seletores de tag, com "e"(,) e seltores filho (ID FILHO):
         ----------------------------------------------------------------------
 
         (Explicação de ID e seletores)
@@ -2470,6 +2519,413 @@ Tanto podemos ser mais especificos assim: "footer a strong" como com "footer str
         Na explicação de seletores-avançados:
         ----------------------------------------------------------------------
 
+Explicação 1:
+============= 
+
+    HTML:
+    -----
+
+        <!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Seletores Avançados</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+
+    <body>
+
+        <h1>Title</h1>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci perspiciatis eos totam similique ad molestias est cumque optio sed doloribus ab debitis quas iste nobis maiores natus porro repellat officiis incidunt sequi, dicta consectetur quia rem. Voluptates ea earum maiores sit? Quis saepe cupiditate odit quos quisquam? Quam, similique.</p>
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam ipsum commodi accusamus magni doloremque! Blanditiis voluptates ex, enim nisi illo esse reprehenderit soluta neque asperiores totam eaque delectus placeat voluptas natus eligendi est hic debitis veniam corporis consequatur! Illum amet praesentium molestias voluptate possimus dolorem saepe quod eveniet hic facere?</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam ipsum commodi accusamus magni doloremque! Blanditiis voluptates ex, enim nisi illo esse reprehenderit soluta neque asperiores totam eaque delectus placeat voluptas natus eligendi est hic debitis veniam corporis consequatur! Illum amet praesentium molestias voluptate possimus dolorem saepe quod eveniet hic facere?</p>
+
+        <h1>Title</h1>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci perspiciatis eos totam similique ad molestias est cumque optio sed doloribus ab debitis quas iste nobis maiores natus porro repellat officiis incidunt sequi, dicta consectetur quia rem. Voluptates ea earum maiores sit? Quis saepe cupiditate odit quos quisquam? Quam, similique.</p>
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam ipsum commodi accusamus magni doloremque! Blanditiis voluptates ex, enim nisi illo esse reprehenderit soluta neque asperiores totam eaque delectus placeat voluptas natus eligendi est hic debitis veniam corporis consequatur! Illum amet praesentium molestias voluptate possimus dolorem saepe quod eveniet hic facere?</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam ipsum commodi accusamus magni doloremque! Blanditiis voluptates ex, enim nisi illo esse reprehenderit soluta neque asperiores totam eaque delectus placeat voluptas natus eligendi est hic debitis veniam corporis consequatur! Illum amet praesentium molestias voluptate possimus dolorem saepe quod eveniet hic facere?</p>
+
+        <h1>Title</h1>
+
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci perspiciatis eos totam similique ad molestias est cumque optio sed doloribus ab debitis quas iste nobis maiores natus porro repellat officiis incidunt sequi, dicta consectetur quia rem. Voluptates ea earum maiores sit? Quis saepe cupiditate odit quos quisquam? Quam, similique.</p>
+        
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam ipsum commodi accusamus magni doloremque! Blanditiis voluptates ex, enim nisi illo esse reprehenderit soluta neque asperiores totam eaque delectus placeat voluptas natus eligendi est hic debitis veniam corporis consequatur! Illum amet praesentium molestias voluptate possimus dolorem saepe quod eveniet hic facere?</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam ipsum commodi accusamus magni doloremque! Blanditiis voluptates ex, enim nisi illo esse reprehenderit soluta neque asperiores totam eaque delectus placeat voluptas natus eligendi est hic debitis veniam corporis consequatur! Illum amet praesentium molestias voluptate possimus dolorem saepe quod eveniet hic facere?</p>
+
+    </body>
+
+</html>
+
+
+
+    CSS:
+    ----
+
+        h1 + p {
+    font-size: 20px;
+}
+
+p + p {
+    color: #ff0000;
+}
+
+p + h1 {
+    text-indent: 50px;
+}
+
+h1 + p + p {
+    color: #0000ff;
+}
+
+------------------------
+
+    Explicação 2:
+    ============= 
+
+    HTML:
+    -----
+
+        <!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>2º EX. de seletores avançados</title>
+        <link rel="stylesheet" href="index2.css">
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <h1>Ficha cadastral:</h1>
+
+            <form>
+
+                <label for="nome">Nome: </label>
+                <input id="nome" type="text"> <br>
+
+                <label for="data">Data de Nascimento: </label>
+                <input id="data" type="date"> <br>
+
+                <label for="end">Endereço: </label>
+                <input id="end" type="text"> <br>
+
+                <label for="sexo">Sexo: </label>
+                <input id="sexo" value="sexof" type="radio"> F 
+                <input id="sexo" value="sexom" type="radio"> M <br>
+
+                <label for="nome-da-mae">Nome da mãe: </label>
+                <input id="nome-da-mae" type="text"> <br>
+
+                <label for="escolaridade">Escolaridade: </label>
+                <select id="escolaridade" name="menu" size="1">
+                    <option>Básico Completo</option>
+                    <option>Básico Incompleto</option>
+                    <option>Fundamental Completo</option>
+                    <option>Fundamental Incompleto</option>
+                    <option>Médio Completo</option>
+                    <option>Médio Incompleto</option>
+                    <option>Superior Completo</option>
+                    <option>Superior Incompleto</option>
+                    <option>Analfabeto</option>
+                </select> <br>
+
+            </form>
+
+        </div>
+
+    </body>
+</html>
+
+
+
+
+
+    CSS:
+    ----
+
+        .container {
+    width: 600px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1:hover {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, .5);
+}
+
+form {
+    font-size: x-large;
+}
+
+label:hover + input{
+    border: 1px dotted #000000;
+}
+
+input {
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+input:focus {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+
+
+------------------------
+
+    Explicação 3:
+    ============= 
+
+    HTML:
+    -----
+
+        <!DOCTYPE html>
+<html lang="pt-Br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>3º EX. de seletores avançados</title>
+        <link rel="stylesheet" href="index3.css">
+    </head>
+
+    <body>
+
+        <article>
+
+            <h1>Title</h1>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur ut magnam totam quibusdam eius, nostrum tempora rerum unde itaque eos incidunt impedit a doloremque dolorum quaerat mollitia est earum saepe.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem exercitationem temporibus vitae corporis magni vel veniam quisquam necessitatibus ad tempore perferendis delectus expedita, ducimus omnis molestiae sit dolor earum suscipit.</p>
+
+            <section>
+
+                <h2>Subtitle</h2>
+    
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis molestiae quia vero architecto harum omnis nemo beatae suscipit corrupti voluptatem, eveniet magni culpa totam magnam porro in. Earum, aliquid odio.</p>
+
+            </section>
+
+        </article>
+
+        <p><a href="https://pt.wikipedia.org/wiki/Latim" target="_blank" class="ancora">Lorem</a>, ipsum dolor sit amet consectetur adipisicing elit. Assumenda earum accusantium recusandae, quos enim unde. Quidem, ratione fuga eum animi esse ipsa optio nemo temporibus officiis vero ipsum aperiam omnis!</p>
+
+        <h3>Sub-Subtitulo</h3>
+
+        <p>Lorem ipsum dolor sit amet, <a href="https://pt.wikipedia.org/wiki/Latim" target="_blank" class="ancora">consectetur</a> adipisicing elit. Mollitia sint similique totam provident nulla, at aliquid perspiciatis delectus aspernatur vel? Tempore voluptatum corrupti corporis ipsam odit eos, cum mollitia facilis.</p>
+
+        <p class="especial">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sint similique totam provident nulla, at aliquid <a href="../../index.html">perspiciatis</a> delectus aspernatur vel? Tempore voluptatum corrupti corporis ipsam odit eos, cum mollitia facilis.</p>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia sint similique totam provident nulla, at aliquid perspiciatis delectus aspernatur vel? Tempore voluptatum corrupti corporis ipsam odit eos, cum mollitia <a href="https://pt.wikipedia.org/wiki/Latim" target="_blank">facilis</a>.</p>
+
+
+
+        <header>
+            <nav>
+                <ul class="menu">
+                    <li class="item">Primeiro Item</li>
+                    <li>Segundo Item</li>
+                    <li>Terceiro Item</li>
+                    <li class="item">Quarto Item</li>
+                </ul>
+            </nav>
+        </header>
+
+        <div>
+            <ul class="segundo-menu">
+                <li>Um</li>
+                <li>Dois</li>
+                <li>Três</li>
+                <li>Quatro</li>
+                <li>Cinco</li>
+            </ul>
+        </div>
+
+        <div>
+            <ul class="terceiro-menu">
+                <li>Par</li>
+                <li>Ímpar</li>
+                <li>Par</li>
+                <li>Ímpar</li>
+                <li>Par</li>
+                <li>Ímpar</li>
+                <li>Par</li>
+                <li>Ímpar</li>
+                <li>Par</li>
+                <li>Ímpar</li>
+                <li>Par</li>
+                <li>Ímpar</li>
+            </ul>
+        </div>
+
+    </body>
+
+</html>
+
+
+
+    CSS:
+    ----
+
+        body {
+    width: 500px;
+    margin: auto;
+}
+
+article > p {
+    font-style: italic;
+}
+
+h2 ~ p {
+    color: #ff0000;
+}
+
+
+h3 ~ p:not(.especial){
+    color: #aaafff;
+    font-style: italic;
+}
+
+/* seleciona todas as âncoras que têm o atributo "href", ou seja, links */
+a:link {
+    background-color:#FF0000;
+}
+
+/* seleciona todos os links cujo valor de "href" é um endereço já visitado */
+a:visited {
+    background-color:#00FF00;
+}
+
+/* seleciona o link no exato momento em que clicamos nele */
+a:active {
+background-color:#0000FF;
+}
+
+.menu > li:first-child {
+    color: #ffff00;
+}
+
+.menu > li:last-child {
+    color: #00ff00;
+}
+
+.menu > li:not(.item) {
+    text-indent: 20px;
+}
+
+.segundo-menu > li:nth-child(3){
+    background-color: orange;
+}
+
+/* Elementos pares */
+.terceiro-menu > li:nth-child(2n) {
+    background-color: orangered;
+}
+
+/* Elementos ímpares */
+
+.terceiro-menu > li:nth-child(2n+1) {
+    background-color: rgb(3, 3, 39);
+    color: #ffffff;
+}
+
+p::first-letter {
+    font-size: 200%;
+}
+
+p::first-line {
+    font-variant: small-caps;
+}
+
+------------------------
+
+    Explicação 4: (:nth-child())
+    ============= 
+
+    HTML:
+    -----
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>4ª EX - seletores avançados</title>
+        <link rel="stylesheet" href="index4.css">
+    </head>
+
+    <body>
+
+        <div>
+            <div>
+                <h1>Ordinal Numbers</h1>
+            </div>
+            <ul>
+                <li>First</li>
+                <li>Second</li>
+                <li>Third</li>
+                <li>Fourth</li>
+                <li>Fifth</li>
+            </ul>
+        </div>
+
+    </body>
+
+</html>
+
+
+    CSS
+    ---
+
+    div {
+    display: block;
+    width: 500px;
+    font-size: x-large;
+    margin: auto;
+}
+
+div > h1 {
+   text-align: center;
+}
+
+ul{
+    position: relative;
+    left: -20px;
+}
+
+li {
+    list-style: none;
+}
+
+/* ímpar */
+li:nth-child(odd) {
+    background-color: #ff0000;
+    padding: 0px 20px;
+}
+
+/* par */
+li:nth-child(even) {
+    background-color: #ffff00;
+    padding: 0px 10px;
+    text-align: right;
+}
 
 
 

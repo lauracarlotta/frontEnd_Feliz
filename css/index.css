@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@500&display=swap');
 
 body {
-    color: #360707;
+    color: #2e0606;
     font-family: 'Alegreya Sans', Arial, Helvetica, sans-serif;
 }
 
@@ -92,7 +92,7 @@ label ~ form > input:hover {
 }
 
 .menu-departamentos li li a::before {
-    content: '\2B51';
+    content: '\2666';
     padding-right: 5px;
     opacity: .8;
 }
@@ -119,8 +119,8 @@ label ~ form > input:hover {
     color: #6D2B1D;
 }
 
-.bolsas-e-carteiras h3::before, .bolsas-e-carteiras h3::after {
-    content: '\2B25';
+.bolsas-e-carteiras h3:before, .bolsas-e-carteiras h3:after {
+    content: '\2665';
     padding: 5px;
 }
 
