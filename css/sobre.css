@@ -178,12 +178,18 @@ li {
 }
 
 .compra {
+    width: 940px;
+    height: 35px;
     background-color:  #FBC3C3;
     color: #360707;
     font-size: xx-large;
     padding: 10px;
     text-align: center;
-    margin: 20px 0px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px; 
+    border-radius: 35px;
+    
 }
 
 .compra::before, .compra::after {

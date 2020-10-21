@@ -184,8 +184,18 @@ label ~ form > input:hover {
     box-shadow: 2px 2px 4px rgba(0, 0, 0, .6);
 }
 
+.novidades, .mais-vendidos {
+    border-radius: 2px 4px 8px;
+}
+
 .novidades h2, .mais-vendidos h2 {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, .6);
+}
+
+.novidades h2:before, .mais-vendidos h2:before {
+    content: '\2730';
+    font-size: 22px;
+    padding-right: 5px;
 }
 
 .novidades {

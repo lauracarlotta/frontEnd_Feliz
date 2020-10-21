@@ -449,7 +449,12 @@ Prefixo:
 
 --------------------
 
-        -box-shadow: sombra da caixa.
+        -box-shadow: sombra da caixa. => X Y blur spread color (blur e spread não são obrigatórios)
+
+                                        (offset-X offset-Y blur-radius spread-radius color) 
+                                            offset - eixo/deslocamento
+                                            blur - borrão
+                                            spread - propagação
 
             20px - deslocamento x,
             20px - deslocamento y e 
@@ -463,7 +468,7 @@ Prefixo:
 
             20px - deslocamento x,
             20px - deslocamento y,
-            30px - grau de espalhamento [blur - borrão] (é aquele "embassadinho") e 
+            30px - grau de espalhamento (é aquele "embassadinho") e 
             black - cor da sombra.
             div {
                 box-shadow: 20px 20px 30px black;
@@ -521,6 +526,10 @@ Prefixo:
 ===>>> Temos que lembrar que tudo tem um padrão, no início. Exemplo: o texto todo sempre começará da esquerda apra a direita e de cima para baixo. Então, tudo, eu disse TUDO, sempre tem um coportamento padão para que possamos formata-los conforme nossa necessidade.
 
 --------------------
+
+        -background: fundo;
+
+        -background: linear-gradient(#FFCA28,#FF6F00); (esca uma cor com a outra);
 
         -background-color: cor do fundo;
 
@@ -583,7 +592,7 @@ Prefixo:
         
         - E ainda é possível dizer onde queremos essa linha: se left, right, top or bottom. Caso não seja especificado, quer dizer que a borda será em tudo];
 
-        -border-radius: borda arredondada; Ex:
+        -border-radius: borda arredondada - radius=raio. Em cada extremidade é ganhado um quadrado imaginário onde o mesmo recebe dentro um císrculo e dentro desse círculo é claculado o raio de cada lado ou cada lado que você aplicar o border-radius pra ficar arredondado; Ex:
 
             border-radius: 5px; 
                 aplicará 5px em todas as bordas do elemento;
@@ -607,6 +616,28 @@ Prefixo:
                     50px para a borda inferior direita e 
                     100px para a borda inferior esquerda.
 
+        
+                    AINDA PODEMOS APLICAR EM APENAS UMA EXTREMIDADE COM AS PROEPRIDADES:
+
+                        > border-top-right-radius: 100px;
+                        > border-bottom-right-radius: 150px;
+                        > border-top-left-radius: 200px;
+                        > border-bottom-left-radius: 250px;
+
+                            E USANDO A PROPRIEDADE transform: rotate(45deg) => iremos girar a div 45 graus [abreviação de deg - graus=degrees] - Um exeplo disso é que poderíamos crair um gráfico de pizza.
+
+--------------------
+
+        -transform: rotate(Xdeg) => Irá rotacionar para X angulo que você colocar. (deg-abrev. de degrees que significa "graus") EX:
+
+            transform: rotate(45deg) - Irá rotacionar 45° *
+
+                (*Exemplo de aplicabilidade seria na construção de um gráfico de pizza.)
+
+--------------------        
+
+        -cursor: poiter (mesmo quando não é um link, passamos o mouse por cima e o cursor muda de ícone.)
+
 --------------------
 
         -text-align: center - alinhamento do texto (center - centralizado)* No nosso primiero caso aplicamos a tag <figure>, porém dentro dela temos além de um texto na <figcaption>, uma <img> e neste caso podemos considerar a img como texto também (como contéudo) e com isso, (a proprieadade sendo aplicada na tag pai), tudo o que estiver dentro (as tags filho) serão alteradas; EX: left, right, justify.
@@ -620,9 +651,9 @@ Prefixo:
 
                         -word-spacing: 5px; tamanho do espaço entre cada palavra
 
-        -text-shadow: sombra do texto.
+        -text-shadow: sombra do texto. => X Y blur color
 
-            10px - deslocamento x,
+            10px - deslocamento x (dá pra por os valores negativo também),
             10px - deslocamento y e 
             red - cor da sombra.
             p {
