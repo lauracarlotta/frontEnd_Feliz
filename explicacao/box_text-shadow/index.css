@@ -27,8 +27,21 @@ h1 {
 }
 
 .terceiro {
+    padding: 25px;
+    border: none;
+    background-color: #cecece;
+    color: #000;
+    border-radius: 80px;
     font-size: 35px;
     text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.6), -5px -5px 4px rgba(255, 0, 0, 0.8);
+}
+
+.terceiro:hover {
+    border-radius: 120px;
+    color: seashell;
+    transform: scale(1.2) rotate(360deg);
+    transition: transform 500ms linear,
+                color 1s linear;
 }
 
 .quarto {
@@ -39,9 +52,9 @@ h1 {
 .quadrado {
     display: block;
     float: left;
-    width: 100px;
+    width: 120px;
     height: 100px;
-    margin: 50px;
+    margin: 40px;
     padding: 10px;
     border: 1px solid rgba(0, 0, 0, 0.9);
     font-size: x-large;
@@ -49,30 +62,34 @@ h1 {
     text-align: center;
 }
 
-.first {
+.div2 > h1 {
+    margin-top: 50px;
+}
+
+.first:hover {
     box-shadow: 10px 30px red;
 }
 
-.second {
+.second:hover {
     box-shadow: 8px 8px 12px red;
 }
 
-.third {
+.third:hover {
     box-shadow: -4px 10px 40px 40px red;
 }
 
-.fourth {
+.fourth:hover {
     box-shadow: inset 0 0 25px red;
 }
 
-.fifth {
+.fifth:hover {
     box-shadow: -5px -5px 10px red;
 }
 
 .retangulo {
     display: inline;
     float: left;
-    margin: 50px;
+    margin: 40px;
     padding: 10px;
     width: 200px;
     height: 60px;
@@ -82,6 +99,10 @@ h1 {
     border-top-right-radius: 60px;
     border-bottom-left-radius: 60px;
     cursor: pointer;
+}
+
+.div3 > h1 {
+    margin-top: 270px;
 }
 
 .primeiro-first {
@@ -95,9 +116,34 @@ h1 {
 
 .segundo-second {
     background: linear-gradient(#FFCA28,#FF6F00, #DA3B01);
-    box-shadow: 3px 3px 6px #F7630C;    
+    box-shadow: 3px 3px 6px 8px #F7630C;    
 }
 
 .segundo-second:active {
-    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 3px 3px 10px  rgba(0, 0, 0, 0.6);
+}
+
+.terceiro-third {
+    background: linear-gradient(#E81123,#F7630C, #FFB900, #4CAF50, #0078D7, #6B69D6, #CE93D8);
+    /* background: linear-gradient(to bottom, white, blue) // To top, right, bottom e left não é necessário mas as ultimas versões dos browsers tem suporte para a config.   */
+}
+
+.terceiro-third:hover {
+    background: linear-gradient(#CE93D8, #6B69D6, #0078D7, #4CAF50, #FFB900, #F7630C, #E81123);
+}
+
+.quarto-fourth {
+    background: radial-gradient(white, blue, black);
+}
+
+.quarto-fourth:active {
+    background: radial-gradient(blue, white, purple, black);
+}
+
+.quinto-fifth {
+    background: linear-gradient(45deg, #5bbeff 0%, #a8deff 47%, #00ffff 100%)
+}
+
+.quinto-fifth:hover {
+    background: linear-gradient(45deg, #FFF000 0%, #0000ff 47%, #00ffff 100%)
 }

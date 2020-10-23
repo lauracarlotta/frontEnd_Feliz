@@ -1,0 +1,59 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} /* Pedir para o Marco Explicar! */
+
+.btn {
+    padding: 10px 20px;
+    margin: 15px;
+    font-size: 20px;
+    font-family: 'Comfortaa', cursive;
+    border: none;
+    border-radius: 4px;
+    transform: scale(1); /* Por padrão, o scale já é 1, mas podemos mudar o padrão do valor base */
+    transition: transform 500ms linear, 
+                border-radius 500ms linear,
+                background-color 300ms linear,
+                color 300ms linear; 
+    /* propriedade > tempo > curva da animação (tipo) */
+    /* PROPRIEADE TRANSITION VERIFICA UMA MUDANÇA!!! E QUANDO HOUVER ESSA MUDANÇA, ELA TENTA ANIMAR ESSA PPROPRIEDADE!!!! // A propriedade transition já criará pra gente os frames // O transition funcionará para qualquer propriedade que possua um começo-meio-fim. EX: não dá pra aplicar o transition de "none" pra "block" - nada irá acontecer // Eu posso colocar valores diferentes para propriedades diferentes // MUITO CUIDADO COM O USO DO "ALL", OU SEJA, QUANDO AO INVÉS DE FALARMOS SOBRE QUAL PROPRIEDADE QUEREMOS A ANIMAÇÃO, FALAMOS QUE QUEREMOS PARA TODAS. ISSO TEM UM CUSTO DE VÁRIAS MANEIRAS: TEMPO, PROCESSADOR, RENDERIZAÇÃO DA PÁGINA PELO BROWSER, ETC... // Quando houver alguma mudança na propriedade transform faça tal coisa (na propriedade e não no valor da propriedade) // 2.5s é a duração de tempo que isso acontecerá (isso, a X coisa) // TEMPO x QUADRO => LINEAR é quando tempo e quadro estão andando em conjunto, proporcionais.  */
+}
+
+/* Quantos quadros(frames-molduras, famoso "quadros por segundo => fps" - quantos quadros por segundo estão sendo renderizados. Quandos mais frames ele for renderizado, mais processamento ele exigirá da sua GPU) queremos que a propriedade crie pra nós???  */
+
+.btn:hover {
+    border-radius: 20px;
+    transform: scale(1.4) rotate(360deg); /* Scale aumenta o item em escalas. Os valores recebidos serão multiplicadores do tamanho. EX: scale(2) deixará o item com o dobro da largura e o dobro da altura. */
+}
+
+.entrar {
+    background-color: #ffb900;
+    color: #F7630C;
+}
+
+.entrar:hover {
+    background-color: #f7630c;
+    color: #ffb900;
+}
+
+.editar {
+    background-color: #00cc6a;
+    color: #498205;
+}
+
+.editar:hover {
+    background-color:#498205;
+    color:  #00cc6a;
+}
+
+.cancelar {
+    background-color: #8e8cd8;
+    color: #744DA9;
+}
+
+.cancelar:hover {
+    background-color: #744DA9;
+    color: #8e8cd8;
+}

@@ -46,6 +46,23 @@ Então basicamente o pessoal de UX já define as páginas, o conteúdo de cada u
 
 ------------
 
+    FRAMEWORKS:
+
+        REACT x ANGULAR: 
+
+            React usa JS e angular usa TypeScript, no react você consegue programar em TypeScript.
+            React não é um framework e sim uma Lib, você cosegue fazer com ele tudo o que você faz com Angular, só que por padrão não vem tudo configurado, você tem que ir configurando. O Angular já vem com tudo embutido. 
+
+------------
+
+    PARA HOSPEDAR O SEU SITE DE GRAÇA, DÁ PRA UTILIZAR O GHPAGES, NETLIFY PARA FRONT E HEROKU PARA BACK. (MARCO BRUNO HOSPEDA OS SEUS SITES NA DIGITAL OCEAN OU NA AZURE)
+
+------------   
+
+    PARA A ORGANIZAÇÃO DOS SEUS PROJETOS, O MARCO BRUNO UTILIZA O ITCSS PARA A ORGANIZAÇÃO DAS PASTAS E O RSCSS PARA A ORGANIZAÇÃO DOS COMPONENTES.
+
+------------
+
 ===>>> O DevOps é como se fosse um arquiteto, ele sabe exatamente onde colocar as colunas para o "sistema" ser levantado e escalável.
 
 ------------
@@ -529,7 +546,26 @@ Prefixo:
 
         -background: fundo;
 
-        -background: linear-gradient(#FFCA28,#FF6F00); (esca uma cor com a outra);
+        -background: linear-gradient(#FFCA28,#FF6F00); (mescla uma cor com a outra, podendo acrescentar muito mais de uma),
+            EX: background: linear-gradient(#E81123,#F7630C, #FFB900, #4CAF50, #0078D7, #6B69D6, #CE93D8);
+
+        -background: radial-gradient(white, blue); => Do centro pra fora ou vice-versa e tambeḿ pode receber mais de duas cores. 
+            background: linear-gradient(to bottom, white, blue) // To top, right, bottom e left não é necessário mas as ultimas versões dos browsers já pode add nas configs adicionando os prefixos.
+
+        -background: linear-gradient(45deg, #5bbeff 0%, #a8deff 47%, #00ffff 100%) => Podendo ainda receber muito mais configs de cores e o angulo que as cores seriam aplicadas. 
+
+            FIQUE ATENTO: O GRADIENTE NAÕ TEM SUPORTE TOTAL PARA TODOS OS NAVEGADORES. VEJA ONDE E COMO DEVERÁ ADICIONAR OS PREFIXOS. (PRINCIPALMENTE NA IE.)
+
+                EX: .linear {
+                    background: -webkit-linear-gradient(top, white, blue);
+                    background: -moz-linear-gradient(top, white, blue);
+                    background: -o-linear-gradient(top, white, blue);
+                    }
+
+                EX: .linear {
+                    background: -webkit-gradient(linear, left top, left bottom,
+                    color-stop(0%, white), color-stop(100%, blue));
+                    }
 
         -background-color: cor do fundo;
 
@@ -628,13 +664,32 @@ Prefixo:
 
 --------------------
 
+        -transform: scale(1) => Por padrão, o scale já é 1, mas podemos mudar o padrão do valor base. Scale aumenta o item em escalas. Os valores recebidos serão multiplicadores do tamanho. EX: scale(2) deixará o item com o dobro da largura e o dobro da altura.
+
         -transform: rotate(Xdeg) => Irá rotacionar para X angulo que você colocar. (deg-abrev. de degrees que significa "graus") EX:
 
             transform: rotate(45deg) - Irá rotacionar 45° *
 
-                (*Exemplo de aplicabilidade seria na construção de um gráfico de pizza.)
+                (*Exemplo de aplicabilidade seria na construção de um gráfico de pizza ou na rotação de um botão.)
 
---------------------        
+-------------------- 
+
+        -transition: faz animações de forma "automatica" pra nós. (Ele anima propriedades que mudam) =>
+
+            propriedade > tempo > curva da animação (tipo) *** Veja no Firefox em "inspecionar"
+
+                Quantos quadros queremos que a propriedade crie pra nós??? (frames-molduras, famoso "quadros por segundo => fps" - quantos quadros por segundo estão sendo renderizados. Quanto mais frames ele for renderizado, mais processamento ele exigirá da sua GPU)
+
+
+        - PROPRIEDADE TRANSITION VERIFICA UMA MUDANÇA!!! E QUANDO HOUVER ESSA MUDANÇA, ELA TENTA ANIMAR ESSA PPROPRIEDADE!!!! // A propriedade transition já criará pra gente os frames // O transition funcionará para qualquer propriedade que possua um começo-meio-fim. EX: não dá pra aplicar o transition de "none" pra "block" - nada irá acontecer // Eu posso colocar valores diferentes para propriedades diferentes // MUITO CUIDADO COM O USO DO "ALL", OU SEJA, QUANDO AO INVÉS DE FALARMOS SOBRE QUAL PROPRIEDADE QUEREMOS A ANIMAÇÃO, FALAMOS QUE QUEREMOS PARA TODAS. ISSO TEM UM CUSTO DE VÁRIAS MANEIRAS: TEMPO, PROCESSADOR, RENDERIZAÇÃO DA PÁGINA PELO BROWSER, ETC... // Quando houver alguma mudança na propriedade transform faça tal coisa (na propriedade e não no valor da propriedade) // 2.5s é a duração de tempo que isso acontecerá (isso, a X coisa) // TEMPO x QUADRO => LINEAR é quando tempo e quadro estão andando em conjunto, proporcionais. (ease=mais devagar *** ease-in=mais devagar quando estiver o mouse *** ease-out=mais devagar quando o mouse estiver fora *** ease-in-out=mais devagartanto para dentro quanto para fora)
+
+        transition: transform 500ms cubic-bezier(0.68, 1.42, 0.8, 1.52), [cubic-bezier(x1, y1, x2, y2)] /* Esse valor (cubic-bezier), entre outros, conseguimos pelo inspecionar direto no navegador - só clicar no reloginho no firefox ou na curvinha no chrome */
+
+        Quando eu quiser que a animação só aconteça quando eu estiver com o mouse em cima, eu devo aplicar o transform apenas no hover, como estará no css.
+
+        Quando eu quiser que a animação só aconteça quando eu estiver com o mouse em cima, eu devo aplicar o transform apenas no houver, como estará no css - A diferença é clara, quando queremos a animação quando tiramos o mouse, temos que colocar os efeitos no botão e quando queremos quando passamos o mouse por cima apenas, ou quando houver uma "mudança", colocamos no "hover" // Podemos ainda configurar o "tira e põe" do mouse no elemento, por exemplo no hover colocar tempo mais longo do que no btn em si.
+
+-------------------- 
 
         -cursor: poiter (mesmo quando não é um link, passamos o mouse por cima e o cursor muda de ícone.)
 
@@ -1416,6 +1471,273 @@ as propriedades top, right, bottom e left (propriedades de coordenandas) são pr
 
 ==========================================================================================================
                         >>>>>>>> EXPLICAÇÕES <<<<<<<<
+==========================================================================================================
+        
+        Na explicação de border-radius:
+        --------------------------------------------------------------------
+
+        HTML:
+        -----
+
+            <!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicação de Border-Radius</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    
+    <div class="container">
+        <h1>Border-Radius</h1>
+        <div class="quadrado primeiro">Primeiro</div>
+        <div class="quadrado segundo">Segundo</div>
+        <div class="quadrado terceiro">Terceiro</div>
+        <div class="quadrado quarto">Quarto</div>
+        <div class="quadrado quinto">Quinto</div>
+        <div class="quadrado sexto">Sexto</div>
+        <div class="quadrado setimo">Sétimo</div>
+        <div class="quadrado oitavo">Oitavo</div>
+    </div>
+
+</body>
+
+</html>
+
+
+
+
+        CSS:
+        ----
+
+            .container {
+    width: 560px;
+    height: 600px;
+    margin: auto;
+    background-color: rgb(233, 233, 233);
+}
+
+h1 {
+    font-size: xx-large;
+    font-style: italic;
+    text-decoration: underline;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.quadrado {
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin: 3px 0 0 10px;
+    padding: 10px;
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.primeiro {
+    background-color: #ff0000;
+    border-radius: 50%; /* circulo porque usamos a porcentagem = 50px não dá tão certo */
+}
+
+.segundo {
+    background-color: #ffb000;
+    border-radius: 10px 30px;
+}
+
+.terceiro {
+    background-color: #00ff00;
+    border-radius: 10px 30px 70px;
+}
+
+.quarto {
+    background-color: #0000ff;
+    border-radius: 10px 20px 40px 80px;
+}
+
+.quinto {
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 0px 5px 20px;
+}
+
+.sexto {
+    background-color: #efcfcf;
+    border-bottom-right-radius: 150px;
+}
+
+.setimo {
+    background-color: #EF6950;
+    border-bottom-right-radius: 150px;
+    transform: rotate(45deg); /* degrees - graus, tipo 90°, 360° */
+    position: relative;
+    left: 368px;
+}
+
+.oitavo {
+    background-color: #00b294;
+    width: 200px;
+    height: 100px;
+    position: relative;
+    top: 10px;
+    left: -100px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+==========================================================================================================
+
+        Na explicação de box_text-shadow:
+        --------------------------------------------------------------------
+        
+        HTML:
+        -----
+
+            <!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicação de Text-Shadow e box Shadow</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Text-Shadow</h1><br>
+        <div class="texto primeiro">Meu</div>
+        <div class="texto segundo">Amor</div>
+        <div class="texto terceiro">Wellington</div>
+        <div class="texto quarto">Da vida toda!!!</div>
+        <br><br><br><br><br>
+        <h1>Box-Shadow</h1><br>
+        <div class="quadrado first">Primeiro</div>
+        <div class="quadrado second">Segundo</div>
+        <div class="quadrado third">Terceiro</div>
+        <div class="quadrado fourth">Quarto</div>
+        <div class="quadrado fifth">Quinto</div>
+        <h1>Outros Exemplos</h1><br>
+        <div class="retangulo primeiro-first">One</div>
+        <div class="retangulo segundo-second">Two</div>
+    </div>
+</body>
+
+</html>
+
+
+        CSS:
+        ----
+
+        .container {
+    width: 1200px;
+    height: 900px;
+    margin: 10px;
+    padding: 5px;
+}
+
+h1 {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.texto {
+    display: inline;
+    padding: 30px;
+    font-weight: bolder;
+}
+
+.primeiro {
+    font-size: 70px;
+    text-shadow: 10px 10px red;
+}
+
+.segundo {
+    font-size: 50px;
+    text-shadow: 5px 5px 10px red;
+}
+
+.terceiro {
+    font-size: 35px;
+    text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.6), -5px -5px 4px rgba(255, 0, 0, 0.8);
+}
+
+.quarto {
+    font-size: 35px;
+    text-shadow: -5px -5px 10px red;
+}
+
+.quadrado {
+    display: block;
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 50px;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.9);
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.first {
+    box-shadow: 10px 30px red;
+}
+
+.second {
+    box-shadow: 8px 8px 12px red;
+}
+
+.third {
+    box-shadow: -4px 10px 40px 40px red;
+}
+
+.fourth {
+    box-shadow: inset 0 0 25px red;
+}
+
+.fifth {
+    box-shadow: -5px -5px 10px red;
+}
+
+.retangulo {
+    display: inline;
+    float: left;
+    margin: 50px;
+    padding: 10px;
+    width: 200px;
+    height: 60px;
+    font-size: x-large;
+    font-weight: bolder;
+    text-align: center;
+    border-top-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+    cursor: pointer;
+}
+
+.primeiro-first {
+    background-color: #26A69A;
+    box-shadow: 3px 3px #004D40;
+}
+
+.primeiro-first:hover {
+    box-shadow: inset 3px 3px 10px rgba(0, 0, 0, 0.6);
+}
+
+.segundo-second {
+    background: linear-gradient(#FFCA28,#FF6F00, #DA3B01);
+    box-shadow: 3px 3px 6px 8px #F7630C;    
+}
+
+.segundo-second:active {
+    box-shadow: inset 3px 3px 10px  rgba(0, 0, 0, 0.6);
+}
+
+        
 ==========================================================================================================
 
         Na explicação de display:
@@ -3104,6 +3426,197 @@ ou
 
 Todo atributo criado tem que começar com data-*/
 
+
+==========================================================================================================
+
+
+        Na explicação de transform-transition:
+        ---------------------------------------------------------------------
+    
+    EXPLICAÇÃO 1:
+
+    HTML:
+    -----
+
+        <!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicação de transform e transition</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <button class="btn entrar">Entrar</button>
+    <button class="btn editar">Editar</button>
+    <button class="btn cancelar">Cancelar</button>
+
+</body>
+
+</html>
+
+
+
+
+    CSS:
+    ----
+
+    body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 15px;
+    font-size: 20px;
+    font-family: 'Comfortaa', cursive;
+    border: none;
+    border-radius: 4px;
+    transform: scale(1); 
+    transition: transform 500ms linear, 
+                border-radius 500ms linear,
+                background-color 300ms linear,
+                color 300ms linear; 
+}    
+
+.btn:hover {
+    border-radius: 20px;
+    transform: scale(1.4); 
+}
+
+.entrar {
+    background-color: #ffb900;
+    color: #F7630C;
+}
+
+.entrar:hover {
+    background-color: #f7630c;
+    color: #ffb900;
+}
+
+.editar {
+    background-color: #00cc6a;
+    color: #498205;
+}
+
+.editar:hover {
+    background-color:#498205;
+    color:  #00cc6a;
+}
+
+.cancelar {
+    background-color: #8e8cd8;
+    color: #744DA9;
+}
+
+.cancelar:hover {
+    background-color: #744DA9;
+    color: #8e8cd8;
+}
+
+
+
+>>>>>>>>>>>>>>>>>
+
+    EXPLICAÇÃO 2:
+
+    HTML:
+    -----
+
+        <!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explicação de transform e transition</title>
+    <link rel="stylesheet" href="index2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <button class="btn entrar">Entrar</button>
+    <button class="btn editar">Editar</button>
+    <button class="btn cancelar">Cancelar</button>
+
+</body>
+
+</html>
+
+
+
+
+
+    CSS:
+    ----
+
+        body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    padding: 10px 20px;
+    margin: 15px;
+    font-size: 20px;
+    font-family: 'Comfortaa', cursive;
+    border: none;
+    border-radius: 4px;
+    transform: scale(1);
+    transition: transform 1s linear, 
+                border-radius 100ms linear,
+                background-color 100ms linear,
+                color 100ms linear;
+}
+
+.btn:hover {
+    border-radius: 20px;
+    transform: scale(1.4);
+    transition: transform 500ms cubic-bezier(0.68, 1.42, 0.8, 1.52),
+                border-radius 500ms linear,
+                background-color 500ms linear,
+                color 500ms linear;
+}
+
+.entrar {
+    background-color: #ffb900;
+    color: #F7630C;
+}
+
+.entrar:hover {
+    background-color: #f7630c;
+    color: #ffb900;
+}
+
+.editar {
+    background-color: #00cc6a;
+    color: #498205;
+}
+
+.editar:hover {
+    background-color:#498205;
+    color:  #00cc6a;
+}
+
+.cancelar {
+    background-color: #8e8cd8;
+    color: #744DA9;
+}
+
+.cancelar:hover {
+    background-color: #744DA9;
+    color: #8e8cd8;
+}
 
 
 
