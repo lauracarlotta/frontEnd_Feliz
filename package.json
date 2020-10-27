@@ -1,17 +1,20 @@
 {
   "name": "frontend_feliz",
   "version": "1.0.0",
-  "description": "- Tem a responsabilidade de guardar:     (Linguagem de marcação)     - Conteúdo(textos e imagens);     - Forma semântica (tags)     - Estrutura (figure)",
-  "main": "server.js",
+  "description": "frontend_feliz e um projeto com finalidade de estudo, ministrado pelo dev Marco Bruno com aulas gratuitas pelo seu canal da Twitch.com utilizando apostila criada pelo empresa Caelum como seu material de apoio",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lauracarlotta/frontEnd_Feliz.git"
   },
-  "author": "",
+  "author": "Laura Carlotta",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/lauracarlotta/frontEnd_Feliz/issues"
