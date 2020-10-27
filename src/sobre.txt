@@ -4,6 +4,10 @@ Estudar:
         - ES6 do JS (arrow function, class, extends, const, metodo dentro de uma class, promisses acincaration)
         - Ajax
 
+    DEPOIS:
+
+        -API
+
 ------------
 
 Pesquisar:
@@ -18,7 +22,24 @@ Pesquisar:
 
         - loading na tag img?
 
-RESPONSIVO: É quando você consegue atende a todos os tamanhos de tela, desde um celular até um desktop maior. (Dar suporte a todos os tamanhos de tela.)         
+        - PWA (responsivo)
+
+        - UX RESEARCH => pesquiasa de mercado pra ver qual é o seu público alvo, ou como é o seu uśuário final, tipo se ele usa mais mobile ou browser. (podendo usar o google analytics)
+
+        - pixel virtual
+
+RESPONSIVO: É quando você consegue atende a todos os tamanhos de tela, desde um celular até um desktop maior OU TV - lEMBRANDO QUE JÁ TEMOS ATÉ SMARTWACHES. (Dar suporte a todos os tamanhos de tela.)  Nesse contexto ainda, podemos ver sites de grande porte que criam 2 sites diferentes para desktop e para mobile. isso porque a experiencia de usuário pode ser diferente. EX: o portal do UOL => no desktop você pode querer ver noticias de forma geral, como por exemplo esportes, política, etc; enquanto que no mobile informções sobre acidentes de transito, pausas no metrô e etc são mais imediatistas, ou seja, o que os usários do mobile poderão querer ver mais rápido ou o que terá destaque no jornal. (NO NAVEGADOR) => No mobile, já tem os apps. => No HTML não muda nada. O que tem alteração é o CSS e o JS.
+
+    A EXPERIENCIA USUÁRIO FINAL SEMPRE SERÁ O FOCO, OU QUE É MAIS IMPORTANTE!!!
+                  -------
+
+MOBILE FIRST => Quando criamos o layout do mobile primeiro, isso significa que o layout é mais enchuto, logo, o conteúdo deve ser mais estruturado. O conteúdo será mais direcionado com o propósito dele. Já o desktop first, nós temos muito mais espaço o que fica muito mais facil de você poluir o site.
+
+    ===>>> POR QUAL COMEÇAR PRIMEIRO? MOBILE FIRST ou DESKTOP FIRST?
+
+        Se o conceito do seu site trabalha com apenas uma coluna, use o mobile first, isso porque por padrão o display já vem block, então é bem mais fácil de você fazer o layout por já ser coisas a menos a configurar. Já no caso de o conceito do site que você trbalhar é de mais de uma coluna (2ou++) tanto irá fazer por qual você deve começar. Ai já seria critério da sua escolha, onde talvez fosse mais facil começar pelo desktop já que é o mais trabalhoso, onde é o que ficaria mais fácil de você poluir visualmente.
+
+
 
 IDEs = Integrated Development Environment 
 
@@ -151,6 +172,10 @@ tags que não existiam no html5:
 ===>>> Porém, precisamos dar um nome para a página para que ele fique visível ao usuário, para que ele saiba em qual página está navegando. Colocamos assim a tag <title> (Ficará na aba do documento ou será exibido na barra de título) [tag semantica]
 
 ===>>> Alguns navegadores não conseguem entender as acentuções (ã, ç, à, ü, ô, etc). Então, a partir de uma tabela que já existe, nos add as configs dela na nossa página para que o texto fique correto. Colocamos a tag <meta charset="UTF-8"/> .meta-metadados / #charset = char: caracteres e set: definir (característica, parâmetro ou config) (charset ou encoding = conf da codificação de caracteres) / "UTF-8"-valor (definimos qual é a tabela de caracteres) (UTF-8 = Unicode)
+
+    <meta name="viewport" content="width=device-width"> viewport-Entrada de visualização (que no nosso caso, é o monitor) (Foi o metodo que a apple encontrou para consertar a discrepancia entre os pixel do celular para o pixels dos desktops = celular tem muito mais pixels por polegada. Em relação ao pixel virtual e o pixel físico. Que seria o pixel físico e o pixiel de área útil= que é realmente o pixel que seu celular usa quando você tá cessando um site ≠ da resolução que você compra o seu celular) => Quando add essa tag ao html, estamos falando para o browser parar de utilizar a resolução do celular e sim usar a resolução que ele realmente usa para aquele site. (device-width=pixel virtual)
+
+
 *** TAG> ATRIBUTO> VALOR *** (Não tem tag de fechamento porque não tem conteúdo.)
 
 ===>>> colocamos uma tag <link> para usarmos o css fora do html e ficaria assim: <link rel="stylesheet" href="../css/style.css"> rel - relation (relacionado ao que: ao valor "stylesheet" que é o estilo do css) e href - é o local do endereço de onde se encontra o arquivo css que eu estou criando.
@@ -536,11 +561,26 @@ Prefixo:
 
 --------------------
 
-        -oppacity: 0.3; varia de 0 a 1 e deixa o elemento com transparencia, onde 0 é totalmente invisível e 1 é totalmente visível.  
+        -opacity: 0.3; varia de 0 a 1 e deixa o elemento com transparencia, onde 0 é totalmente invisível e 1 é totalmente visível. 
+
+            p {
+                opacity: 0.3;
+            } 
+
+        => Assim, caso houvesse uma imagem de fundo, o elemento todo, inclusive o texto, ficariam com grau de transparencia.
+
+            p {
+                background-color: rgba(0,0,0,0.3);
+                color: white;
+            }
+
+        => Já assim conseguimos configurar exatqamente com o efeito que queremos. Aplicando o RGBA.
+
+            (Em relação as cores, há a possibilidade de colocar um grau de transparencia quando modifiacamos o rgba dos elementos)
 
 --------------------
 
-===>>> Temos que lembrar que tudo tem um padrão, no início. Exemplo: o texto todo sempre começará da esquerda apra a direita e de cima para baixo. Então, tudo, eu disse TUDO, sempre tem um coportamento padão para que possamos formata-los conforme nossa necessidade.
+===>>> Temos que lembrar que tudo tem um padrão, no início. Exemplo: o texto todo sempre começará da esquerda apra a direita e de cima para baixo. Então, tudo, eu disse TUDO, sempre tem um coportamento padrão para que possamos formata-los conforme nossa necessidade.
 
 --------------------
 
@@ -620,10 +660,6 @@ Prefixo:
                         Ainda podemos utilizar palavras para movimentar nos nossos eixos (top, right, bottom, left e center sendo sempre dois valores: um pra x [horizontal] e outro pra y [vertical])
 --------------------
 
-        
-
---------------------
-
         -border: 1px solid #000000 [tamanho, tipo e cor = em px, boda solid (sólida - contínua) e a cor preta (borda de qualquer elemento); EX: dashed, dotted, double, groove, etc.
         
         - E ainda é possível dizer onde queremos essa linha: se left, right, top or bottom. Caso não seja especificado, quer dizer que a borda será em tudo];
@@ -664,13 +700,70 @@ Prefixo:
 
 --------------------
 
-        -transform: scale(1) => Por padrão, o scale já é 1, mas podemos mudar o padrão do valor base. Scale aumenta o item em escalas. Os valores recebidos serão multiplicadores do tamanho. EX: scale(2) deixará o item com o dobro da largura e o dobro da altura.
+        -transform: altera propriedades visuais epodemos fazer algumas combinações. EX: 
+
+                html {
+                    transform: rotate(-30deg) scale(0.4);
+                }
+
+        -transform: translate(Xdeg, Ydeg); => Irá mexer com o eixo do elemento. EX:
+
+                /* Move o elemento no eixo horizontal */
+                            
+                    .header {
+                        transform: translateX(50px);
+                    }
+
+                /* Move o elemento no eixo vertical */
+                    
+                    #main {
+                        transform: translateY(-20px);
+                    }
+
+                /* Move o elemento nos dois eixos (X, Y) */
+                
+                    footer {
+                        transform: translate(40px, -20px);
+                    }
+
+        -transform: scale(1) => Por padrão, o scale já é 1, mas podemos mudar o padrão do valor base. Scale aumenta o item em escalas. Os valores recebidos serão multiplicadores do tamanho. EX: scale(2) deixará o item com o dobro da largura e o dobro da altura. EX:
+
+                /* Alterar a escala total do elemento */
+
+                    #novidades li {.
+                        transform: scale(1.2);
+                    }
+
+                /* Alterar a escala vertical e horizontal do elemento */
+
+                    #mais-vendidos li {
+                        transform: scale(1, 0.6);
+                    }
 
         -transform: rotate(Xdeg) => Irá rotacionar para X angulo que você colocar. (deg-abrev. de degrees que significa "graus") EX:
 
-            transform: rotate(45deg) - Irá rotacionar 45° *
+                    #menu-departamentos {
+                        transform: rotate(-10deg);
+                    }
 
-                (*Exemplo de aplicabilidade seria na construção de um gráfico de pizza ou na rotação de um botão.)
+                    transform: rotate(45deg) - Irá rotacionar 45° *
+
+                            (*Exemplo de aplicabilidade seria na construção de um gráfico de pizza ou na rotação de um botão.)
+
+        -transform: skewZ(Xdeg) => Distorce o elemento. *Ficará parecido com um losango (dependo de quantos graus você aplicar ao valor). EX:
+
+                /* Distorcer o elemento no eixo horizontal */
+
+                    footer {
+                        transform: skewX(10deg);
+                    }
+
+                /* Distorcer o elemento no eixo vertical */
+            
+                    #social {
+                        transform: skewY(10deg);
+                    }
+
 
 -------------------- 
 
@@ -681,13 +774,21 @@ Prefixo:
                 Quantos quadros queremos que a propriedade crie pra nós??? (frames-molduras, famoso "quadros por segundo => fps" - quantos quadros por segundo estão sendo renderizados. Quanto mais frames ele for renderizado, mais processamento ele exigirá da sua GPU)
 
 
-        - PROPRIEDADE TRANSITION VERIFICA UMA MUDANÇA!!! E QUANDO HOUVER ESSA MUDANÇA, ELA TENTA ANIMAR ESSA PPROPRIEDADE!!!! // A propriedade transition já criará pra gente os frames // O transition funcionará para qualquer propriedade que possua um começo-meio-fim. EX: não dá pra aplicar o transition de "none" pra "block" - nada irá acontecer // Eu posso colocar valores diferentes para propriedades diferentes // MUITO CUIDADO COM O USO DO "ALL", OU SEJA, QUANDO AO INVÉS DE FALARMOS SOBRE QUAL PROPRIEDADE QUEREMOS A ANIMAÇÃO, FALAMOS QUE QUEREMOS PARA TODAS. ISSO TEM UM CUSTO DE VÁRIAS MANEIRAS: TEMPO, PROCESSADOR, RENDERIZAÇÃO DA PÁGINA PELO BROWSER, ETC... // Quando houver alguma mudança na propriedade transform faça tal coisa (na propriedade e não no valor da propriedade) // 2.5s é a duração de tempo que isso acontecerá (isso, a X coisa) // TEMPO x QUADRO => LINEAR é quando tempo e quadro estão andando em conjunto, proporcionais. (ease=mais devagar *** ease-in=mais devagar quando estiver o mouse *** ease-out=mais devagar quando o mouse estiver fora *** ease-in-out=mais devagartanto para dentro quanto para fora)
+        - PROPRIEDADE TRANSITION VERIFICA UMA MUDANÇA!!! E QUANDO HOUVER ESSA MUDANÇA, ELA TENTA ANIMAR ESSA PPROPRIEDADE!!!! // A propriedade transition já criará pra gente os frames // O transition funcionará para qualquer propriedade que possua um começo-meio-fim. EX: não dá pra aplicar o transition de "none" pra "block" - nada irá acontecer // Eu posso colocar valores diferentes para propriedades diferentes // MUITO CUIDADO COM O USO DO "ALL", OU SEJA, QUANDO AO INVÉS DE FALARMOS SOBRE QUAL PROPRIEDADE QUEREMOS A ANIMAÇÃO, FALAMOS QUE QUEREMOS PARA TODAS. ISSO TEM UM CUSTO DE VÁRIAS MANEIRAS: TEMPO, PROCESSADOR, RENDERIZAÇÃO DA PÁGINA PELO BROWSER, ETC... // Quando houver alguma mudança na propriedade transform faça tal coisa (na propriedade e não no valor da propriedade) // 2.5s é a duração de tempo que isso acontecerá (isso, a X coisa) // TEMPO x QUADRO => LINEAR é quando tempo e quadro estão andando em conjunto, proporcionais.
 
-        transition: transform 500ms cubic-bezier(0.68, 1.42, 0.8, 1.52), [cubic-bezier(x1, y1, x2, y2)] /* Esse valor (cubic-bezier), entre outros, conseguimos pelo inspecionar direto no navegador - só clicar no reloginho no firefox ou na curvinha no chrome */
+            Por padrão, a animação é linear, mas temos outros tipos para animações mais suaves:
+                
+                linear - velocidade constante na animação;
+                ease - redução gradual na velocidade da animação;
+                ease-in - aumento gradual na velocidade da animação;
+                ease-in-out - aumento gradual, depois redução gradual na velocidade da animação;
+                cubic-bezier(x1,y1,x2,y2) - curva de velocidade para animação customizada (avançado)
 
-        Quando eu quiser que a animação só aconteça quando eu estiver com o mouse em cima, eu devo aplicar o transform apenas no hover, como estará no css.
+        transition: transform 500ms cubic-bezier(0.68, 1.42, 0.8, 1.52), /* Esse valor (cubic-bezier), entre outros, conseguimos pelo inspecionar direto no navegador - só clicar no reloginho no firefox ou na curvinha no chrome */
 
-        Quando eu quiser que a animação só aconteça quando eu estiver com o mouse em cima, eu devo aplicar o transform apenas no houver, como estará no css - A diferença é clara, quando queremos a animação quando tiramos o mouse, temos que colocar os efeitos no botão e quando queremos quando passamos o mouse por cima apenas, ou quando houver uma "mudança", colocamos no "hover" // Podemos ainda configurar o "tira e põe" do mouse no elemento, por exemplo no hover colocar tempo mais longo do que no btn em si.
+        => Quando eu quiser que a animação só aconteça quando eu estiver com o mouse em cima, eu devo aplicar o transform apenas no hover, como estará no css.
+
+        => Quando eu quiser que a animação só aconteça quando eu estiver com o mouse em cima, eu devo aplicar o transform apenas no houver, como estará no css - A diferença é clara, quando queremos a animação quando tiramos o mouse, temos que colocar os efeitos no botão e quando queremos quando passamos o mouse por cima apenas, ou quando houver uma "mudança", colocamos no "hover" // Podemos ainda configurar o "tira e põe" do mouse no elemento, por exemplo no hover colocar tempo mais longo do que no btn em si.
 
 -------------------- 
 
@@ -813,18 +914,32 @@ as propriedades top, right, bottom e left (propriedades de coordenandas) são pr
 
     Então modificamos manualmente com o inherit, ou seja, dizemos a tag que herdará o mesmo valor sobre o pai daquela propriedade. Se a tag a estivesse envolvida em uma div, logo esta sendo a sua tag pai, o a respeitaria essa hierarquia de herança.
 
-------------
+------------ 
 
     *** Unidades de Medida:
 
 
             = Medidas absolutas: Unidades que não mudam nunca e que sabemos exatamente como funcionam (definidas pela física. Ex: pixel, cm, metro, etc.)
 
-            = 
+        ABSOLUTAS:
+        ----------
 
-                - px:Unidade de medida de resolução (EX: quantos pixel uma imagem usa para se compor na tela = 1px - menor unidade de medida num dispositivo de resolução)
+            ==>> PX: Unidade de medida de resolução (EX: quantos pixel uma imagem usa para se compor na tela = 1px - menor unidade de medida num dispositivo de resolução)
 
-                - %: Será referente ao seu pai. ou seja: se seu pai tem 500px, 100% dela será 500px (divisão em porcentagem da tela)
+                1px = 1 pontinho na tela baseado em luz contendo 3 microleds que terá 3 cores (RGB)
+                    TELA - PIXEL FÍSICO
+                    |-----> Quando usamos essa unid. de medida, o pixel, no css ele é uma medida   
+                            virtual => O CSS trabalha com uma aglomeração de pixels. (O CSS não trabalha exatamente com 1 pixel) Cada tela terá um padrão. (Baseado numa matemática em comparação da conversa de mobiles e desktops com o SO - numa resolução) PIXEL VIRTUAL ≠ PIXEL FÍSICO.
+        RELATIVO:
+        ----------
+
+            ===>> %: Será referente ao seu pai, na maioria dos casos, ou seja: se seu pai tem 500px, 100% dela será 500px (divisão em porcentagem da tela) - Uma parte do pai. (RESPONSIVO)
+
+                - Mas em alguns elementos o valor de referencia será ele mesmo. EX:
+
+                    transform: translateY(100%); positivo - move o elemento pra baixo = 100% dele mesmo. 
+
+                        (Nesse caso, vai ser no chutometro ou na decoreba sabermos qual é a referencia do tamanho.)
 
 ------------
 
