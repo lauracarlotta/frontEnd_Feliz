@@ -1,8 +1,8 @@
 {
   "name": "frontend_feliz",
   "version": "1.0.0",
-  "description": "frontend_feliz e um projeto com finalidade de estudo, ministrado pelo dev Marco Bruno com aulas gratuitas pelo seu canal da Twitch.com utilizando apostila criada pelo empresa Caelum como seu material de apoio",
-  "main": "index.js",
+  "description": "frontend_feliz e um projeto com finalidade de estudo, ministrado pelo dev Marco Bruno com aulas gratuitas pelo seu canal da Twitch.com utilizando apostila criada pelo empresa Caelum como seu material de apoio.",
+  "main": "index.php",
   "dependencies": {
     "express": "^4.17.1"
   },
