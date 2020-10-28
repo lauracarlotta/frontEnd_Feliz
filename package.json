@@ -1,0 +1,23 @@
+{
+  "name": "frontend_feliz",
+  "version": "1.0.0",
+  "description": "frontend_feliz e um projeto com finalidade de estudo, ministrado pelo dev Marco Bruno com aulas gratuitas pelo seu canal da Twitch.com utilizando apostila criada pelo empresa Caelum como seu material de apoio",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lauracarlotta/frontEnd_Feliz.git"
+  },
+  "author": "Laura Carlotta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lauracarlotta/frontEnd_Feliz/issues"
+  },
+  "homepage": "https://github.com/lauracarlotta/frontEnd_Feliz#readme"
+}
