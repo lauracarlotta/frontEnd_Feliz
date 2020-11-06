@@ -1,4 +1,4 @@
-*FRONT-END FELIZ*
+# *FRONT-END FELIZ*
 
 *frontend_feliz e um projeto com finalidade de estudo, ministrado pelo dev Marco Bruno com aulas gratuitas pelo seu canal da Twitch.com utilizando apostila criada pelo empresa Caelum como seu material de apoio.*
 
