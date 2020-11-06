@@ -1,0 +1,166 @@
+/* mobile-241px-939px */
+
+@media (min-width: 241px) and (max-width: 939px) {
+    .container {
+        width: 95%
+    }
+    header h1 {
+        text-align: center;
+    }
+
+    header h1 img {
+        max-width: 50%;
+    }
+
+    .sacola {
+        display: none;
+    }
+
+    .logo {
+        margin-bottom: 55px;
+    }
+
+    .menu-opcoes {
+        text-align: center;
+    }
+
+    .menu-opcoes a {
+        text-align: center;
+        text-decoration: underline;
+        font-size: 20px;
+    }
+
+    .menu-opcoes ul {
+        width: 100%;
+        margin: auto;
+    }
+
+    .menu-opcoes ul li {
+        display: inline-block;
+        width: auto;
+        margin: auto;
+        padding: 0px 5px 8px 5px;
+    }
+
+    .busca, .menu-departamentos {
+        width: 90%;
+        margin: 0 5%;
+    }
+
+    .busca {
+        margin-bottom: 5px;
+    }
+
+    .busca h2 {
+        padding: 0px;
+    }
+
+    .busca input {
+        margin-left: 25px;
+        padding-right: 10px;
+    }
+
+    .busca, .menu-departamentos {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .banner-destaque img {
+        margin: auto;
+        margin-top: 5px;
+        width: 100%;
+    }
+
+    .painel {
+        width: auto;
+    }
+
+    .painel ul {
+        margin: auto;
+    }
+
+    .painel li {
+        width: calc(33.33% - 6px);               
+    }
+
+    .painel img {
+        width: 100%;
+    }
+}
+
+
+/* smartwatch-170px-240px */
+
+@media (min-width: 160px) and (max-width: 310px) {
+    .container {
+        width: 90%;
+    }
+    
+    .sacola {
+        display: none;
+    }
+
+    .logo {
+        width: calc(90vw - 10px);
+        margin-bottom: 60px;
+    }
+
+    .menu-opcoes {
+        text-align: center;
+    }
+
+    .menu-opcoes ul {
+        width: 100%;
+        margin: auto;
+    }
+
+    .menu-opcoes ul li {
+        display: inline-block;
+        width: auto;
+        margin: auto;
+        padding: 0 5px;
+        text-align: center;
+    }
+
+    .menu-opcoes ul li a {
+        font-size: 12.5px;
+    }
+
+    .busca, .menu-departamentos {
+        font-size: 12px;
+        width: 95%;
+        margin: 2px;
+    }
+
+    .busca, .menu-departamentos h2{
+        text-align: center;
+    }
+
+    .busca input {
+        width: 93%;
+        margin: 5px;
+        padding-right: 10px;
+    }
+
+    .banner-destaque img {
+        margin: auto;
+        margin-top: 5px;
+        width: 100%;
+    }
+
+    .painel {
+        width: 100%;
+    }
+
+    .painel ul {
+        margin: auto;
+    }
+
+    .painel li {
+        width: calc(33.33% - 10px);               
+    }
+
+    .painel img {
+        width: 100%;
+    }
+}
