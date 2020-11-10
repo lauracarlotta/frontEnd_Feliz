@@ -198,7 +198,7 @@ label ~ form > input:hover {
 .novidades h2:before, .mais-vendidos h2:before {
     content: '\2730';
     font-size: 22px;
-    padding-right: 5px;
+    padding: 0 5px;
 }
 
 .novidades {
@@ -256,12 +256,12 @@ footer .container {
 .social-media {
     position: absolute;
     top: 14px;
-    right: 0;
+    right: 0px;
 }
 
 .items {
     float: left;
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 .social-media a {

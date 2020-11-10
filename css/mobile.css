@@ -4,12 +4,9 @@
     .container {
         width: 95%
     }
+
     header h1 {
         text-align: center;
-    }
-
-    header h1 img {
-        max-width: 50%;
     }
 
     .sacola {
@@ -17,20 +14,16 @@
     }
 
     .logo {
-        margin-bottom: 55px;
+        width: 65%;
+        margin-bottom: 2px;
     }
 
     .menu-opcoes {
         text-align: center;
     }
 
-    .menu-opcoes a {
-        text-align: center;
-        text-decoration: underline;
-        font-size: 20px;
-    }
-
     .menu-opcoes ul {
+        position: static;
         width: 100%;
         margin: auto;
     }
@@ -40,6 +33,12 @@
         width: auto;
         margin: auto;
         padding: 0px 5px 8px 5px;
+    }
+
+    .menu-opcoes a {
+        text-align: center;
+        text-decoration: underline;
+        font-size: 18px;
     }
 
     .busca, .menu-departamentos {
@@ -75,6 +74,10 @@
         width: auto;
     }
 
+    .painel h2 {
+        text-align: center;
+    }
+
     .painel ul {
         margin: auto;
     }
@@ -86,23 +89,58 @@
     .painel img {
         width: 100%;
     }
+
+    .novidades h2:after, .mais-vendidos h2:after {
+        content: '\2730';
+        font-size: inherit;
+        padding: 0 5px;
+    }
+
 }
 
+/* Rodapé min 241px - max 319px */
 
-/* smartwatch-170px-240px */
+@media (min-width: 241px) and (max-width: 319px) {
 
-@media (min-width: 160px) and (max-width: 310px) {
+    .rodape {
+        margin: auto;
+        width: 100%;
+    }
+
+    #logo-rodape {
+        transform: scale(0.7);
+    }
+
+    .social-media {
+        top: 7px;
+    }
+
+    .items {
+        transform: scale(0.8);
+        margin: 0px;
+    }
+
+}
+
+/* smartwatch-160px-240px */
+
+@media (min-width: 160px) and (max-width: 240px) {
     .container {
         width: 90%;
     }
     
+    header h1 {
+        text-align: center;
+
+    }
+
     .sacola {
         display: none;
     }
 
     .logo {
-        width: calc(90vw - 10px);
-        margin-bottom: 60px;
+        width: 65%;
+        margin-bottom: 2px;
     }
 
     .menu-opcoes {
@@ -110,8 +148,10 @@
     }
 
     .menu-opcoes ul {
+        position: static;
         width: 100%;
         margin: auto;
+        padding-bottom: 2px;
     }
 
     .menu-opcoes ul li {
@@ -126,9 +166,13 @@
         font-size: 12.5px;
     }
 
+    #buscar {
+        left: 4px;
+    }
+
     .busca, .menu-departamentos {
         font-size: 12px;
-        width: 95%;
+        width: calc(90vw - 4px);
         margin: 2px;
     }
 
@@ -136,10 +180,13 @@
         text-align: center;
     }
 
+    .busca {
+        height: 90px;
+    }
+
     .busca input {
         width: 93%;
-        margin: 5px;
-        padding-right: 10px;
+        margin: 0px 2px 2px 2px;
     }
 
     .banner-destaque img {
@@ -149,7 +196,13 @@
     }
 
     .painel {
-        width: 100%;
+        width: auto;
+    }
+
+    .painel h2 {
+        padding: 0px;
+        font-size: calc(24px - 0.5em);
+        text-align: center;
     }
 
     .painel ul {
@@ -157,10 +210,59 @@
     }
 
     .painel li {
-        width: calc(33.33% - 10px);               
+        width: calc(50% - 6px);               
     }
 
     .painel img {
         width: 100%;
+    }
+
+    .novidades h2:before, .novidades h2:after {
+        content: '\2730';   
+        padding: 0px 2px;
+        font-size: 15px;
+        
+    }
+
+    .mais-vendidos h2:before, .mais-vendidos h2:after {
+        content: '\2730';
+        margin: auto;
+        padding: 0px 2px;
+        font-size: 15px;
+    }
+
+    .rodape {
+        margin: auto;
+        width: 100%;
+    }
+
+    #logo-rodape {
+        position: relative;
+        left: -20px;
+        transform: scale(0.6);
+    }
+
+    .social-media {
+        top: 7px;
+    }
+
+    .items {
+        transform: scale(0.6);
+        margin: -5px;
+    }
+}
+
+/* smartwatch - rodapé -160px-189px */
+
+@media (min-width: 160px) and (max-width: 189px) {
+
+    #logo-rodape {
+        left: -30px;
+        transform: scale(0.5);
+    }
+
+    .items {
+        transform: scale(0.5);
+        margin: -6px;
     }
 }
