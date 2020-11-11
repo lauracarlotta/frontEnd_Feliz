@@ -1,0 +1,374 @@
+ /* mobile - 600px - 939px */
+
+/* @media (min-width: 620px) and (max-width: 939px) {
+    .container {
+        width: 95%
+    }
+
+    header h1 {
+        text-align: center;
+    }
+
+    .sacola {
+        display: none;
+    }
+
+    .logo {
+        width: 65%;
+        margin-bottom: 2px;
+    }
+
+    .menu-opcoes {
+        text-align: center;
+    }
+
+    .menu-opcoes ul {
+        position: static;
+        width: 100%;
+        margin: auto;
+    }
+
+    .menu-opcoes ul li {
+        display: inline-block;
+        width: auto;
+        margin: auto;
+        padding: 0px 5px 8px 5px;
+    }
+
+    .menu-opcoes a {
+        text-align: center;
+        text-decoration: underline;
+        font-size: 18px;
+    }
+
+    .compra {
+        width: 95%;
+        font-size: 28px;
+        height: 30px;
+    }
+
+}
+
+ /* mobile - 490px - 599px */
+
+/* @media (min-width: 490px) and (max-width: 619px) {
+    .container {
+        width: 95%
+    }
+
+    header h1 {
+        text-align: center;
+    }
+
+    .sacola {
+        display: none;
+    }
+
+    .logo {
+        width: 65%;
+        margin-bottom: 2px;
+    }
+
+    .menu-opcoes {
+        text-align: center;
+    }
+
+    .menu-opcoes ul {
+        position: static;
+        width: 100%;
+        margin: auto;
+    }
+
+    .menu-opcoes ul li {
+        display: inline-block;
+        width: auto;
+        margin: auto;
+        padding: 0px 5px 8px 5px;
+    }
+
+    .menu-opcoes a {
+        text-align: center;
+        text-decoration: underline;
+        font-size: 18px;
+    }
+
+    #centro-de-distribuicao, #centro-de-distribuicao-img {
+        float: none;
+        width: calc((95vw - 30px));
+        height: 100%;
+        margin: auto;
+    }
+
+    .compra {
+        width: 95%;
+        font-size: 28px;
+        height: 30px;
+    }
+
+}
+ 
+ /* mobile-241px-489px */
+
+/* @media (min-width: 241px) and (max-width: 489px) {
+    .container {
+        width: 95%
+    }
+
+    header h1 {
+        text-align: center;
+    }
+
+    .sacola {
+        display: none;
+    }
+
+    .logo {
+        width: 65%;
+        margin-bottom: 2px;
+    }
+
+    .menu-opcoes {
+        text-align: center;
+    }
+
+    .menu-opcoes ul {
+        position: static;
+        width: 100%;
+        margin: auto;
+    }
+
+    .menu-opcoes ul li {
+        display: inline-block;
+        width: auto;
+        margin: auto;
+        padding: 0px 5px 8px 5px;
+    }
+
+    .menu-opcoes a {
+        text-align: center;
+        text-decoration: underline;
+        font-size: 18px;
+    }
+
+    #centro-de-distribuicao, #centro-de-distribuicao-img, #familia-pelho, #familia-pelho-img, figcaption {
+        float: none;
+        width: calc((95vw - 30px));
+        height: 100%;
+        margin: auto;
+    }
+
+    .compra {
+        width: 95%;
+        font-size: 28px;
+        height: 30px;
+    }
+
+}
+
+/* .compra 320px - 440px */
+
+/* @media (min-width: 320px) and (max-width: 440px) {
+
+    .container {
+        width: 95%;
+    }
+
+    .mirror-fashion-h1 {
+        font-size: 20px;
+        text-align: center;
+        text-indent: 0;
+        padding: 5px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 15px;
+        text-indent: 5px;
+        padding: 0 25px;
+    }
+
+    figure {
+        padding: 5px;
+    }
+
+    #centro-de-distribuicao, #centro-de-distribuicao-img, #familia-pelho, #familia-pelho-img, figcaption {
+        float: none;
+        width: calc((95vw - 30px));
+        height: 100%;
+        margin: auto;
+    }
+
+    .diferencas {
+        padding: 0 25px;
+        text-align: justify;
+    }
+
+    .compra {
+        width: 90%;
+        height: 22px;
+        padding: 5px;
+        font-size: 20px;
+    }
+}
+
+/* Rodapé min 241px - max 319px */
+
+/* @media (min-width: 241px) and (max-width: 319px) {
+
+    .container {
+        width: 95%;
+    }
+
+    .mirror-fashion-h1 {
+        font-size: 18px;
+        text-align: center;
+        text-indent: 0;
+        padding: 5px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 16px;
+        text-indent: 5px;
+        padding: 0 25px;
+    }
+
+    figure {
+        padding: 5px;
+    }
+
+    #centro-de-distribuicao, #centro-de-distribuicao-img, #familia-pelho, #familia-pelho-img, figcaption {
+        float: none;
+        width: calc((95vw - 30px));
+        height: 100%;
+        margin: auto;
+    }
+
+    .diferencas {
+        padding: 0 25px;
+        text-align: justify;
+    }
+
+    .compra {
+        width: 90%;
+        height: 16px;
+        padding: 3px;
+        font-size: 15px;
+    }
+
+    li {
+        font-size: 14px;
+    }
+
+    .rodape {
+        margin: auto;
+        width: 100%;
+    }
+
+    #logo-rodape {
+        transform: scale(0.7);
+    }
+
+    .social-media {
+        top: 7px;
+    }
+
+    .items {
+        transform: scale(0.8);
+        margin: 0px;
+    }
+
+} */
+
+/* smartwatch-160px-240px */
+
+@media (min-width: 160px) and (max-width: 240px) {
+    .container {
+        width: 90%;
+    }
+    
+    header h1 {
+        text-align: center;
+
+    }
+
+    .sacola {
+        display: none;
+    }
+
+    .logo {
+        width: 65%;
+        margin-bottom: 2px;
+    }
+
+    .menu-opcoes {
+        text-align: center;
+    }
+
+    .menu-opcoes ul {
+        position: static;
+        width: 100%;
+        margin: auto;
+        padding-bottom: 2px;
+    }
+
+    .menu-opcoes ul li {
+        display: inline-block;
+        width: auto;
+        margin: auto;
+        padding: 0 5px;
+        text-align: center;
+    }
+
+    .menu-opcoes ul li a {
+        font-size: 12.5px;
+    }
+
+    .rodape {
+        margin: auto;
+        width: 100%;
+    }
+
+    #logo-rodape {
+        position: relative;
+        left: -20px;
+        transform: scale(0.6);
+    }
+
+    .social-media {
+        top: 7px;
+    }
+
+    .items {
+        transform: scale(0.6);
+        margin: -5px;
+    }
+}
+
+/* smartwatch - rodapé -160px-189px */
+
+@media (min-width: 160px) and (max-width: 189px) {
+
+    #logo-rodape {
+        left: -30px;
+        transform: scale(0.5);
+    }
+
+    .items {
+        transform: scale(0.5);
+        margin: -6px;
+    }
+
+    .compra {
+        width: 95%;
+        font-size: 10px;
+    }
+}

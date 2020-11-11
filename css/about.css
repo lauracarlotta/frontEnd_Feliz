@@ -81,10 +81,11 @@ header {
 .mirror-fashion-h1 {
     background-color: #9d3d3b;
     color: #360707;
-    padding: 10px 0px 10px 30px;
+    padding: 10px;
     margin: 10px 0;
     font-size: x-large;
     font-style: italic;
+    text-indent: 20px;
     text-shadow: 2px 2px 4px rgba(61, 60, 60, 0.753);
 }
 
@@ -197,7 +198,7 @@ figcaption {
     height: 35px;
     background-color:  #FBC3C3;
     color: #360707;
-    font-size: xx-large;
+    font-size: 32px;
     padding: 10px;
     text-align: center;
     margin: auto;
