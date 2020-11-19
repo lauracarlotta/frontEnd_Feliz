@@ -1,3 +1,5 @@
+/* DESKTOP */
+
 @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@500&display=swap');
 
@@ -146,8 +148,19 @@ p > a:active {
     color: #FBC3C3;
 }
 
+.segundo {
+    margin: 5px 60px;
+}
+
+address {
+    display: block;
+    text-indent: 150px;
+    margin-bottom: 5px;
+}
+
 strong {
-    font-weight: bolder;
+    font-size: large;
+    font-style: italic;
 }
 
 em {

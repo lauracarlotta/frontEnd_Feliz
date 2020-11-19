@@ -1,6 +1,8 @@
- /* mobile - 600px - 939px */
+/* MOBILE */
 
-/* @media (min-width: 620px) and (max-width: 939px) {
+/* mobile - 600px - 939px */
+
+@media (min-width: 620px) and (max-width: 939px) {
     .container {
         width: 95%
     }
@@ -51,7 +53,7 @@
 
  /* mobile - 490px - 599px */
 
-/* @media (min-width: 490px) and (max-width: 619px) {
+@media (min-width: 490px) and (max-width: 619px) {
     .container {
         width: 95%
     }
@@ -109,7 +111,7 @@
  
  /* mobile-241px-489px */
 
-/* @media (min-width: 241px) and (max-width: 489px) {
+@media (min-width: 241px) and (max-width: 489px) {
     .container {
         width: 95%
     }
@@ -150,6 +152,18 @@
         font-size: 18px;
     }
 
+    .segundo {
+        margin: auto;
+    }
+
+    address {
+        display: block;
+        text-indent: 0px;
+        font-size: large;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
     #centro-de-distribuicao, #centro-de-distribuicao-img, #familia-pelho, #familia-pelho-img, figcaption {
         float: none;
         width: calc((95vw - 30px));
@@ -167,7 +181,7 @@
 
 /* .compra 320px - 440px */
 
-/* @media (min-width: 320px) and (max-width: 440px) {
+@media (min-width: 320px) and (max-width: 440px) {
 
     .container {
         width: 95%;
@@ -189,6 +203,18 @@
         line-height: 15px;
         text-indent: 5px;
         padding: 0 25px;
+    }
+
+    .segundo {
+        margin: auto;
+    }
+
+    address {
+        display: block;
+        text-indent: 0px;
+        font-size: large;
+        text-align: center;
+        margin-bottom: 5px;
     }
 
     figure {
@@ -217,7 +243,7 @@
 
 /* Rodapé min 241px - max 319px */
 
-/* @media (min-width: 241px) and (max-width: 319px) {
+@media (min-width: 241px) and (max-width: 319px) {
 
     .container {
         width: 95%;
@@ -239,6 +265,17 @@
         line-height: 16px;
         text-indent: 5px;
         padding: 0 25px;
+    }
+    .segundo {
+        margin: auto;
+    }
+
+    address {
+        display: block;
+        text-indent: 0px;
+        font-size: medium;
+        text-align: center;
+        margin-bottom: 5px;
     }
 
     figure {
@@ -286,7 +323,7 @@
         margin: 0px;
     }
 
-} */
+} 
 
 /* smartwatch-160px-240px */
 
@@ -297,7 +334,6 @@
     
     header h1 {
         text-align: center;
-
     }
 
     .sacola {
@@ -307,6 +343,12 @@
     .logo {
         width: 65%;
         margin-bottom: 2px;
+    }
+    .mirror-fashion-h1 {
+        font-size: 18px;
+        text-align: center;
+        text-indent: 0;
+        padding: 5px;
     }
 
     .menu-opcoes {
@@ -330,6 +372,67 @@
 
     .menu-opcoes ul li a {
         font-size: 12.5px;
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+
+    p {
+        font-size: 12px;
+        line-height: 14px;
+        text-indent: 5px;
+        padding: 0 20px;
+    }
+
+    .segundo {
+        margin: auto;
+    }
+
+    address {
+        display: block;
+        text-indent: 0px;
+        font-size: small;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    
+    strong {
+        font-size: small;
+    }
+
+    figure {
+        padding: 5px;
+    }
+
+    #centro-de-distribuicao, #centro-de-distribuicao-img, #familia-pelho, #familia-pelho-img, figcaption {
+        float: none;
+        width: calc((95vw - 30px));
+        height: 100%;
+        margin: auto;
+    }
+
+    .diferencas {
+        padding: 0 25px;
+        text-align: justify;
+    }
+
+    .compra {
+        width: 90%;
+        height: 14px;
+        padding: 3px;
+        font-size: 15px;
+    }
+    .compra::before, .compra::after {
+        content: none;
+    }
+
+    figcaption {
+        font-size: small;
+    }
+
+    li {
+        font-size: 14px;
     }
 
     .rodape {
