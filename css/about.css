@@ -1,16 +1,22 @@
 /* DESKTOP */
 
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@500&display=swap');
-
 body {
     color: #42454d;
     font-family: 'Alegreya Sans', Arial, Helvetica, sans-serif;
 }
 
-.cabecalho {
+.container {
+    width: 940px;
+    margin: 0 auto;
+}
+
+header{
     background-image: url(../img/fundo-cabecalho.jpg);
     opacity: 0.9;
+}
+
+header .container {
+    position: relative;
 }
 
 .logo {
