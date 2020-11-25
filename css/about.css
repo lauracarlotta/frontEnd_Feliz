@@ -158,6 +158,17 @@ address {
     margin-bottom: 5px;
 }
 
+address > a {
+    text-decoration: none;
+    color: #9d3d3b;
+}
+
+address a:hover {
+    color: #FBC3C3;
+    font-size: 18px;
+    font-family: 'Sansita Swashed', cursive;
+}
+
 strong {
     font-size: large;
     font-style: italic;
@@ -208,17 +219,20 @@ figcaption {
 
 .compra {
     width: 940px;
-    height: 35px;
-    background-color:  #FBC3C3;
+    height: 40px;
+    background-color: #FBC3C3;
     color: #360707;
-    font-size: 32px;
+    font-size: 38px;
     padding: 10px;
     text-align: center;
     margin: auto;
     margin-top: 20px;
     margin-bottom: 20px; 
     border-radius: 35px;
-    
+}
+
+.compra > strong {
+    font-size: 38px;
 }
 
 .compra::before, .compra::after {
