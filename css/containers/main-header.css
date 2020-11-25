@@ -1,0 +1,26 @@
+/* cabeçalho principal */
+
+/* nome com duas palavras, mas não o colocamos no diretório de components posi ele é diferente: Ele não é reutilizavel (Da mesma maneira que a sacola é!) Existem dois níveis de reutilização. Podemos pegar a sacola e colocá-la em vários lugares diferentes da página (utilizando-a em vários contextos). Já o cabeçalho, assim como o Rodapé, nunca vão deixar de ser cabeçalho e rodapé, ou seja, seu lugares, posicionamentos nas páginas e semântica nuca mudam = Já tem uma função a cumprir. (Ele é mais limitado. Nós podemos utilizá-los em várias páginas, várias vezes, mas ele sempre terão a mesma finalidade. ELE SEMPRE SERÁ O HEADER - terá características bem específicas.)
+
+Com isso, criamos o diretório "containers" que geralmente envolvem outros elementos. */
+
+.main-header {
+    padding: 10px 0 20px 0;
+    text-align: center;
+}
+
+.main-header .logo {
+    width: 150px;
+    margin-bottom: 10px;
+}
+
+.main-header .action {
+    display: inline-block;
+    margin: 2px 8px 8px;
+}
+
+
+/* http - lógica de programação - estrutura de dados - base de algotimo e resolução de problemas - git e github 
+
+soft skill - ler documentação (respeitar a documentação) - valorizar troca de informação - inglês 
+ livro Loyane estrutra de dados. */

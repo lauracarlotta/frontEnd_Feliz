@@ -1,0 +1,9 @@
+/* Para a pasta Components = "Sempre" dar nome com duas palavras (Método do Marco Bruno) */
+
+/* Posso reutilizar em vários lugares sem ter problemas. 
+Com dois nomes = components ou containers,
+com um nome = item <= o item é filho de alguém, ou seja, não faz sentido aquilo existir se não estiver acompanhado de algo ou ainda, estando dentro de algo. Ex: a tag <nav> quase que exclusivamente estará dentro da header ou da main-header*/
+
+.shopping-bag {
+    display: none;
+}
