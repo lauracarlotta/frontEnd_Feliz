@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../../css/generic/reset.css">
+    <link rel="stylesheet" href="../../css/tools/containers.css">
     <link rel="stylesheet" href="../../css/elements/base.css">
     <link rel="stylesheet" href="../../css/containers/main-header.css">
+    <link rel="stylesheet" href="../../css/containers/product-mirror.css">
+    <link rel="stylesheet" href="../../css/containers/footer.css">
     <link rel="stylesheet" href="../../css/components/shopping-bag.css">
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap" rel="stylesheet"> 
-    <!-- <link rel="stylesheet" href="../../css/index.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap" rel="stylesheet">  -->
+    <link rel="stylesheet" href="../../css/components/title-mirror.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap" rel="stylesheet"> <!-- Colocar o link no html ao invés de @import no css pode fazer uma diferença no desempenho da performance do site, por isso o marco bruno aconselha colocar no html e não no css -->
     <title>Produtos</title>
     <!--[if lt IE 9]>
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -21,36 +22,49 @@
 
 <body>
    
-    <header class="main-header">
+    <header>
 
-        <div class="container cabecalho">
+        <div class="container">
 
-            <h1><a href="../index.html"><img class="logo" src="../../img/logo-cabecalho.png" alt="Logo da Mirror Fashion"></a></h1>
+            <div class="main-header">
 
-            <span class="shopping-bag">Nenhum item na sacola de compras</span>
+                <h1>
+                    <a href="../index.html">
+                        <img class="logo" src="../../img/logo-cabecalho.png" alt="Logo da Mirror Fashion">
+                    </a>
+                </h1>
+    
+                <span class="shopping-bag">Nenhum item na sacola de compras</span>
+    
+                <nav class="menu">
+    
+                    <a class="action" href="#">Sua conta</a>
+                    <a class="action" href="#">Lista de Desejos</a>
+                    <a class="action" href="#">Cartão Fidelidade</a>
+                    <a class="action" href="../about.html">Sobre</a>
+                    <a class="action" href="#">Ajuda</a>
+                    
+                </nav>
 
-            <nav class="menu">
-
-                <a class="action" href="#">Sua conta</a>
-                <a class="action" href="#">Lista de Desejos</a>
-                <a class="action" href="#">Cartão Fidelidade</a>
-                <a class="action" href="../about.html">Sobre</a>
-                <a class="action" href="#">Ajuda</a>
-                
-            </nav>
+            </div>
 
         </div>
 
     </header>
 
-    <!-- <div class="container"> -->
 
-        <section class="product">
+    <section class="product-mirror">
+
+        <div class="container">
     
-            <h2 class="title">Fuzz Cardigan</h2>
-            <p class="price">Por  R$ 129,90</p>
+            <div class="title-price">
+
+                <h2 class="title-mirror">Fuzz Cardigan</h2>
+                <p class="price">Por  R$ 129,90</p>
+                
+            </div>
     
-            <form action="carlotta.custodio@gmail.com" method="POST">
+            <form action="mailto:carlotta.custodio@gmail.com" method="POST">
     
                 <fieldset>
     
@@ -76,10 +90,10 @@
                 <button class="buy">Comprar</button>
 
             </form>
-            
-        </section>
 
-    <!-- </div> -->
+        </div>
+        
+    </section>
 
     <footer>
         <!-- rodapé -->

@@ -4,6 +4,11 @@
 Com dois nomes = components ou containers,
 com um nome = item <= o item é filho de alguém, ou seja, não faz sentido aquilo existir se não estiver acompanhado de algo ou ainda, estando dentro de algo. Ex: a tag <nav> quase que exclusivamente estará dentro da header ou da main-header*/
 
-.shopping-bag {
-    display: none;
+.shopping-bag{
+    background-image: url(../../img/sacola.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+    width: 140px;
+    padding: 20px 50px 10px 0px;
+    text-align: right;
 }

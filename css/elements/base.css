@@ -1,5 +1,8 @@
 /* coisas que são base do nosso css. EX: TAGS head, body, html etc */
 
 body {
+    min-width: 320px; /* Isso seria util pára não quebrar a tela (dando suporte para o tamanho minino de 320px) */
     font-family: 'Alegreya Sans', sans-serif;
 }
+
+

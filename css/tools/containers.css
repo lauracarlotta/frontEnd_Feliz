@@ -1,0 +1,6 @@
+/* Para classes bem genericas, que são bem genericas mesmo, que podemos aplicar em vários outros lugares */
+
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+}

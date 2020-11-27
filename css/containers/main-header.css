@@ -4,14 +4,24 @@
 
 Com isso, criamos o diretório "containers" que geralmente envolvem outros elementos. */
 
+header {
+    background-image: url(../../img/fundo-cabecalho.jpg);
+}
+
 .main-header {
     padding: 10px 0 20px 0;
     text-align: center;
 }
 
+/* Se usarmos a sacolinha em outro lugar, ela pode ficar aparecendo o tempo todo na tela, só faz sentido ela sumir porque ela está no header e ela fica apertada no conteúdo do header. Então sempre temos que pensar no porque do elemento estar mudando o seu estado. Ele esta sendo mudado por caus do contexto que ele está sendo usado ou porque ele sempre vai ter esse comportamento? nesse caso, ele não vai ter sempre esse comportamento. (Se usamor ele em outro lugar na página, ou no rodapé, ou em outro lugar que naõ seja no header ele vai ter outro comportamento) e é imprevisível isso porque nós não temos isso no layout ainda. Mas nesse contexto, faz mais sentido escodermos a sacolinha dentro do header, porque isso está relacionado ao header */
+
 .main-header .logo {
     width: 150px;
-    margin-bottom: 10px;
+    margin: 0 0 10px 5px;
+}
+
+.main-header .shopping-bag {
+    display: none;
 }
 
 .main-header .action {
@@ -19,8 +29,30 @@ Com isso, criamos o diretório "containers" que geralmente envolvem outros eleme
     margin: 2px 8px 8px;
 }
 
+/* Sempre possível, é melhor usar o seletor de filho direto e os demais para ficar mais fácil de ler o se css */
 
 /* http - lógica de programação - estrutura de dados - base de algotimo e resolução de problemas - git e github 
 
 soft skill - ler documentação (respeitar a documentação) - valorizar troca de informação - inglês 
  livro Loyane estrutra de dados. */
+
+@media (min-width: 800px) {
+
+    .main-header {
+        display: flex; /* Por padrão vai deixar um do lado do outro */
+        justify-content: space-between; /* para deixar o espaço "certo" entre o elementos - Joga um elemento para a direita e o outro pra esquerda - deixando um espaço entre eles. */
+        position: relative;
+    }
+
+    .main-header .shopping-bag { 
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 10px;
+    }
+
+    .main-header .menu {
+        align-self: flex-end; /* Como por padãro, o menu irá se mover no eixo x, com o flex-end fazemos ele se mover para o eixo y */
+        margin-top: 50px;
+    }
+}
