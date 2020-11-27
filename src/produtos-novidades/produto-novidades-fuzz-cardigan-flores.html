@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../../img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../../img/favicon.ico" class="input-color" type="image/x-icon">
     <link rel="stylesheet" href="../../css/generic/reset.css">
     <link rel="stylesheet" href="../../css/tools/containers.css">
     <link rel="stylesheet" href="../../css/elements/base.css">
@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../../css/containers/footer.css">
     <link rel="stylesheet" href="../../css/components/shopping-bag.css">
     <link rel="stylesheet" href="../../css/components/title-mirror.css">
+    <link rel="stylesheet" href="../../css/components/color-radius.css">
     <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap" rel="stylesheet"> <!-- Colocar o link no html ao invés de @import no css pode fazer uma diferença no desempenho da performance do site, por isso o marco bruno aconselha colocar no html e não no css -->
     <title>Produtos</title>
     <!--[if lt IE 9]>
@@ -61,28 +62,30 @@
 
                 <h2 class="title-mirror">Fuzz Cardigan</h2>
                 <p class="price">Por  R$ 129,90</p>
-                
+
             </div>
     
             <form action="mailto:carlotta.custodio@gmail.com" method="POST">
     
                 <fieldset>
     
-                    <legend>Escolha uma cor: </legend>
+                    <legend class="color">Escolha uma cor: </legend>
     
-                    <label for="green">
-                        <input type="radio" name="color" id="green">
-                        <img src="../../img/produtos/foto1-verde.png" alt="Produto Novidades Fuzz Cardigan Flores Verde">
+                    <input class="color-input" type="radio" name="color" id="green" checked>
+                    <label class="color-radius" for="green">
+                        <!-- :before -->
+                        <img class="color-photo" src="../../img/produtos/foto1-verde.png" alt="Produto Novidades Fuzz Cardigan Flores Verde">
+                        <!-- :after -->
                     </label>
     
-                    <label for="pink">
-                        <input type="radio" name="color" id="pink" checked>
-                        <img src="../../img/produtos/foto1-rosa.png" alt="Produto Novidades Fuzz Cardigan Flores Rosa">
+                    <input class="color-input" type="radio" name="color" id="pink">
+                    <label class="color-radius" for="pink">
+                        <img class="color-photo" src="../../img/produtos/foto1-rosa.png" alt="Produto Novidades Fuzz Cardigan Flores Rosa">
                     </label>
                     
-                    <label for="blue">
-                        <input type="radio" name="color" id="blue">
-                        <img src="../../img/produtos/foto1-azul.png" alt="Produto Novidades Fuzz Cardigan Flores Azul">
+                    <input class="color-input" type="radio" name="color" id="purple">
+                    <label class="color-radius" for="purple">
+                        <img class="color-photo" src="../../img/produtos/foto1-purple.png" alt="Produto Novidades Fuzz Cardigan Flores Purple">
                     </label>
     
                 </fieldset>
