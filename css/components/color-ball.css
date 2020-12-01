@@ -1,0 +1,114 @@
+/* .color-radius {
+    display: inline-block;
+} */
+
+.color-ball {
+    position: relative;
+    padding-top: 80px;
+}
+
+.color-ball .color-radius::before { /* : - pseudo-classe / :: - Pseudoelemento */
+    content: ''; /* para pseudoelemento, precisamos declarar o content, mesmo que não passemos valor nenhum - É o conteúdo do componente(Podendo add um emotion, texto, image - com url() - e etc.). */
+    background-color: gray;
+    position: absolute;
+    top: 10px;
+    /* display: block; */ /* Por padrão, para os pseudoelementos, o display é inline, então precisamos mudar isso */ /* Tiramos o display block porque iremos reposicionar as bolas dos inputs como position absolut */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-sizing: border-box; /* Para que o elemento não cresça quando estiver selecionado */
+    cursor: pointer; /* Para ficar com o ponteiro como se fosse link */
+}
+
+.color-ball .color-radius[for="green"]::before {
+    background-color: #439888;
+    left: 65px; /* Dei 30px que não tinha */
+}
+
+.color-ball .color-radius[for="pink"]::before {
+    background-color: #f53f6b;
+    left: 125px; /* Dei a diferença de 50px do verde para o rosa */
+}
+
+.color-ball .color-radius[for="purple"]::before {
+    background-color: #6b60b2;
+    left: 185px; /* Dei a diferença de 50px do rosa para o roxo */
+}
+
+.color-ball .color-input {
+    display: none;
+}
+
+.color-ball .color-input:checked + .color-radius::before {
+    border: 5px solid rgba(0, 0, 0, 0.3);
+}
+
+.color-radius > .color-photo {
+    display: none;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 380px;
+}
+
+.color-ball .color-radius[for="green"] > .color-photo {
+    border: 4px double #439888;
+}
+
+.color-ball .color-radius[for="pink"] > .color-photo {
+    border: 4px double #f53f6b;
+}
+
+.color-ball .color-radius[for="purple"] > .color-photo {
+    border: 4px double #6b60b2;
+}
+
+.color-ball .color-input:checked + .color-radius > .color-photo {
+    display: block;
+}
+
+/* vamos criar um pseudo elemento. Não é um elemento de fato. Utilizando after ou before */
+
+@media (min-width: 450px) {
+
+    .color-ball .color-photo {
+        width: 420px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 980px) {
+
+    .color-ball {
+        padding-top: 10px;
+    }
+
+    .color-ball > .color {
+        position: absolute;
+        top: 90px;
+        left: 410px;
+    }
+
+    .color-ball .color-radius::before {
+        position: static; /* Tiramos o comportamento que ele tinha antes colocando o padão do position que é o static */
+        display: inline-block;
+        margin: 110px 0 0 10px;
+    }
+
+    .color-ball .color-radius[for="green"]::before {
+        left: 110px;
+    }
+    
+    .color-ball .color-radius[for="pink"]::before {
+        left: 170px;
+    }
+    
+    .color-ball .color-radius[for="purple"]::before {
+        left: 230px;
+    }
+
+    .color-ball .color-photo {
+        float: left;
+        margin: 0 10px 10px;
+    }
+
+}

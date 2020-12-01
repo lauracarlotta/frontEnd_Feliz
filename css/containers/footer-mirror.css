@@ -1,0 +1,48 @@
+.footer-mirror {
+    background-image: url(../../img/fundo-rodape.png);
+    padding: 20px 0px;
+    text-align: center;
+    margin-top: 30px    ;
+}
+
+.footer-mirror .social-media {
+    width: 142px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.footer-mirror a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+    margin-top: 10px;
+}
+
+.footer-mirror [href*="facebook"] {
+    background-image: url(../../img/facebook.png);
+}
+
+.footer-mirror [href*="twitter"] {
+    background-image: url(../../img/twitter.png);
+}
+
+.footer-mirror [href*="instagram"] {
+    background-image: url(../../img/instagram.png);
+}
+
+@media (min-width: 520px) {
+
+    .footer-mirror .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .footer-mirror .social-media {
+        margin: 0;
+    }
+}

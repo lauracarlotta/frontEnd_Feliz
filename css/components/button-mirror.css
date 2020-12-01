@@ -1,0 +1,33 @@
+.button-mirror {
+    background-color: #222;
+    color: #cecece;
+    width: 100%;
+    max-width: 400px;
+    height: 45px;
+    margin: 5px auto;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: box-shadow 100ms linear;
+}
+
+.button-mirror:hover {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.button-mirror:active {
+    transform: translateY(2px) scale(0.95);
+    box-shadow: inset 4px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 980px) {
+
+    .button-mirror {
+        display: inline-block;
+        position: relative;
+        right: -710px;
+        bottom: 65px;
+        width: 200px;
+        margin-top: 10px;
+    }
+}
