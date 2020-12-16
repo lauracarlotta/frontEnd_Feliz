@@ -19,6 +19,7 @@
 .product-mirror .title-price {
     width: 300px;
     margin: 0px auto;
+    font-style: italic;
 }
 
 .product-mirror .title-price > .title-mirror { 
@@ -49,9 +50,7 @@
 
     .product-mirror {
         position: relative;
-        display: block;
-        margin: 0 20px;
-        
+        display: block;        
     }
 
     .product-mirror fieldset {
@@ -62,7 +61,7 @@
         text-align: left;
     }
 
-    .product-mirror .title-price > .title-mirror {
+    /* .product-mirror .title-price > .title-mirror {
         position: relative;
         top: 90px;
         right: -50px;
@@ -72,5 +71,5 @@
         position: relative;
         top: 90px;
         right: -60px;
-    }
+    } */
 }

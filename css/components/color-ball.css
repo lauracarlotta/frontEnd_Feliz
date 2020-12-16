@@ -62,6 +62,7 @@
     border: 4px double #6b60b2;
 }
 
+/* .color-ball .color-input:not(:checked) */
 .color-ball .color-input:checked + .color-radius > .color-photo {
     display: block;
 }
@@ -84,14 +85,14 @@
 
     .color-ball > .color {
         position: absolute;
-        top: 90px;
+        top: 10px;
         left: 410px;
     }
 
     .color-ball .color-radius::before {
         position: static; /* Tiramos o comportamento que ele tinha antes colocando o padão do position que é o static */
         display: inline-block;
-        margin: 110px 0 0 10px;
+        margin: 30px 0 0 10px;
     }
 
     .color-ball .color-radius[for="green"]::before {

@@ -27,3 +27,6 @@
     - Interação, animação
 
         = INTERAÇÃO.
+
+# Amadores focam em olhar o design do Photoshop e copiar na página. Profissionais focam em experiências Web acessíveis, semânticas e portáveis, onde o design tem um papel decorativo. 
+*(Apostila "Desenvolvimento Web, com HTML, CSS e JavaScript" - Caelum)*

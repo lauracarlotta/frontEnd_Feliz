@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="../../css/components/title-mirror.css">
     <link rel="stylesheet" href="../../css/components/color-ball.css">
     <link rel="stylesheet" href="../../css/components/button-mirror.css">
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap" rel="stylesheet"> <!-- Colocar o link no html ao invés de @import no css pode fazer uma diferença no desempenho da performance do site, por isso o marco bruno aconselha colocar no html e não no css -->
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap" rel="stylesheet"> <!-- Colocar o link no html ao invés de @import no css pode fazer uma diferença no desempenho da performance do site, para que a fonte não demore a carregar e o usuário tenha uma experiencia ruim -->
     <title>Produtos</title>
     <!--[if lt IE 9]>
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -73,21 +73,66 @@
                     <legend class="color">Escolha uma cor: </legend>
     
                     <input class="color-input" type="radio" name="color" id="green" checked>
-                    <label class="color-radius" for="green"> 
+                    <label class="color-radius" for="green">
                         <!-- :before -->
-                        <img class="color-photo" src="../../img/produtos/foto1-verde.png" alt="Produto Novidades Fuzz Cardigan Flores Verde">
+                        <img class="color-photo" src="../../img/produtos/foto1-verde.png" 
+                        alt="Produto Novidades Fuzz Cardigan Flores Verde">
                         <!-- :after -->
                     </label>
     
                     <input class="color-input" type="radio" name="color" id="pink">
-                    <label class="color-radius" for="pink"> 
-                        <img class="color-photo" src="../../img/produtos/foto1-rosa.png" alt="Produto Novidades Fuzz Cardigan Flores Rosa">
+                    <label class="color-radius" for="pink">
+                        <img class="color-photo" src="../../img/produtos/foto1-rosa.png" 
+                        alt="Produto Novidades Fuzz Cardigan Flores Rosa">
                     </label>
                     
                     <input class="color-input" type="radio" name="color" id="purple">
                     <label class="color-radius" for="purple">
-                        <img class="color-photo" src="../../img/produtos/foto1-purple.png" alt="Produto Novidades Fuzz Cardigan Flores Purple">
+                        <img class="color-photo" src="../../img/produtos/foto1-purple.png" 
+                        alt="Produto Novidades Fuzz Cardigan Flores Purple">
                     </label>
+
+                    <fieldeset class="tamanhos">
+
+                        <legend>Escolha o tamanho:</legend>
+                        <input type="range" min="36" max="48" value="44" step="2" name="tamanho" id="tamanho">
+
+                    </fieldeset>
+
+                    <div class="detalhes_produto">
+
+                        <h2>Detalhes do produto</h2>
+
+                        <p>Esse é o melhor casaco de Cardigã que você já viu. Excelente material italiano com estampa desenhada pelos artesãos da comunidade de Krotor nas ilhas gregas. Compre já e receba hoje mesmo pela nossa entrega a jato.</p>
+
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Características</th>
+                                    <th>Detalhe</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Modelo</td>
+                                    <td>Cardigã 7854</td>
+                                </tr>
+                                <tr>
+                                    <td>Material</td>
+                                    <td>Algodão e Poliester</td>
+                                </tr>
+                                <tr>
+                                    <td>Cores</td>
+                                    <td>Verde, Rosa e Roxo</td>
+                                </tr>
+                                <tr>
+                                    <td>Lavagem</td>
+                                    <td>Lavar a mão</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
     
                 </fieldset>
 
