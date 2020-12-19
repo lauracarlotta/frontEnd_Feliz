@@ -1,0 +1,61 @@
+/* Paineis de Novidades e Mais Vendidos */
+
+.painel {
+    margin: 10px 0;
+    padding: 10px;
+    width: 444px;
+    border-radius: 4px 8px 16px;
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, .6);
+}
+
+#destaque {
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, .6);
+}
+
+.novidades h2:before, .mais-vendidos h2:before {
+    content: '\2730';
+    font-size: 22px;
+    padding: 0 5px;
+}
+
+.novidades {
+    float: left;
+    background: linear-gradient(#fbd2d2, #ff7d7d);
+}
+
+.mais-vendidos {
+    float: right;
+    background: linear-gradient(#d7d2f1, #a698dd);
+}
+
+.painel li {
+    display: inline-block;
+    vertical-align: top;
+    width: 141px;
+    margin: 2px;
+    padding-bottom: 10px;
+    transition: 0.7s ease-out;
+}
+
+.painel li:hover {
+    transition: all 0.3s ease-in;
+    transform: scale(1.2);
+    box-shadow: 0px 0px 5px #333;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, .6);
+    background-color: rgb(255,255,255);
+    color: #333333;
+}
+
+.painel h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+.painel a {
+    color: #333333;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+}

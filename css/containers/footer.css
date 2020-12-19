@@ -1,0 +1,42 @@
+/* Rodapé */
+
+footer {
+    background-image: url(../../img/fundo-rodape.png);
+    clear: both; /* LEMBRA: Limpa o fundo!!! */
+    padding: 15px 0;
+}
+
+footer .container {
+    position: relative;
+}
+
+.social-media {
+    position: absolute;
+    top: 14px;
+    right: 0px;
+}
+
+.items {
+    float: left;
+    margin-left: 10px;
+}
+
+.social-media a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    text-indent: -9999px;
+}
+
+[href*="twitter.com"] {
+    background-image: url(../../img/twitter.png);
+}
+
+[href*="facebook.com"] {
+    background-image: url(../../img/facebook.png);
+}
+
+[href*="instagram.com"] {
+    background-image: url(../../img/instagram.png);
+}
