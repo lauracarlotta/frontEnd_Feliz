@@ -8,14 +8,17 @@
     <link rel="stylesheet" href="css/generic/reset.css">
     <link rel="stylesheet" href="css/tools/containers.css">
     <link rel="stylesheet" href="css/elements/base.css">
-    <link rel="stylesheet" href="css/containers/main-header.css">
+    <link rel="stylesheet" href="css/containers/header.css">
+    <link rel="stylesheet" href="css/elements/menus/nav-header.css">
     <link rel="stylesheet" href="css/containers/product-mirror.css">
-    <link rel="stylesheet" href="css/containers/footer-mirror.css">
+    <link rel="stylesheet" href="css/containers/footer.css">
     <link rel="stylesheet" href="css/components/shopping-bag.css">
     <link rel="stylesheet" href="css/components/title-mirror.css">
     <link rel="stylesheet" href="css/components/color-ball.css">
-    <link rel="stylesheet" href="css/components/button-mirror.css">
-    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap" rel="stylesheet"> <!-- Colocar o link no html ao invés de @import no css pode fazer uma diferença no desempenho da performance do site, para que a fonte não demore a carregar e o usuário tenha uma experiencia ruim -->
+    <link rel="stylesheet" href="css/components/buttons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet"> 
+    <!-- Colocar o link no html ao invés de @import no css pode fazer uma diferença no desempenho da performance do site, para que a fonte não demore a carregar e o usuário tenha uma experiencia ruim -->
     <title>Produtos</title>
     <!--[if lt IE 9]>
         <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -26,9 +29,7 @@
    
     <header>
 
-        <div class="container">
-
-            <div class="main-header">
+        <div class="container cabecalho">
 
                 <h1>
                     <a href="index.html">
@@ -38,17 +39,17 @@
     
                 <span class="shopping-bag">Nenhum item na sacola de compras</span>
     
-                <nav class="menu">
+                <nav class="menu-opcoes">
     
-                    <a class="action" href="#">Sua conta</a>
-                    <a class="action" href="#">Lista de Desejos</a>
-                    <a class="action" href="#">Cartão Fidelidade</a>
-                    <a class="action" href="about.html">Sobre</a>
-                    <a class="action" href="#">Ajuda</a>
+                    <ul>
+                        <li><a class="action" href="#">Sua conta</a></li>
+                        <li><a class="action" href="#">Lista de Desejos</a></li>
+                        <li><a class="action" href="#">Cartão Fidelidade</a></li>
+                        <li><a class="action" href="about.html">Sobre</a></li>
+                        <li><a class="action" href="#">Ajuda</a></li>
+                    </ul>
                     
                 </nav>
-
-            </div>
 
         </div>
 
@@ -94,16 +95,20 @@
 
                     <fieldeset class="tamanhos">
 
-                        <legend>Escolha o tamanho:</legend>
-                        <input type="range" min="36" max="48" value="44" step="2" name="tamanho" id="tamanho">
+                        <legend class="legenda-tamanhos">Escolha o tamanho:</legend>
+                        <input class="range-button" type="range" min="36" max="50" value="36" step="2" name="tamanho" id="tamanho">
 
                     </fieldeset>
 
-                    <div class="detalhes_produto">
+                    <div class="detalhes-produto">
 
                         <h2>Detalhes do produto</h2>
 
                         <p>Esse é o melhor casaco de Cardigã que você já viu. Excelente material italiano com estampa desenhada pelos artesãos da comunidade de Krotor nas ilhas gregas. Compre já e receba hoje mesmo pela nossa entrega a jato.</p>
+
+                    </div>
+
+                    <div class="tabela">
 
                         <table>
                             <thead>
@@ -136,7 +141,7 @@
     
                 </fieldset>
 
-                <button class="button-mirror">Comprar</button>
+                <button class="button-mirror-comprar"><a href="checkout.html">Comprar</a></button>
 
             </form>
 
