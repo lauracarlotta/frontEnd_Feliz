@@ -1,0 +1,81 @@
+/* Index - form pesquisa */
+
+#search {
+    border-radius: 10px;
+    position: relative;
+    bottom: 7px;
+}
+
+#buscar {
+    background-image: url(../../img/busca.png);
+    background-color: #9d3d3b;
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    position: relative;
+    bottom: 6px;
+    border: none;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+.busca h2, .busca form, .menu-departamentos h2 {
+    margin: 10px;
+    padding: 5px;
+}
+
+.busca input {
+    width: 150px;
+    margin-right: 10px;
+    border: none;
+}
+
+label ~ form > input:hover {
+    border: 1.5px dashed #000000;
+}
+
+.busca input:focus {
+    background-color: #f5dcdc;
+    text-indent: 10px;
+}
+
+.destaque {
+    margin-top: 10px;
+}
+
+
+/* Produto - botão comprar */
+
+.button-mirror-comprar {
+    background-color: #222;
+    color: #cecece;
+    width: 100%;
+    max-width: 400px;
+    height: 45px;
+    margin: 5px auto;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: box-shadow 100ms linear;
+}
+
+.button-mirror-comprar:hover {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.button-mirror-comprar:active {
+    transform: translateY(2px) scale(0.95);
+    box-shadow: inset 4px 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 980px) {
+
+    .button-mirror {
+        display: inline-block;
+        position: relative;
+        right: -710px;
+        bottom: 65px;
+        width: 200px;
+        margin-top: 10px;
+    }
+}

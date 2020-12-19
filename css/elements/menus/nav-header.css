@@ -1,0 +1,36 @@
+/* Menu nav-header */
+
+.menu-opcoes ul {
+    position: absolute;
+    bottom: 0;
+    right: 0px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.menu-opcoes ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.menu-opcoes a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 22px; 
+}
+
+.menu-opcoes a:hover {
+    transition: font-size 500ms ease,
+                border-radius 300ms linear,
+                color 500ms linear;
+    font-size: 26px;
+    background-color: rgba(0, 0, 0, .9);
+    color: #FBC3C3;
+    padding: 2px 10px;
+    border-radius: 15px;
+}
+
+.menu-opcoes a:active {
+    color: #a39bc8;
+    transition: color 10ms linear;
+}
