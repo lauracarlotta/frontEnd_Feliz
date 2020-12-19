@@ -1,4 +1,4 @@
-/* cabeçalho principal */
+/* cabeçalho principal - página produto */
 
 /* nome com duas palavras, mas não o colocamos no diretório de components posi ele é diferente: Ele não é reutilizavel (Da mesma maneira que a sacola é!) Existem dois níveis de reutilização. Podemos pegar a sacola e colocá-la em vários lugares diferentes da página (utilizando-a em vários contextos). Já o cabeçalho, assim como o Rodapé, nunca vão deixar de ser cabeçalho e rodapé, ou seja, seu lugares, posicionamentos nas páginas e semântica nuca mudam = Já tem uma função a cumprir. (Ele é mais limitado. Nós podemos utilizá-los em várias páginas, várias vezes, mas ele sempre terão a mesma finalidade. ELE SEMPRE SERÁ O HEADER - terá características bem específicas.)
 

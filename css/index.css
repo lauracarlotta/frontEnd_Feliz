@@ -125,22 +125,6 @@ label ~ form > input:hover {
     padding: 5px;
 }
 
-.sacola {
-    background-image: url(../img/sacola.png);
-    background-repeat: no-repeat;
-    background-position: right top; /* x = horizontal, y = vertical */
-        color: #FFF;
-        position: absolute;
-        top: 6px; 
-        right: 0px; 
-        font-size: 14px;
-        font-weight: bold;
-        padding-top: 16px;
-        padding-right: 50px;
-        text-align: right;
-        width: 140px;
-}
-
 .menu-opcoes ul {
     position: absolute;
     bottom: 0;
