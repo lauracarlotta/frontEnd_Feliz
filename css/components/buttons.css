@@ -68,6 +68,11 @@ label ~ form > input:hover {
     box-shadow: inset 4px 4px 6px rgba(0, 0, 0, 0.5);
 }
 
+.button-mirror-comprar a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
 .range-button {
     display: flex;
     margin: 15px auto;
