@@ -20,13 +20,13 @@
     cursor: pointer; /* Para ficar com o ponteiro como se fosse link */
 }
 
-.color-ball .color-radius[for="green"]::before {
-    background-color: #439888;
+.color-ball .color-radius[for="pink"]::before {
+    background-color: #f53f6b;
     left: 65px; /* Dei 30px que não tinha */
 }
 
-.color-ball .color-radius[for="pink"]::before {
-    background-color: #f53f6b;
+.color-ball .color-radius[for="green"]::before {
+    background-color: #439888;
     left: 125px; /* Dei a diferença de 50px do verde para o rosa */
 }
 
@@ -50,12 +50,12 @@
     max-width: 380px;
 }
 
-.color-ball .color-radius[for="green"] > .color-photo {
-    border: 4px double #439888;
-}
-
 .color-ball .color-radius[for="pink"] > .color-photo {
     border: 4px double #f53f6b;
+}
+
+.color-ball .color-radius[for="green"] > .color-photo {
+    border: 4px double #439888;
 }
 
 .color-ball .color-radius[for="purple"] > .color-photo {
@@ -86,20 +86,20 @@
     .color-ball > .color {
         position: absolute;
         top: 25px;
-        left: 420px;
+        left: 442px;
     }
 
     .color-ball .color-radius::before {
         position: static; /* Tiramos o comportamento que ele tinha antes colocando o padão do position que é o static */
         display: inline-block;
-        margin: 60px 0 0 10px;
+        margin: 60px 0 0 20px;
     }
 
-    .color-ball .color-radius[for="green"]::before {
+    .color-ball .color-radius[for="pink"]::before {
         left: 110px;
     }
     
-    .color-ball .color-radius[for="pink"]::before {
+    .color-ball .color-radius[for="green"]::before {
         left: 170px;
     }
     
