@@ -153,11 +153,35 @@
                             <dd>50</dd>
                     
                             <dt>Preço</dt>
-                            <dd>R$ 129,90</dd>
+                            <dd id="preco">R$ 129,90</dd>
                         </dl>
         
                     </div>
             
+                </div>
+
+                <div class="card mb-3">
+
+                    <div class="card-body">
+
+                        <dl>
+
+                            <div class="form-group">
+    
+                                <dt><label for="qtd">Quantidade:</label></dt>
+                                <dd><input class="form-control" id="qtd" min="1" max="99" value="1" type="number"></dd>
+    
+                            </div>
+    
+                            <div class="form-group">
+                                <dt><label for="total">Total:</label></dt>
+                                <dd><output for="qtd preco" class="form-control" id="total">R$ 129,90</output></dd>
+                            </div>
+
+                        </dl>
+
+                    </div>
+
                 </div>
     
             </div>
@@ -286,8 +310,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
-    <script type="text/javascript" src="jquery.js"></script>
-    <script type="text/javascript" src="bootstrap.js"></script>
+    <script type="text/javascript" src="js/total.js"></script>
     
 </body>
 
