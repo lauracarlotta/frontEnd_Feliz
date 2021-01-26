@@ -24,10 +24,10 @@ header {
     display: none;
 }
 
-.main-header .action {
+/* .main-header .action {
     display: inline-block;
     margin: 2px 8px 8px;
-}
+} */
 
 /* Sempre possível, é melhor usar o seletor de filho direto e os demais para ficar mais fácil de ler o se css */
 

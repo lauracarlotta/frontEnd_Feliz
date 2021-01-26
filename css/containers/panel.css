@@ -37,6 +37,14 @@
     transition: 0.7s ease-out;
 }
 
+.painel li:nth-child(n+7) {
+    display: none;
+}
+
+.painel-aberto li:nth-child(n+7) {
+    display: inline-block;
+}
+
 .painel li:hover {
     transition: all 0.3s ease-in;
     transform: scale(1.2);

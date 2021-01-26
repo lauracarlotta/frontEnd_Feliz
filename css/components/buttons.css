@@ -41,8 +41,29 @@ label ~ form > input:hover {
 
 .destaque {
     margin-top: 10px;
+    /* position: relative; */
+} 
+
+/* .pause, 
+.play {
+    display: block;
+    position: absolute;
+    right: 15px;
+    top: 15px;
 }
 
+.pause {
+    border-left: 10px solid #900;
+    border-right: 10px solid #900;
+    height: 30px;
+    width: 5px;
+}
+
+.play {
+    border-left: 25px solid #900;
+    border-bottom: 15px solid transparent;
+    border-top: 15px solid transparent;
+} */
 
 /* Produto - botão comprar */
 
@@ -83,7 +104,7 @@ label ~ form > input:hover {
     display: inline-block;
     height: 44px;
     width: 44px;
-    line-height: 44px;
+    line-height: 0px;
     text-align: center;
     /* border: 3px solid #666; */
     /* border-radius: 50%; */
@@ -104,7 +125,11 @@ label ~ form > input:hover {
     .range-button {
         float: left;
         position: relative;
-        margin: 35px 0;
+        margin: 35px 15px;
         transform: scale(1.2);
+    }
+
+    .tamanhos output {
+        line-height: 45px;
     }
 }

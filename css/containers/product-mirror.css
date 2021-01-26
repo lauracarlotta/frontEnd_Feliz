@@ -42,7 +42,7 @@ legend {
 
 .detalhes-produto {
     display: block;
-    margin: 10px;
+    margin: 0 10px;
 }
 
 .detalhes-produto > h2 {
